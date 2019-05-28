@@ -1,0 +1,118 @@
+f-icons .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+f-icons .fa:hover {
+    opacity: 0.7;
+}
+
+f-icons .fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+f-icons .fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+f-icons .fa-google {
+    background: #dd4b39;
+    color: white;
+}
+
+f-icons .fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+f-icons .fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+f-icons .fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+f-icons .fa-pinterest {
+    background: #cb2027;
+    color: white;
+}
+
+f-icons .fa-snapchat-ghost {
+    background: #fffc00;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+f-icons .fa-skype {
+    background: #00aff0;
+    color: white;
+}
+
+f-icons .fa-android {
+    background: #a4c639;
+    color: white;
+}
+
+f-icons .fa-dribbble {
+    background: #ea4c89;
+    color: white;
+}
+
+f-icons .fa-vimeo {
+    background: #45bbff;
+    color: white;
+}
+
+f-icons .fa-tumblr {
+    background: #2c4762;
+    color: white;
+}
+
+f-icons .fa-vine {
+    background: #00b489;
+    color: white;
+}
+
+f-icons .fa-foursquare {
+    background: #45bbff;
+    color: white;
+}
+
+f-icons .fa-stumbleupon {
+    background: #eb4924;
+    color: white;
+}
+
+f-icons .fa-flickr {
+    background: #f40083;
+    color: white;
+}
+
+f-icons .fa-yahoo {
+    background: #430297;
+    color: white;
+}
+
+f-icons .fa-soundcloud {
+    background: #ff5500;
+    color: white;
+}
+
+f-icons .fa-reddit {
+    background: #ff5700;
+    color: white;
+}
+
+f-icons .fa-rss {
+    background: #ff6600;
+    color: white;
+}
