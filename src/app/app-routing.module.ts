@@ -1,7 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './Pages/home/home.component';
+import { CatagoryInfoComponent } from './Components/catagory-info/catagory-info.component';
+import { FileUploadComponent } from './Components/file-upload/file-upload.component';
+import { CatagoryComponent } from './Pages/catagory/catagory.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: 'home', component: HomeComponent },
+  { path: 'category', component: CatagoryInfoComponent },
+  { path: 'upload', component: FileUploadComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
