@@ -6,10 +6,12 @@ import { FileUploadComponent } from './Components/file-upload/file-upload.compon
 import { CatagoryComponent } from './Pages/catagory/catagory.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full'},
-  { path: 'home', component: HomeComponent },
-  { path: 'category', component: CatagoryInfoComponent },
-  { path: 'upload', component: FileUploadComponent },
+  // {
+  //   path:'' ,redirectTo:'/home',pathMatch:'full'
+  // },
+  { path:'' ,redirectTo:'/home',pathMatch:'full' },
+  {path: 'home' , component: HomeComponent},
+  {path: 'catagory/:type' , component: CatagoryComponent}
 ];
 
 @NgModule({

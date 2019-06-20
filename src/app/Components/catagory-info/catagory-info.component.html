@@ -260,12 +260,12 @@
                 <div class="sub-cat-news-item-a" *ngIf=" i >= 6 && i < 9">
                     <div class="row no-margin">
                         <div class="col-5 no-padding">
-                            <img class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}"> </div>
+                            <img class="cat-news-item-a-img" src={{items.thumbImageSrcUrl}}> </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
                                 <div class="a-hedline">{{items.storyText | slice:0:60}}...</div>
                                 <div class="n-i-source">
-                                    <a href="{{items.storyTextUrl}}" target="_blank">
+                                    <a href={{items.storyTextUrl}} target="_blank">
                                         <img class="source" src="assets/img/source logo 3.png">
                                     </a>
                                 </div>
@@ -424,7 +424,7 @@
                                 <div class="a-hedline">{{items.storyText | slice:0:60}}...</div>
                                 <div class="n-i-source">
                                     <a href="{{items.storyTextUrl}}" target="_blank">
-                                        <img class="source" src="assets/img/source logo 3.png">
+                                        <img class="source" src="./assets/img/source logo 3.png">
                                     </a>
                                 </div>
                             </div>

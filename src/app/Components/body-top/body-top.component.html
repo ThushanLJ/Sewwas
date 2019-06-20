@@ -1,4 +1,4 @@
-<div class="body-top">
+<div class="body-top" *ngIf="load">
   <div class="container no-padding">
     <div class="row no-margin">
       <div class="col-lg-6  col-sm-12  no-padding ">
@@ -19,7 +19,7 @@
                       <img class="c-n-img" src="{{item.enlargeImgUrl}}">
                     </div>
                     <div class="c-n-img" *ngIf="!item.enlargeImgUrl">
-                      <img class="c-n-img" src="{{item.thumbImageSrcUrl}}">
+                      <img class="c-n-img" src="{{item.enlargeImgUrl}}">
                     </div>
                     <div class="c-n-ttl">
                       <div class="c-hedline">{{item.storyText | slice:0:60}}...
@@ -63,7 +63,7 @@
                       <img class="c-n-img" src="{{item.enlargeImgUrl}}">
                     </div>
                     <div class="c-n-img" *ngIf="!item.enlargeImgUrl">
-                      <img class="c-n-img" src="{{item.thumbImageSrcUrl}}">
+                      <img class="c-n-img" src="{{item.enlargeImgUrl}}">
                     </div>
                     <div class="c-n-ttl">
                       <div class="c-hedline">{{item.storyText | slice:0:60}}...
@@ -107,7 +107,7 @@
                       <img class="c-n-img" src="{{item.enlargeImgUrl}}">
                     </div>
                     <div class="c-n-img" *ngIf="!item.enlargeImgUrl">
-                      <img class="c-n-img" src="{{item.thumbImageSrcUrl}}">
+                      <img class="c-n-img" src="{{item.enlargeImgUrl}}">
                     </div>
                     <div class="c-n-ttl">
                       <div class="c-hedline">{{item.storyText | slice:0:60}}...
@@ -161,7 +161,7 @@
                 <div class="home-news-item-a">
                   <div class="row no-margin">
                     <div class="col-5 no-padding">
-                      <img class="home-news-item-a-img" src="{{item.thumbImageSrcUrl}}"> </div>
+                      <img class="home-news-item-a-img" src="{{item.enlargeImgUrl}}"> </div>
                     <div class="col-7 no-padding">
                       <div class="home-news-item-a-ttl">
                         <div class="a-hedline">{{item.storyText | slice:0:80}}...
@@ -184,7 +184,7 @@
               <div class="home-news-item-a" *ngIf="i >= 4 && i < 6">
                 <div class="row no-margin">
                   <div class="col-5 no-padding">
-                    <img class="home-news-item-a-img" src="{{item.thumbImageSrcUrl}}"> </div>
+                    <img class="home-news-item-a-img" src="{{item.enlargeImgUrl}}"> </div>
                   <div class="col-7 no-padding">
                     <div class="home-news-item-a-ttl">
                       <div class="a-hedline">{{item.storyText | slice:0:80}}...
@@ -206,7 +206,7 @@
       </div>
       <!-- second collum -->
       <div class="col-lg-3 col-sm-6">
-        <div class="ftr-news" *ngFor="let item of headStoryArrayOne"> 
+        <div class="ftr-news">
 
           <!-- <div class="ftr-news-img"  style="background:url({{item.thumbImageSrcUrl|images}})"></div> -->
           <!-- <div class="ftr-news-img"   src={{item.thumbImageSrcUrl|images}}></div> -->
@@ -214,31 +214,72 @@
 
           <!-- <div class="ftr-news-img"   *ngIf="!item.enlargeImgUrl" style="background:url() !important"></div> -->
 
-          <img class="ftr-news-img" src={{item.thumbImageSrcUrl}}>
+          <img class="ftr-news-img" src={{newsArray[0].enlargeImgUrl}}>
           <div class="ftr-news-ttl">
-            <div class="ftr-hedline">{{item.storyText | slice:0:80}}...
+            <div class="ftr-hedline">{{newsArray[0].storyText | slice:0:80}}...
               <br>
               <small> Read More</small>
             </div>
             <div class="ftr-source">
-              <a href="{{item.storyTextUrl}}" target="_blank">
+              <a href="{{newsArray[0].storyTextUrl}}" target="_blank">
                 <img class="source" src="assets/img/source logo.png">
               </a>
             </div>
           </div>
         </div>
-        <div class="home-news-item-a" *ngFor="let item of thirdArray; let i = index">
+        <div class="home-news-item-a">
           <div class="row no-margin">
             <div class="col-5 no-padding">
-              <img class="home-news-item-a-img" src="{{item.thumbImageSrcUrl}}"> </div>
+              <img class="home-news-item-a-img" src={{newsArray[6].thumbImageSrcUrl}}>
+            </div>
             <div class="col-7 no-padding">
               <div class="home-news-item-a-ttl">
-                <div class="a-hedline">{{item.storyText | slice:0:80}}...
+                <div class="a-hedline">{{newsArray[6].storyText | slice:0:80}}...
                   <br>
                   <small> Read More</small>
                 </div>
                 <div class="n-i-source">
-                  <a href="{{item.storyTextUrl}}" target="_blank">
+                  <a href={{newsArray[6].storyTextUrl}} target="_blank">
+                    <img class="source" src="assets/img/source logo 2.png">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-news-item-a">
+          <div class="row no-margin">
+            <div class="col-5 no-padding">
+              <img class="home-news-item-a-img" src={{newsArray[7].enlargeImgUrl}}>
+            </div>
+            <div class="col-7 no-padding">
+              <div class="home-news-item-a-ttl">
+                <div class="a-hedline">{{newsArray[7].storyText | slice:0:80}}...
+                  <br>
+                  <small> Read More</small>
+                </div>
+                <div class="n-i-source">
+                  <a href={{newsArray[7].storyTextUrl}} >
+                    <img class="source" src="assets/img/source logo 2.png">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-news-item-a">
+          <div class="row no-margin">
+            <div class="col-5 no-padding">
+              <img class="home-news-item-a-img" src={{newsArray[8].thumbImageSrcUrl}}>
+            </div>
+            <div class="col-7 no-padding">
+              <div class="home-news-item-a-ttl">
+                <div class="a-hedline">{{newsArray[8].storyText | slice:0:80}}...
+                  <br>
+                  <small> Read More</small>
+                </div>
+                <div class="n-i-source">
+                  <a href={{newsArray[8].storyTextUrl}} target="_blank">
                     <img class="source" src="assets/img/source logo 2.png">
                   </a>
                 </div>
@@ -250,22 +291,23 @@
       <!-- third collum -->
 
       <div class="col-lg-3 col-sm-6 no-padding ">
-        <div *ngFor="let item of headStoryArrayTwo">
+        
           <div class="ftr-news-2">
             <!-- <div *ngIf="item.enlargeImgUrl">
               <img class="ftr-news-img" src={{item.enlargeImgUrl}}>
             </div>
             <div *ngIf="!item.enlargeImgUrl">
-              <img class="ftr-news-img" src={{item.thumbImageSrcUrl}}>
+              <img class="ftr-news-img" src={{item.enlargeImgUrl}}>
             </div> -->
-            <img class="ftr-news-img" src={{item.thumbImageSrcUrl}}>
-            
-
+            <img class="ftr-news-img" src={{newsArray[1].thumbImageSrcUrl}}>
             <div class="ftr-news-2-ttl">
-              <div class="ftr-2-hedline">{{item.storyText | slice:0:80}}</div>
+              <div class="ftr-2-hedline">{{newsArray[1].storyText | slice:0:80}}</div>
               <div class="ftr-2-source">
-                <img class="source" src="assets/img/source logo.png"> </div>
-            </div>
+                <a href={{newsArray[1].storyTextUrl}} target="_blank">
+                  <img class="source" src="assets/img/source logo 2.png">
+                </a>
+              </div>
+            
           </div>
         </div>
 
