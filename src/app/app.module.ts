@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { ImagesPipe } from './pipes/images.pipe';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +30,8 @@ import { StoryComponent } from './Components/story/story.component';
 import { VideoComponent } from './Components/video/video.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { NewHeaderComponent } from './Components/new-header/new-header.component';
+import { BlogComponent } from './Pages/blog/blog.component';
+import { CatagoryBlogComponent } from './Components/catagory-blog/catagory-blog.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +54,9 @@ import { NewHeaderComponent } from './Components/new-header/new-header.component
     StoryComponent,
     VideoComponent,
     LoginComponent,
-    NewHeaderComponent
+    NewHeaderComponent,
+    BlogComponent,
+    CatagoryBlogComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +64,7 @@ import { NewHeaderComponent } from './Components/new-header/new-header.component
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule,
   ],
   providers: [NewsService],
   bootstrap: [AppComponent]

@@ -53,4 +53,18 @@ export class StoryComponent implements OnInit {
     })
   }
 
+  addVote(){
+    var user={
+      'userid':localStorage.getItem('sewwasUserId'),
+      'newsid':this.type,
+      'username':localStorage.removeItem('sewwasUserName')
+    }
+    console.log(user)
+    this.newsService.addNewsVote(user).subscribe((data:any)=>{
+      console.log(data);
+    },(err : HttpErrorResponse)=>{
+      console.log(err);
+    })
+  }
+
 }

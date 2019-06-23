@@ -32,7 +32,7 @@ export class CatagoryKnwComponent implements OnInit {
 
   moreDetail(item){
     // this.router.navigate([''])
-    if(item.storySite!='youtube'){
+    if(item.storySite!='Youtube'){
       this.router.navigate(['/news/'+item._id])
     }
     else{
