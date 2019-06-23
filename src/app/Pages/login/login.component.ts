@@ -31,14 +31,17 @@ export class LoginComponent implements OnInit {
    registerForm : FormGroup;
    loginForm : FormGroup;
    load:boolean=false;
+   logindiv:boolean=true;
 
   logoutNow(){
-    firebase.auth().signOut().then(function() {
+    firebase.auth().signOut().then(()=> {
       // Sign-out successful.
       console.log("Success")
       localStorage.removeItem('sewwasUserToken');
       localStorage.removeItem('sewwasUserName');
       localStorage.removeItem('sewwasUserId');
+      localStorage.removeItem('sewwasPicture');
+      this.router.navigate(['/home']);
     }).catch(function(error) {
       console.log(error)
     });
@@ -83,7 +86,8 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('sewwasUserToken', data.data.token);
         localStorage.setItem('sewwasUserName', data.data.user.local.username);
         localStorage.setItem('sewwasUserId', data.data.user._id);
-        //this.router.navigate(['/home']);
+        localStorage.setItem('sewwasPicture', data.data.picture);
+        this.router.navigate(['/home']);
       }
       else{
         //
@@ -144,6 +148,7 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('sewwasUserToken', data.data.token);
           localStorage.setItem('sewwasUserName', data.data.user_name);
           localStorage.setItem('sewwasUserId', data.data.user_id);
+          localStorage.setItem('sewwasPicture', data.data.picture);
           this.router.navigate(['/home']);
         }
         else{
@@ -190,10 +195,11 @@ export class LoginComponent implements OnInit {
 
 
   register(){
-    console.log(this.registerForm.value);
+    //console.log(this.registerForm.value);
     this.auth.registerUser(this.registerForm.value).subscribe((data:any)=>{
       if(data.data != null){
-        //
+        window.location.reload();
+        console.log(data.data);
       }
       else{
         //
@@ -211,6 +217,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('sewwasUserToken', data.data.token);
         localStorage.setItem('sewwasUserName', data.data.user_name);
         localStorage.setItem('sewwasUserId', data.data.user_id);
+        localStorage.setItem('sewwasPicture', data.data.picture);
         this.router.navigate(['/home']);
       }
       else{
@@ -219,6 +226,16 @@ export class LoginComponent implements OnInit {
     },(err : HttpErrorResponse)=>{
       //
     })
+  }
+
+  singup(){
+    this.logindiv=false;
+    console.log("ksahdksahdhsa");
+  }
+
+  singin(){
+    this.logindiv=true;
+    console.log("bjjkhjkh");
   }
 
 }
