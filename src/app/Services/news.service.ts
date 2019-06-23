@@ -34,4 +34,8 @@ export class NewsService {
     let params = new HttpParams().set("id",id)
     return this.http.get(this.baseURL+"idResult",{params:params})
   }
+
+  addComment(data){
+    return this.http.post(this.baseURL+'addNewsComment',data);
+  }
 }

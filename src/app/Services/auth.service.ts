@@ -17,4 +17,13 @@ export class AuthService {
   loginUser(data){
     return this.http.post(this.baseURL+'login',data);
   }
+
+  fbRegister(data){
+    console.log(data);
+    return this.http.post(this.baseURL+'facebookOauth',data);
+  }
+
+  googleRegister(data){
+    return this.http.post(this.baseURL+'googleOauth',data);
+  }
 }

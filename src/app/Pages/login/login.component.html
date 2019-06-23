@@ -1,4 +1,4 @@
-<div class="tab-content">
+<div *ngIf="load" class="tab-content">
     <div>
         <button><a href="#signIn">sign in</a></button>
         <button><a href="#signUp">sign up</a></button>
@@ -9,7 +9,7 @@
                 <label>
                     <b>Email:</b>
                 </label>
-                <input type="text" placeholder="Email" name="email" formControlName="username" required>
+                <input type="text" placeholder="Email" name="email" formControlName="email" required>
             </div>
             <div>
                 <label>
@@ -72,8 +72,13 @@
         <div class="col-sm-offset-2 col-sm-10">
             <button class="btn btn-default" (click)="loginUsingGoogleAuth()">Google</button>
             <button class="btn btn-default" (click)="loginUsingFacebook()">Facebook</button>
-            <button class="btn btn-default" (click)="logoutNow()">Logout</button>
+            <!-- <button class="btn btn-default" (click)="logoutNow()">Logout</button> -->
         </div>
     </div>
 
+</div>
+
+<div *ngIf="!load">
+    Already Login
+    <button class="btn btn-default" (click)="logoutNow()">Logout</button>
 </div>

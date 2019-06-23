@@ -1,2 +1,46 @@
-<div><img src={{arr[0].enlargeImgUrl}}></div>
-<div [innerHtml]="arr[0].moreStoryHtml"></div>
+<div>
+        <div><h1>{{arr[0].storyText}}</h1></div>
+        <div><img src={{arr[0].enlargeImgUrl}}></div>
+        <div [innerHtml]="arr[0].moreStoryHtml"></div>
+        <div>
+            <form [formGroup]="commentForm">
+                <div>
+                    <textarea class="form-control" rows="4" placeholder="Add your comment...." formControlName="text"></textarea>
+                </div>
+                <div>
+                    <button (click)="submitComment()" class="signup">Submit Comment</button>
+                </div>
+            </form>
+        </div>
+        <!-- <div>
+            <table>
+                <thead>
+                    <th></th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let comment of arr[0].comments">
+                        <td>****</td>
+                        <td>{{comment.text}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> -->
+        
+        <div *ngIf="arr[0].comments?.length > 0">
+            <div *ngFor="let comment of arr[0].comments" >
+                <div class="row">
+                    <div class="col">
+                        <div>
+                            <div>hardcode user</div>
+                            <div><p>{{comment.text}}</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div *ngIf="arr[0].comments?.length == 0">
+            <p>Be the first to comment</p>
+        </div>
+</div>

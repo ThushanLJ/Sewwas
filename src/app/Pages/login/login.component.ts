@@ -1,7 +1,10 @@
+import { AuthService } from './../../Services/auth.service';
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../Services/auth.service'
 import * as firebase from 'firebase'
 import {Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { HttpErrorResponse } from "@angular/common/http";
+import { Router } from '@angular/router';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -21,17 +24,21 @@ export class LoginComponent implements OnInit {
   };
 
   
-  constructor(private auth: AuthService , private formBuilder: FormBuilder) { 
+  constructor(public auth: AuthService , private formBuilder: FormBuilder,private router : Router) { 
     firebase.initializeApp(this.firebaseConfig);
   }
 
    registerForm : FormGroup;
    loginForm : FormGroup;
+   load:boolean=false;
 
   logoutNow(){
     firebase.auth().signOut().then(function() {
       // Sign-out successful.
       console.log("Success")
+      localStorage.removeItem('sewwasUserToken');
+      localStorage.removeItem('sewwasUserName');
+      localStorage.removeItem('sewwasUserId');
     }).catch(function(error) {
       console.log(error)
     });
@@ -39,14 +46,52 @@ export class LoginComponent implements OnInit {
 
   loginUsingFacebook(){
     var provider = new firebase.auth.FacebookAuthProvider();
-    firebase.auth().signInWithPopup(provider).then(function(result) {
+    var fbuser=null;
+    firebase.auth().signInWithPopup(provider).then((result)=> {
       // // This gives you a Facebook Access Token. You can use it to access the Facebook API.
       // var token = result.credential.accessToken;
       // // The signed-in user info.
       // var user = result.user;
       // ...
+      
+      // if(result != null){
+      //   var user={
+      //     'name':result.additionalUserInfo.profile.name,
+      //     'userMail':result.additionalUserInfo.profile.email,
+      //     'firstName':result.additionalUserInfo.profile.first_name,
+      //     'lastName':result.additionalUserInfo.profile.last_name,
+      //     'picture':result.additionalUserInfo.profile.picture.data.url
+      //   }
+      // }
 
-      console.log(result)
+      fbuser=result;
+      var user;
+        if(fbuser != null){
+        user={
+          'name':fbuser.additionalUserInfo.profile.name,
+          'userMail':fbuser.additionalUserInfo.profile.email,
+          'firstName':fbuser.additionalUserInfo.profile.first_name,
+          'lastName':fbuser.additionalUserInfo.profile.last_name,
+          'picture':fbuser.additionalUserInfo.profile.picture.data.url
+        }
+      }
+      
+     this.auth.fbRegister(user).subscribe((data:any)=>{
+       console.log(data);
+       if(data.data.user != null){
+        console.log(data);
+        localStorage.setItem('sewwasUserToken', data.data.token);
+        localStorage.setItem('sewwasUserName', data.data.user.local.username);
+        localStorage.setItem('sewwasUserId', data.data.user._id);
+        //this.router.navigate(['/home']);
+      }
+      else{
+        //
+      }
+     },(err : HttpErrorResponse)=>{
+      //
+    })
+      //console.log(fbuser)
     }).catch(function(error) {
       // Handle Errors here.
       // var errorCode = error.code;
@@ -57,14 +102,56 @@ export class LoginComponent implements OnInit {
       // var credential = error.credential;
       // // ...
     });
+    
+    // function servicecall(){
+    //   if(fbuser != null){
+    //     var user={
+    //       'name':fbuser.additionalUserInfo.profile.name,
+    //       'userMail':fbuser.additionalUserInfo.profile.email,
+    //       'firstName':fbuser.additionalUserInfo.profile.first_name,
+    //       'lastName':fbuser.additionalUserInfo.profile.last_name,
+    //       'picture':fbuser.additionalUserInfo.profile.picture.data.url
+    //     }
+      
+    // }
+    // }
   }
   loginUsingGoogleAuth(){
 
     var provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider).then(function(result) {
+    var guser=null;
+    firebase.auth().signInWithPopup(provider).then((result)=> {
       // This gives you a Google Access Token. You can use it to access the Google API.
 
       console.log(result)
+
+      guser=result;
+      var user;
+        if(guser != null){
+        user={
+          'name':guser.additionalUserInfo.profile.name,
+          'userMail':guser.additionalUserInfo.profile.email,
+          'firstName':guser.additionalUserInfo.profile.given_name,
+          'lastName':guser.additionalUserInfo.profile.family_name,
+          'picture':guser.additionalUserInfo.profile.picture
+        }
+      }
+
+      this.auth.googleRegister(user).subscribe((data:any)=>{
+        console.log(data);
+        if(data.data.user != null){
+          console.log(data);
+          localStorage.setItem('sewwasUserToken', data.data.token);
+          localStorage.setItem('sewwasUserName', data.data.user_name);
+          localStorage.setItem('sewwasUserId', data.data.user_id);
+          this.router.navigate(['/home']);
+        }
+        else{
+          //
+        }
+      },(err : HttpErrorResponse)=>{
+        //
+      })
       // var token = result.credential.accessToken;
       // // The signed-in user info.
       // var user = result.user;
@@ -92,26 +179,45 @@ export class LoginComponent implements OnInit {
     });
 
     this.loginForm = this.formBuilder.group({
-      username:[null, Validators.required],
+      email:[null, Validators.required],
       password:[null, Validators.required],
     });
+
+    if(localStorage.getItem('sewwasUserToken')==null ){
+      this.load=true;
+    }
   }
 
 
   register(){
     console.log(this.registerForm.value);
     this.auth.registerUser(this.registerForm.value).subscribe((data:any)=>{
-      console.log(data);
+      if(data.data != null){
+        //
+      }
+      else{
+        //
+      }
+    },(err : HttpErrorResponse)=>{
+      //
     })
   }
 
   login(){
     console.log(this.loginForm.value);
     this.auth.loginUser(this.loginForm.value).subscribe((data:any)=>{
-      console.log(data);
-      localStorage.setItem('sewwasUserToken', data.data.token);
-      localStorage.setItem('sewwasUserName', data.data.user_name);
-      localStorage.setItem('sewwasUserId', data.data.user_id);
+      if(data.data.user_id != null){
+        console.log(data);
+        localStorage.setItem('sewwasUserToken', data.data.token);
+        localStorage.setItem('sewwasUserName', data.data.user_name);
+        localStorage.setItem('sewwasUserId', data.data.user_id);
+        this.router.navigate(['/home']);
+      }
+      else{
+        //
+      }
+    },(err : HttpErrorResponse)=>{
+      //
     })
   }
 
