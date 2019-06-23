@@ -10,11 +10,13 @@
                   <div class="sec-news-block-1 sec-news-block-a" *ngIf="i == 0">
                     <img class="sec-block-a-img" src={{item.enlargeImgUrl}}>
                     <div class="sec-block-a-ttl">
-                      <span (click)="moreDetail()">{{item.storyText}}</span>
+                      <span (click)="moreDetail(item)">{{item.storyText}}</span>
                     </div>
                         <span>
                             <a target="_blank" href={{item.storyTextUrl}}>
-                                <img class="sec-block-a-source" src="./assets/img/source logo 2.png">
+                                <img *ngIf='item.storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                <img *ngIf='item.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                <img *ngIf='item.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                             </a>
                         </span>
                     </div>
@@ -28,11 +30,13 @@
                                     src={{item.enlargeImgUrl}}> </div>
                             <div class="col-7 no-padding">
                                 <div class="home-news-item-a-ttl">
-                                    <div class="a-hedline"><span (click)="moreDetail()">{{item.storyText}}</span></div>
+                                    <div class="a-hedline"><span (click)="moreDetail(item)">{{item.storyText}}</span></div>
                                     <div class="n-i-source">
                                             <span>
                                                 <a target="_blank" href={{item.storyTextUrl}}>
-                                                    <img class="sec-block-a-source" src="./assets/img/source logo 2.png">
+                                                    <img *ngIf='item.storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                                    <img *ngIf='item.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                                    <img *ngIf='item.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                                 </a>
                                             </span>
                                     </div>
@@ -78,11 +82,13 @@
                                     src={{item.enlargeImgUrl}}> </div>
                             <div class="col-7 no-padding">
                                 <div class="home-news-item-a-ttl">
-                                    <div class="a-hedline"><span (click)="moreDetail()">{{item.storyText}}</span></div>
+                                    <div class="a-hedline"><span (click)="moreDetail(item)">{{item.storyText}}</span></div>
                                     <div class="n-i-source"> 
                                             <span>
                                                 <a target="_blank" href={{item.storyTextUrl}}>
-                                                    <img class="sec-block-a-source" src="./assets/img/source logo 2.png">
+                                                    <img *ngIf='item.storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                                    <img *ngIf='item.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                                    <img *ngIf='item.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                                 </a>
                                             </span>
                                     </div>
@@ -123,11 +129,13 @@
                   <div class="sec-news-block-4 sec-news-block-a" *ngIf="i == 7">
                     <img class="sec-block-a-img" src={{item.enlargeImgUrl}}>
                     <div class="sec-block-a-ttl">
-                        <span (click)="moreDetail()">{{item.storyText}}</span>
+                        <span (click)="moreDetail(item)">{{item.storyText}}</span>
                     </div>
                         <span>
                             <a target="_blank" href={{item.storyTextUrl}}>
-                                <img class="sec-block-a-source" src="./assets/img/source logo 2.png">
+                                <img *ngIf='item.storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                <img *ngIf='item.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                <img *ngIf='item.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                             </a>
                         </span>
                     </div>

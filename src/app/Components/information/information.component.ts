@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import {NewsService} from '../../services/news.service'
 
@@ -9,7 +10,8 @@ import {NewsService} from '../../services/news.service'
 })
 export class InformationComponent implements OnInit {
 
-  constructor(private newsService:NewsService) { }
+  constructor(private newsService:NewsService,
+              private router : Router) { }
 
   infoNews:any[];
   arr:any[];
@@ -21,8 +23,14 @@ export class InformationComponent implements OnInit {
     })
   }
 
-  moreDetail(){
-    console.log("test");
+  moreDetail(item){
+    // this.router.navigate([''])
+    if(item.storySite!='youtube'){
+      this.router.navigate(['/news/'+item._id])
+    }
+    else{
+      this.router.navigate(['/video/'+item._id])
+    }
   }
 
 }

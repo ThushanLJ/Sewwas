@@ -22,11 +22,13 @@
                                 <img src={{bizNewsArray[0].thumbImageSrcUrl}} alt="Sri Lanka blasts: IT worker held" width="100%">
                             </div>
 
-                            <div class="carousel-caption">
+                            <div (click)="moreDetail(bizNewsArray[0])" class="carousel-caption">
                                 <h3>{{bizNewsArray[0].storyText | slice:0:60}}</h3>
                                 <div class="cat-c-source">
                                     <a href="{{bizNewsArray[0].storyTextUrl}}" target="_blank">
-                                        <img class="source" src="assets/img/source logo 3.png">
+                                        <img *ngIf='newArray[0].storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                        <img *ngIf='newArray[0].storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                        <img *ngIf='newArray[0].storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                     </a>
                                 </div>
                             </div>
@@ -39,11 +41,13 @@
                             <div *ngIf="!newArray[0].enlargeImgUrl">
                                 <img src={{newArray[0].thumbImageSrcUrl}} alt="Sri Lanka blasts: IT worker held" width="100%">
                             </div>
-                            <div class="carousel-caption">
+                            <div (click)="moreDetail(newArray[0])" class="carousel-caption">
                                 <h3>{{newArray[0].storyText | slice:0:60}}</h3>
                                 <div class="cat-c-source">
                                     <a href="{{newArray[0].storyTextUrl}}" target="_blank">
-                                        <img class="source" src="assets/img/source logo 3.png">
+                                        <img *ngIf='newArray[0].storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                        <img *ngIf='newArray[0].storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                        <img *ngIf='newArray[0].storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                     </a>
                                 </div>
                             </div>
@@ -56,11 +60,13 @@
                             <div *ngIf="!newsVideoArray[0].enlargeImgUrl">
                                 <img src={{newsVideoArray[0].thumbImageSrcUrl}} alt="Sri Lanka blasts: IT worker held" width="100%">
                             </div>
-                            <div class="carousel-caption">
+                            <div (click)="moreDetail(newsVideoArray[0])" class="carousel-caption">
                                 <h3>{{newsVideoArray[0].storyText | slice:0:60}}</h3>
                                 <div class="cat-c-source">
                                     <a href="{{newsVideoArray[0].storyTextUrl}}" target="_blank">
-                                        <img class="source" src="assets/img/source logo 3.png">
+                                        <img *ngIf='newsVideoArray[0].storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                        <img *ngIf='newsVideoArray[0].storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                        <img *ngIf='newsVideoArray[0].storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                     </a>
                                 </div>
                             </div>
@@ -88,10 +94,12 @@
                                     <img class="cat-news-item-a-img" src="{{newsVideoArray[0].thumbImageSrcUrl}}"> </div>
                                 <div class="col-6 no-padding">
                                     <div class="cat-news-item-a-ttl">
-                                        <div class="cat-a-hedline">{{newsVideoArray[0].storyText | slice:0:60}}</div>
+                                        <div class="cat-a-hedline"  (click)="moreDetail(newsVideoArray[0])">{{newsVideoArray[0].storyText | slice:0:60}}</div>
                                         <div class="n-i-source">
                                             <a href="{{newsVideoArray[0].storyTextUrl}}" target="_blank">
-                                                <img class="source" src="assets/img/source logo 3.png">
+                                                <img *ngIf='newsVideoArray[0].storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                                <img *ngIf='newsVideoArray[0].storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                                <img *ngIf='newsVideoArray[0].storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                             </a>
                                         </div>
                                     </div>
@@ -106,10 +114,12 @@
                                     <img class="cat-news-item-a-img" src="{{newArray[1].thumbImageSrcUrl}}"> </div>
                                 <div class="col-6 no-padding">
                                     <div class="cat-news-item-a-ttl">
-                                        <div class="cat-a-hedline">{{newArray[1].storyText | slice:0:60}}</div>
+                                        <div class="cat-a-hedline" (click)="moreDetail(newArray[1])">{{newArray[1].storyText | slice:0:60}}</div>
                                         <div class="n-i-source">
                                             <a href="{{newArray[1].storyTextUrl}}" target="_blank">
-                                                <img class="source" src="assets/img/source logo 3.png">
+                                                <img *ngIf='newArray[1].storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                                <img *ngIf='newArray[1].storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                                <img *ngIf='newArray[1].storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                             </a>
                                         </div>
                                     </div>
@@ -121,13 +131,15 @@
                         <div class="cat-news-item-a">
                             <div class="row no-margin">
                                 <div class="col-6 no-padding">
-                                    <img class="cat-news-item-a-img" src="{{bizNewsArray[0].thumbImageSrcUrl}}"> </div>
+                                    <img class="cat-news-item-a-img" src="{{bizNewsArray[1].thumbImageSrcUrl}}"> </div>
                                 <div class="col-6 no-padding">
                                     <div class="cat-news-item-a-ttl">
-                                        <div class="cat-a-hedline">{{bizNewsArray[0].storyText | slice:0:60}}</div>
+                                        <div class="cat-a-hedline" (click)="moreDetail(bizNewsArray[1])">{{bizNewsArray[1].storyText | slice:0:60}}</div>
                                         <div class="n-i-source">
-                                            <a href="{{bizNewsArray[0].storyTextUrl}}" target="_blank">
-                                                <img class="source" src="assets/img/source logo 3.png">
+                                            <a href="{{bizNewsArray[1].storyTextUrl}}" target="_blank">
+                                                <img *ngIf='bizNewsArray[1].storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                                <img *ngIf='bizNewsArray[1].storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                                <img *ngIf='bizNewsArray[1].storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                             </a>
                                         </div>
                                     </div>
@@ -155,10 +167,12 @@
                             <img class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}"> </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
-                                <div class="a-hedline">{{items.storyText | slice:0:60}}...</div>
+                                <div class="a-hedline" (click)="moreDetail(items)">{{items.storyText | slice:0:60}}...</div>
                                 <div class="n-i-source">
                                     <a href="{{items.storyTextUrl}}" target="_blank">
-                                        <img class="source" src="assets/img/source logo 3.png">
+                                        <img *ngIf='items.storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                        <img *ngIf='items.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                        <img *ngIf='items.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                     </a>
 
                                 </div>
@@ -210,10 +224,12 @@
                             <img class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}"> </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
-                                <div class="a-hedline">{{items.storyText | slice:0:60}}...</div>
+                                <div class="a-hedline" (click)="moreDetail(items)">{{items.storyText | slice:0:60}}...</div>
                                 <div class="n-i-source">
                                     <a href="{{items.storyTextUrl}}" target="_blank">
-                                        <img class="source" src="assets/img/source logo 3.png">
+                                        <img *ngIf='items.storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                        <img *ngIf='items.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                        <img *ngIf='items.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                     </a>
                                 </div>
                             </div>
@@ -263,10 +279,12 @@
                             <img class="cat-news-item-a-img" src={{items.thumbImageSrcUrl}}> </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
-                                <div class="a-hedline">{{items.storyText | slice:0:60}}...</div>
+                                <div class="a-hedline" (click)="moreDetail(items)">{{items.storyText | slice:0:60}}...</div>
                                 <div class="n-i-source">
                                     <a href={{items.storyTextUrl}} target="_blank">
-                                        <img class="source" src="assets/img/source logo 3.png">
+                                        <img *ngIf='items.storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                        <img *ngIf='items.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                        <img *ngIf='items.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                     </a>
                                 </div>
                             </div>
@@ -309,6 +327,26 @@
             <div class="row no-margin">
                 <h4 class="sub-cat-ttl">Hot News</h4>
             </div>
+            <div *ngFor="let items of newArray; let i=index">
+                    <div class="sub-cat-news-item-a" *ngIf=" i >= 9 && i < 12">
+                        <div class="row no-margin">
+                            <div class="col-5 no-padding">
+                                <img class="cat-news-item-a-img" src={{items.thumbImageSrcUrl}}> </div>
+                            <div class="col-7 no-padding">
+                                <div class="cat-news-item-a-ttl">
+                                    <div class="a-hedline" (click)="moreDetail(items)">{{items.storyText | slice:0:60}}...</div>
+                                    <div class="n-i-source">
+                                        <a href={{items.storyTextUrl}} target="_blank">
+                                            <img *ngIf='items.storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                            <img *ngIf='items.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                            <img *ngIf='items.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--
             <div class="sub-cat-news-item-a">
                 <div class="row no-margin">
                     <div class="col-5 no-padding">
@@ -336,21 +374,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="sub-cat-news-item-a">
-                <div class="row no-margin">
-                    <div class="col-5 no-padding">
-                        <img class="cat-news-item-a-img" src="assets/img/news item 1.png"> </div>
-                    <div class="col-7 no-padding">
-                        <div class="cat-news-item-a-ttl">
-                            <div class="a-hedline">Sri Lanka blasts: IT worker held</div>
-                            <div class="n-i-source">
-                                <img class="source" src="assets/img/source logo 3.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </div>-->
 
         </div>
 
@@ -367,10 +391,12 @@
                             <img class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}"> </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
-                                <div class="a-hedline">{{items.storyText | slice:0:60}}...</div>
+                                <div class="a-hedline" (click)="moreDetail(items)">{{items.storyText | slice:0:60}}...</div>
                                 <div class="n-i-source">
                                     <a href="{{items.storyTextUrl}}" target="_blank">
-                                        <img class="source" src="assets/img/source logo 3.png">
+                                        <img *ngIf='items.storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                        <img *ngIf='items.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                        <img *ngIf='items.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                     </a>
                                 </div>
                             </div>
@@ -421,10 +447,12 @@
                             <img class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}"> </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
-                                <div class="a-hedline">{{items.storyText | slice:0:60}}...</div>
+                                <div class="a-hedline"  (click)="moreDetail(items)">{{items.storyText | slice:0:60}}...</div>
                                 <div class="n-i-source">
                                     <a href="{{items.storyTextUrl}}" target="_blank">
-                                        <img class="source" src="./assets/img/source logo 3.png">
+                                        <img *ngIf='items.storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                        <img *ngIf='items.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                        <img *ngIf='items.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                     </a>
                                 </div>
                             </div>
@@ -473,10 +501,12 @@
                             <img class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}"> </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
-                                <div class="a-hedline">{{items.storyText | slice:0:60}}...</div>
+                                <div class="a-hedline"  (click)="moreDetail(items)">{{items.storyText | slice:0:60}}...</div>
                                 <div class="n-i-source">
                                     <a href="{{items.storyTextUrl}}" target="_blank">
-                                        <img class="source" src="assets/img/source logo 3.png">
+                                        <img *ngIf='items.storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                        <img *ngIf='items.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                        <img *ngIf='items.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                     </a>
                                 </div>
                             </div>
@@ -525,10 +555,12 @@
                             <img class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}"> </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
-                                <div class="a-hedline">{{items.storyText | slice:0:60}}...</div>
+                                <div class="a-hedline"  (click)="moreDetail(items)">{{items.storyText | slice:0:60}}...</div>
                                 <div class="n-i-source">
                                     <a href="{{items.storyTextUrl}}" target="_blank">
-                                        <img class="source" src="assets/img/source logo 3.png">
+                                        <img *ngIf='items.storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                        <img *ngIf='items.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                        <img *ngIf='items.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                     </a>
                                 </div>
                             </div>

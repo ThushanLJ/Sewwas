@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import {NewsService} from '../../services/news.service';
 import {SubcatagoryService} from '../../services/subcatagory.service';
@@ -11,7 +12,8 @@ import {SubcatagoryService} from '../../services/subcatagory.service';
 export class CatagoryKnwComponent implements OnInit {
 
   constructor(private newsService:NewsService,
-              private subcatagoryService:SubcatagoryService) { }
+              private subcatagoryService:SubcatagoryService,
+              private router : Router) { }
 
   recent:any[];
   technews:any[];
@@ -26,5 +28,17 @@ export class CatagoryKnwComponent implements OnInit {
       this.technews=data.data;
     })
   }
+
+
+  moreDetail(item){
+    // this.router.navigate([''])
+    if(item.storySite!='youtube'){
+      this.router.navigate(['/news/'+item._id])
+    }
+    else{
+      this.router.navigate(['/video/'+item._id])
+    }
+  }
+
 
 }

@@ -4,25 +4,32 @@
         <div class="top-bar ">
             <div class="row ">
                 <div class="col-lg-2 col-sm-12" style="padding:0px 0px">
-                    <div class="logo"> <img src="assets/img/logo.png" width="100%"> </div>
+                    <div class="logo">
+                        <img src="assets/img/logo.png" width="100%"> </div>
                 </div>
                 <div class="col-8">
                     <div class="input-group searchbar">
                         <input type="text" class="form-control" placeholder="Search this blog">
                         <div class="input-group-append">
-                            <button class="btn btn-secondary search-btn" type="button"> <i class="fa fa-search"></i>
+                            <button class="btn btn-secondary search-btn" type="button">
+                                <i class="fa fa-search"></i>
                             </button>
                         </div>
                     </div>
                 </div>
                 <div class="col-2" style="padding:0px 0px">
-                    <div class="login-profile"> <a href="#" class="sign">Sign in</a>|<a href="#" class="sign"> Sign
-                            up</a> </div>
+                    <div class="login-profile">
+                        <!-- <a href="#" class="sign">Sign in</a>|
+                        <a href="#" class="sign"> Sign up
+                        </a> -->
+                        <a routerLink="/login">Sign in</a>|
+                        <a routerLink="/login">Sign up</a>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="quick-links pc">
-                    <div class="col" style="padding:0px 0px">
+                    <!-- <div class="col" style="padding:0px 0px">
                         <nav class="nav"> <a class="nav-link" href="#"><i class='fas fa-newspaper'
                                     style='font-size:15px;color:#4890c8;padding:0px 5px;'> </i>Quick link one</a> <a
                                 class="nav-link" href="#"><i class='fas fa-newspaper'
@@ -34,27 +41,37 @@
                             <a class="nav-link" href="#"><i class='fas fa-newspaper'
                                     style='font-size:15px;color:#4890c8;padding:0px 5px;'> </i>Quick link Three</a>
                         </nav>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </div>
-  </div>
-  <!--========================== nav ===========================-->
-  <div class="navigation">
-    <nav class="navbar navbar-expand-lg navbar-light justify-content-center main-nav"
-        style="background-color: #586579;">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
-                class="navbar-toggler-icon"></span> </button>
+</div>
+<!--========================== nav ===========================-->
+<div class="navigation">
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-center main-nav" style="background-color: #586579;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto ml-auto">
-                <li class="nav-item"> <a class="nav-link" routerLink="/">HOME</a> </li>
-                <li class="nav-item"> <a class="nav-link" [routerLink]="['/catagory', 'inf']">INFORMATION</a> </li>
-                <li class="nav-item"> <a class="nav-link" [routerLink]="['/catagory', 'knw']">KNOWLEDGE</a> </li>
-                <li class="nav-item"> <a class="nav-link" [routerLink]="['/catagory', 'ent']">ENTERTAINMENT</a> </li>
-                <li class="nav-item"> <a class="nav-link" [routerLink]="['/catagory', 'blog']">BLOG</a> </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/catagory', 'inf']">INFORMATION</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/catagory', 'knw']">KNOWLEDGE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/catagory', 'ent']">ENTERTAINMENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/catagory', 'blog']">BLOG</a>
+                </li>
             </ul>
         </div>
     </nav>
-  </div>
+</div>

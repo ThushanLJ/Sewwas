@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 // import { FileSelectDirective } from 'ng2-file-upload';
 import { ImagesPipe } from './pipes/images.pipe';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,12 @@ import { HeaderComponent } from './Components/header/header.component';
 import { CatagoryEntComponent } from './Components/catagory-ent/catagory-ent.component';
 import { CatagoryKnwComponent } from './Components/catagory-knw/catagory-knw.component';
 import { FooterComponent } from './Components/footer/footer.component';
+import { NewBodyTopComponent } from './Components/new-body-top/new-body-top.component';
+import { NewsComponent } from './Pages/news/news.component';
+import { StoryComponent } from './Components/story/story.component';
+import { VideoComponent } from './Components/video/video.component';
+import { LoginComponent } from './Pages/login/login.component';
+import { NewHeaderComponent } from './Components/new-header/new-header.component';
 
 @NgModule({
   declarations: [
@@ -38,12 +45,20 @@ import { FooterComponent } from './Components/footer/footer.component';
     CatagoryComponent,
     CatagoryEntComponent,
     CatagoryKnwComponent,
-    FooterComponent
+    FooterComponent,
+    NewBodyTopComponent,
+    NewsComponent,
+    StoryComponent,
+    VideoComponent,
+    LoginComponent,
+    NewHeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [NewsService],
   bootstrap: [AppComponent]

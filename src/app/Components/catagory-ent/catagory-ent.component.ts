@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import {SubcatagoryService} from '../../services/subcatagory.service';
 import {NewsService} from '../../services/news.service'
@@ -11,7 +12,8 @@ import {NewsService} from '../../services/news.service'
 export class CatagoryEntComponent implements OnInit {
 
   constructor(private subcatagoryService:SubcatagoryService,
-              private newsService:NewsService) { }
+              private newsService:NewsService,
+              private router : Router) { }
 
   teledrama:any[];
   music:any[];
@@ -33,12 +35,12 @@ export class CatagoryEntComponent implements OnInit {
 
     this.subcatagoryService.getSportNews().subscribe((data:any)=>{
       this.sport = data.data;
-      console.log(this.sport);
+      //console.log(this.sport);
     });
 
     this.newsService.getEntertainmentNews().subscribe((data:any)=>{
       this.recent = data.data;
-      //console.log(this.recent);
+      console.log(this.recent);
     })
 
     this.subcatagoryService.getComedyVideos().subscribe((data:any)=>{
@@ -57,8 +59,14 @@ export class CatagoryEntComponent implements OnInit {
     })
   }
 
-  moreDetail(){
-    console.log("test");
+  moreDetail(item){
+    // this.router.navigate([''])
+    if(item.storySite!='Youtube'){
+      this.router.navigate(['/news/'+item._id])
+    }
+    else{
+      this.router.navigate(['/video/'+item._id])
+    }
   }
 
 }

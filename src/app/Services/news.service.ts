@@ -27,5 +27,11 @@ export class NewsService {
   }
 
   getLatestNews(){
-    return this.http.get(this.baseURL+"hotnews");}
+    return this.http.get(this.baseURL+"hotnews");
+  }
+
+  getNewsDetail(id){
+    let params = new HttpParams().set("id",id)
+    return this.http.get(this.baseURL+"idResult",{params:params})
+  }
 }

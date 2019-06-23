@@ -1,0 +1,79 @@
+<div class="tab-content">
+    <div>
+        <button><a href="#signIn">sign in</a></button>
+        <button><a href="#signUp">sign up</a></button>
+    </div>
+    <div id="signIn">
+        <form [formGroup]="loginForm">
+            <div>
+                <label>
+                    <b>Email:</b>
+                </label>
+                <input type="text" placeholder="Email" name="email" formControlName="username" required>
+            </div>
+            <div>
+                <label>
+                    <b>Password:</b>
+                </label>
+                <input type="password" placeholder="Password" name="psw" formControlName="password" required>
+            </div>
+            <div>
+                <button (click)="login()" class="signup">Sign Up</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div id="signUp">
+        <form [formGroup]="registerForm">
+            <div>
+                <label>
+                    <b>First Name:</b>
+                </label>
+                <input type="text" placeholder="First Name" name="firstName" formControlName="firstName" required>
+            </div>
+            <div>
+                <label>
+                    <b>Last Name:</b>
+                </label>
+                <input type="text" placeholder="Last Name" name="lastName" formControlName="lastName" required>
+            </div>
+            <div>
+                <label>
+                    <b>User Name:</b>
+                </label>
+                <input type="text" placeholder="User Name" name="userName" formControlName="username" required>
+            </div>
+            <div>
+                <label>
+                    <b>Email:</b>
+                </label>
+                <input type="email" placeholder="Email" name="email" formControlName="email" required>
+            </div>
+            <div>
+                <label>
+                    <b>Password:</b>
+                </label>
+                <input type="password" placeholder="Password" name="psw" formControlName="password" required>
+            </div>
+            <div>
+                <label>
+                    <b>Confirm Password:</b>
+                </label>
+                <input type="password" placeholder="Confirm Password" name="psw-repeat" required>
+            </div>
+            <div>
+                <button (click)="register()" class="signup">Sign in</button>
+            </div>
+        </form>
+
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button class="btn btn-default" (click)="loginUsingGoogleAuth()">Google</button>
+            <button class="btn btn-default" (click)="loginUsingFacebook()">Facebook</button>
+            <button class="btn btn-default" (click)="logoutNow()">Logout</button>
+        </div>
+    </div>
+
+</div>

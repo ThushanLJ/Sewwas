@@ -1,5 +1,6 @@
 import { SubcatagoryService } from './../../Services/subcatagory.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-catagory-info',
@@ -8,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CatagoryInfoComponent implements OnInit {
 
-  constructor(private subCategoryService: SubcatagoryService) { }
+  constructor(private subCategoryService: SubcatagoryService,
+              private router : Router) { }
 
   newArray: any[];
   bizNewsArray: any[];
@@ -30,6 +32,16 @@ export class CatagoryInfoComponent implements OnInit {
       this.newsVideoArray = data.data;
       console.log(this.newsVideoArray, "newsVideoArray");
     });
+  }
+
+  moreDetail(item){
+    // this.router.navigate([''])
+    if(item.storySite!='youtube'){
+      this.router.navigate(['/news/'+item._id])
+    }
+    else{
+      this.router.navigate(['/video/'+item._id])
+    }
   }
 
 }
