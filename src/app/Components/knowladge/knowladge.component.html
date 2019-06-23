@@ -1,50 +1,61 @@
 <!--========================== section-info ===========================-->
 <div class="container section no-padding">
-        <div class="info">
-            <div class="sec-ttl">
-                <span class="info">Knowladge ></span>
-            </div>
-            <div class="row no-margin ">
-                <div class="col-3 no-padding">
-                    <div *ngFor="let item of arr; let i = index">
-                      <div class="sec-news-block-1 sec-news-block-a" *ngIf="i == 0">
-                        <img class="sec-block-a-img" src={{item.enlargeImgUrl}}>
+    <div class="info">
+        <div class="sec-ttl">
+            <span class="info">Knowladge ></span>
+        </div>
+        <div class="row no-margin ">
+            <div class="col-3 no-padding">
+                <div *ngFor="let item of arr; let i = index">
+                    <div class="sec-news-block-1 sec-news-block-a" *ngIf="i == 0">
+                        <!-- <img class="sec-block-a-img" src={{item.enlargeImgUrl}}> -->
+                        <img *ngIf='item.enlargeImgUrl' class="sec-block-a-img" src={{item.enlargeImgUrl}}>
+                        <img *ngIf='!item.enlargeImgUrl' class="sec-block-a-img" src="assets/img/hiru.png">
                         <div class="sec-block-a-ttl">
-                          <span (click)="moreDetail(item)">{{item.storyText}}</span>
+                            <span (click)="moreDetail(item)">{{item.storyText}}</span>
                         </div>
-                            <span>
-                                <a target="_blank" href={{item.storyTextUrl}}>
-                                    <img *ngIf='item.storySite=="hiru"' class="source" src="assets/img/hiru.png">
-                                    <img *ngIf='item.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
-                                    <img *ngIf='item.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
-                                </a>
-                            </span>
-                        </div>
+                        <span>
+                            <a target="_blank" href={{item.storyTextUrl}}>
+                                <img *ngIf='item.storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                <img *ngIf='item.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                <img *ngIf='item.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
+                            </a>
+                        </span>
                     </div>
                 </div>
-                <div class="col-3 no-padding">
-                    <div class="sec-news-block-2 sec-news-block-b" *ngFor="let item of arr; let i = index">
-                        <div class="home-news-item-a" *ngIf="i > 0 && i < 4">
-                            <div class="row no-margin">
-                                <div class="col-5 no-padding"> <img class="home-news-item-a-img"
-                                        src={{item.enlargeImgUrl}}> </div>
-                                <div class="col-7 no-padding">
-                                    <div class="home-news-item-a-ttl">
-                                        <div class="a-hedline"><span (click)="moreDetail(item)">{{item.storyText}}</span></div>
-                                        <div class="n-i-source">
-                                                <span>
-                                                    <a target="_blank" href={{item.storyTextUrl}}>
-                                                        <img *ngIf='item.storySite=="hiru"' class="source" src="assets/img/hiru.png">
-                                                        <img *ngIf='item.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
-                                                        <img *ngIf='item.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
-                                                    </a>
-                                                </span>
-                                        </div>
+            </div>
+            <div class="col-3 no-padding">
+                <div class="sec-news-block-2 sec-news-block-b" *ngFor="let item of arr; let i = index">
+                    <div class="home-news-item-a" *ngIf="i > 0 && i < 4">
+                        <div class="row no-margin">
+                            <div class="col-5 no-padding">
+                                <!-- <img class="home-news-item-a-img" src={{item.enlargeImgUrl}}>  -->
+                                <img *ngIf='item.enlargeImgUrl' class="sec-block-a-img" src={{item.enlargeImgUrl}}>
+                                <img *ngIf='item.enlargeImgUrl=="null"' class="sec-block-a-img"
+                                    src="assets/img/deafault.png">
+                            </div>
+
+                            <div class="col-7 no-padding">
+                                <div class="home-news-item-a-ttl">
+                                    <div class="a-hedline"><span (click)="moreDetail(item)">{{item.storyText}}</span>
+                                    </div>
+                                    <div class="n-i-source">
+                                        <span>
+                                            <a target="_blank" href={{item.storyTextUrl}}>
+                                                <img *ngIf='item.storySite=="hiru"' class="source"
+                                                    src="assets/img/hiru.png">
+                                                <img *ngIf='item.storySite=="adaDerana"' class="source"
+                                                    src="assets/img/derana.png">
+                                                <img *ngIf='item.storySite=="Youtube"' class="source"
+                                                    src="assets/img/youtube.png">
+                                            </a>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!--
+                    </div>
+                    <!--
                         <div class="home-news-item-a">
                             <div class="row no-margin">
                                 <div class="col-5 no-padding"> <img class="home-news-item-a-img"
@@ -72,30 +83,38 @@
                             </div>
                         </div>
                       -->
-                    </div>
                 </div>
-                <div class="col-3 no-padding">
-                    <div class="sec-news-block-3 sec-news-block-b" *ngFor="let item of arr; let i = index">
-                        <div class="home-news-item-a" *ngIf="i > 3 && i < 7">
-                            <div class="row no-margin">
-                                <div class="col-5 no-padding"> <img class="home-news-item-a-img"
-                                        src={{item.enlargeImgUrl}}> </div>
-                                <div class="col-7 no-padding">
-                                    <div class="home-news-item-a-ttl">
-                                        <div class="a-hedline"><span (click)="moreDetail(item)">{{item.storyText}}</span></div>
-                                        <div class="n-i-source"> 
-                                                <span>
-                                                    <a target="_blank" href={{item.storyTextUrl}}>
-                                                        <img *ngIf='item.storySite=="hiru"' class="source" src="assets/img/hiru.png">
-                                                        <img *ngIf='item.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
-                                                        <img *ngIf='item.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
-                                                    </a>
-                                                </span>
-                                        </div>
+            </div>
+            <div class="col-3 no-padding">
+                <div class="sec-news-block-3 sec-news-block-b" *ngFor="let item of arr; let i = index">
+                    <div class="home-news-item-a" *ngIf="i > 3 && i < 7">
+                        <div class="row no-margin">
+                            <div class="col-5 no-padding">
+                                <!-- <img class="home-news-item-a-img" src={{item.enlargeImgUrl}}> -->
+                                <img *ngIf='item.enlargeImgUrl' class="sec-block-a-img" src={{item.enlargeImgUrl}}>
+                                <img *ngIf='item.enlargeImgUrl=="null"' class="sec-block-a-img" src="assets/img/deafault.png">
+                            </div>
+                            <div class="col-7 no-padding">
+                                <div class="home-news-item-a-ttl">
+                                    <div class="a-hedline"><span (click)="moreDetail(item)">{{item.storyText}}</span>
+                                    </div>
+                                    <div class="n-i-source">
+                                        <span>
+                                            <a target="_blank" href={{item.storyTextUrl}}>
+                                                <img *ngIf='item.storySite=="hiru"' class="source"
+                                                    src="assets/img/hiru.png">
+                                                <img *ngIf='item.storySite=="adaDerana"' class="source"
+                                                    src="assets/img/derana.png">
+                                                <img *ngIf='item.storySite=="Youtube"' class="source"
+                                                    src="assets/img/youtube.png">
+                                            </a>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
-                        </div><!--
+                        </div>
+                    </div>
+                    <!--
                         <div class="home-news-item-a">
                             <div class="row no-margin">
                                 <div class="col-5 no-padding"> <img class="home-news-item-a-img"
@@ -122,26 +141,27 @@
                                 </div>
                             </div>
                         </div>-->
-                    </div>
                 </div>
-                <div class="col-3 no-padding">
-                    <div *ngFor="let item of arr; let i = index">
-                      <div class="sec-news-block-4 sec-news-block-a" *ngIf="i == 7">
-                        <img class="sec-block-a-img" src={{item.enlargeImgUrl}}>
+            </div>
+            <div class="col-3 no-padding">
+                <div *ngFor="let item of arr; let i = index">
+                    <div class="sec-news-block-4 sec-news-block-a" *ngIf="i == 7">
+                        <!-- <img class="sec-block-a-img" src={{item.enlargeImgUrl}}> -->
+                        <img *ngIf='item.enlargeImgUrl' class="sec-block-a-img" src={{item.enlargeImgUrl}}>
+                        <img *ngIf='item.enlargeImgUrl=="null"' class="sec-block-a-img"  src="assets/img/deafault.png">
                         <div class="sec-block-a-ttl">
                             <span (click)="moreDetail(item)">{{item.storyText}}</span>
                         </div>
-                            <span>
-                                <a target="_blank" href={{item.storyTextUrl}}>
-                                    <img *ngIf='item.storySite=="hiru"' class="source" src="assets/img/hiru.png">
-                                    <img *ngIf='item.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
-                                    <img *ngIf='item.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
-                                </a>
-                            </span>
-                        </div>
+                        <span>
+                            <a target="_blank" href={{item.storyTextUrl}}>
+                                <img *ngIf='item.storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                <img *ngIf='item.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                <img *ngIf='item.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
+                            </a>
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
-      </div>
-      
+    </div>
+</div>

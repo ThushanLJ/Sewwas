@@ -357,5 +357,88 @@
         </div>
       </div>
     </header>
+    <div class="container2" id="container2">
+        <div class="carousel-wrapper">
+          <div class="carousel" data-flickity>
+            <div class="carousel-cell" aria-selected="false" [routerLink]="['/catagory', 'knw']">
+              <h3>Knowledge</h3>
+              <!-- <a class="more" href="">{{knwArray[0].storyText | slice:0:60}}</a> -->
+              <div class="imageSize">
+                <img  src={{knwArray[0].enlargeImgUrl}} />
+              </div>
+              <div>
+                <p>
+                  {{knwArray[0].storyText}}
+                </p>
+              </div>
+              <!-- <div class="line"></div>
+              <div class="price">
+                <span>225<sup>€</sup></span>
+              </div> -->
+            </div>
+            <div class="carousel-cell" aria-selected="false" [routerLink]="['/catagory', 'inf']">
+              <h3>Information</h3>
+              <!-- <a class="more" href="">{{infArray[0].storyText | slice:0:60}}</a> -->
+              <div  class="imageSize">
+              <img src={{infArray[0].enlargeImgUrl}} />
+              </div>
+              <div>
+                <p>
+                  {{infArray[0].storyText}}
+                </p>
+              </div>
+              <!-- <div class="line"></div>
+              <div class="price">
+                <span>225<sup>€</sup></span>
+              </div> -->
+            </div>
+            <div class="carousel-cell active" aria-selected="true">
+              <h3>Home</h3>
+              <!-- <a class="more" href="">{{latestArray[1].storyText | slice:0:60}}</a> -->
+              <div class="imageSize">
+                <img  src={{latestArray[1].enlargeImgUrl}} />
+              </div>
+              <div>
+                <p>
+                  {{latestArray[1].storyText}}
+                </p>
+              </div>
+              <!-- <div class="line"></div>
+              <div class="price">
+                <span>225<sup>€</sup></span>
+              </div> -->
+            </div>
+            <div class="carousel-cell" aria-selected="false" [routerLink]="['/catagory', 'ent']">
+              <h3>Entertainment</h3>
+              <!-- <a class="more" href="">{{entArray[0].storyText | slice:0:40}}</a> -->
+              <div class="imageSize">
+                <img  src={{entArray[0].enlargeImgUrl}} />
+              </div>
+              <div>
+                <p>
+                  {{entArray[0].storyText}}
+                </p>
+              </div>
+              
+              <!-- <div class="line"></div>
+              <div class="price">
+                <span>225<sup>€</sup></span>
+              </div> -->
+            </div>
+            <div class="carousel-cell" aria-selected="false">
+              <h3>Blog</h3>
+              <a class="more" href="">Explore more</a>
+              <div class="imageSize">
+                <img 
+                src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" />
+              </div>
+              <!-- <div class="line"></div>
+              <div class="price">
+                <span>225<sup>€</sup></span>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NewsService } from 'src/app/services/news.service';
 
 @Component({
   selector: 'app-new-header',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewHeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private newsService: NewsService
+  ) { }
+
+  knwArray:any[];
+  entArray:any[];
+  infArray:any[];
+  latestArray:any[];
 
   ngOnInit() {
 
@@ -23,7 +31,30 @@ export class NewHeaderComponent implements OnInit {
 
       var header = document.getElementById("header");
       header.setAttribute("class", "active");
+      var container2 = document.getElementById("container2");
+      container2.setAttribute("class", "container2 active");
     }, 10000);
+
+
+    this.newsService.getKnowladgeNews().subscribe((data:any)=>{
+      this.knwArray=data.data;
+      console.log(this.knwArray,"getKnowladgeNews");
+    })
+
+    this.newsService.getInfomationNews().subscribe((data:any)=>{
+      this.infArray=data.data;
+      console.log(this.infArray,"getInfomationNews");
+    })
+
+    this.newsService.getEntertainmentNews().subscribe((data:any)=>{
+      this.entArray=data.data;
+      console.log(this.entArray,"getEntertainmentNews");
+    })
+
+    this.newsService.getLatestNews().subscribe((data:any)=>{
+      this.latestArray=data.data;
+      console.log(this.latestArray,"getLatestNews");
+    })
   }
 
 }

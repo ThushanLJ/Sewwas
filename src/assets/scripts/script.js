@@ -17,4 +17,5 @@
 // setTimeout(function(){ 
 // 	document.getElementById('svg').classList.add('animate');
 // 	$('header').addClass('active');
+// $('.container2').addClass('active');
 // }, 10000);

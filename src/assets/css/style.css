@@ -207,3 +207,30 @@ div#info-section {
 	height: 20%;
 	text-align: center;
 }
+
+#header.other {
+    background: #fff;
+    /* color: #666; */
+}
+#header.other:before{
+	content:'';
+	position:absolute;
+	width:100%;
+	height:50px;
+	background:blue;
+}
+#header.other .action-sec a{
+	color:#444;
+}
+.flickity-page-dots .dot.is-selected{
+	background: #f79327 !important;
+	bottom: -85px !important;
+}
+.flickity-page-dots .dot {
+    background:#f1f1f1 !important;
+	opacity:1 !important;
+	bottom: -85px !important;
+}
+.flickity-viewport{
+	overflow: visible !important;
+}
