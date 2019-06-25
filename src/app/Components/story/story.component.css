@@ -1,0 +1,46 @@
+.textHead{
+    text-align:center;
+}
+.imageAlignment{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.textContent{
+    text-align: justify;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.commentArea{
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 10px;
+}
+
+.btn{
+    margin-top: 5px;
+}
+
+.vote{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.btnAlign{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.viewComments{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.comment-user-profile-image{
+    height: 12%;
+}
+.comment-align{
+    height: 80px;
+}
+.font-style-user{
+    font-weight:100;
+}

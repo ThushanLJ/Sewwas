@@ -1,0 +1,35 @@
+@media all and (min-width: 720px) {
+    .pc {
+        display: block;
+    }
+    .tab {
+        display: none;
+    }
+    .mob {
+        display: none;
+    }
+}
+
+@media all and (max-width: 720px) {
+    .pc {
+        display: none;
+    }
+    .tab {
+        display: block;
+    }
+    .mob {
+        display: none;
+    }
+}
+
+@media all and (max-width: 479px) {
+    .pc {
+        display: none;
+    }
+    .tab {
+        display: none;
+    }
+    .mob {
+        display: block;
+    }
+}

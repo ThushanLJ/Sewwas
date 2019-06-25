@@ -1,0 +1,332 @@
+<div class="body-top" *ngIf="load">
+  <div class="container no-padding">
+    <div class="row no-margin">
+      <div class="col-lg-6  col-sm-12  no-padding ">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+          </ul>
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row no-margin">
+                <div class="col-4 no-padding" *ngFor="let item of newsArray; let i = index">
+                  <div class="carousel-n-item" *ngIf=" i < 3">
+                    <div class="c-n-img" *ngIf="item.enlargeImgUrl">
+                      <img class="c-n-img" src="{{item.enlargeImgUrl}}">
+                    </div>
+                    <div class="c-n-img" *ngIf="!item.enlargeImgUrl">
+                      <img class="c-n-img" src="{{item.enlargeImgUrl}}">
+                    </div>
+                    <div class="c-n-ttl">
+                      <div class="c-hedline">{{item.storyText | slice:0:60}}...
+                        <br>
+                        <small> Read More</small>
+                      </div>
+                      <div class="c-n-source">
+                        <img class="source" src="assets/img/source logo.png"> </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="col-4 no-padding" style="border-left: 1px solid #fff;">
+                          <div class="carousel-n-item">
+                              <div class="c-n-img"> <img class="c-n-img" src="assets/img/new img 2.jpg">
+                              </div>
+                              <div class="c-n-ttl">
+                                  <div class="c-hedline">Sri Lanka blasts: IT worker held</div>
+                                  <div class="c-n-source"> <img class="source"
+                                          src="assets/img/source logo.png"> </div>
+                              </div>
+                          </div>
+                      </div> -->
+                <!-- <div class="col-4 no-padding" style="border-left: 1px solid #fff;">
+                          <div class="carousel-n-item">
+                              <div class="c-n-img"> <img class="c-n-img" src="assets/img/new img 3.jpg">
+                              </div>
+                              <div class="c-n-ttl">
+                                  <div class="c-hedline">Sri Lanka blasts: IT worker held</div>
+                                  <div class="c-n-source"> <img class="source"
+                                          src="assets/img/source logo.png"> </div>
+                              </div>
+                          </div>
+                      </div> -->
+              </div>
+            </div>
+            <div class="carousel-item ">
+              <div class="row no-margin">
+                <div class="col-4 no-padding" *ngFor="let item of newsArray; let i = index">
+                  <div class="carousel-n-item" *ngIf=" i >= 3 && i < 6">
+                    <div class="c-n-img" *ngIf="item.enlargeImgUrl">
+                      <img class="c-n-img" src="{{item.enlargeImgUrl}}">
+                    </div>
+                    <div class="c-n-img" *ngIf="!item.enlargeImgUrl">
+                      <img class="c-n-img" src="{{item.enlargeImgUrl}}">
+                    </div>
+                    <div class="c-n-ttl">
+                      <div class="c-hedline">{{item.storyText | slice:0:60}}...
+                        <br>
+                        <small> Read More</small>
+                      </div>
+                      <div class="c-n-source">
+                        <img class="source" src="assets/img/source logo.png"> </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="col-4 no-padding" style="border-left: 1px solid #fff;">
+                          <div class="carousel-n-item">
+                              <div class="c-n-img"> <img class="c-n-img" src="assets/img/new img 4.jpg">
+                              </div>
+                              <div class="c-n-ttl">
+                                  <div class="c-hedline">Sri Lanka blasts: IT worker held</div>
+                                  <div class="c-n-source"> <img class="source"
+                                          src="assets/img/source logo.png"> </div>
+                              </div>
+                          </div>
+                      </div> -->
+                <!-- <div class="col-4 no-padding" style="border-left: 1px solid #fff;">
+                          <div class="carousel-n-item">
+                              <div class="c-n-img"> <img class="c-n-img" src="assets/img/new img 6.jpg">
+                              </div>
+                              <div class="c-n-ttl">
+                                  <div class="c-hedline">Sri Lanka blasts: IT worker held</div>
+                                  <div class="c-n-source"> <img class="source"
+                                          src="assets/img/source logo.png"> </div>
+                              </div>
+                          </div>
+                      </div> -->
+              </div>
+            </div>
+            <div class="carousel-item ">
+              <div class="row no-margin">
+                <div class="col-4 no-padding" *ngFor="let item of newsArray; let i = index">
+                  <div class="carousel-n-item" *ngIf=" i >= 6 && i < 9">
+                    <div class="c-n-img" *ngIf="item.enlargeImgUrl">
+                      <img class="c-n-img" src="{{item.enlargeImgUrl}}">
+                    </div>
+                    <div class="c-n-img" *ngIf="!item.enlargeImgUrl">
+                      <img class="c-n-img" src="{{item.enlargeImgUrl}}">
+                    </div>
+                    <div class="c-n-ttl">
+                      <div class="c-hedline">{{item.storyText | slice:0:60}}...
+                        <br>
+                        <small> Read More</small>
+                      </div>
+                      <div class="c-n-source">
+                        <img class="source" src="assets/img/source logo 2.png"> </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="col-4 no-padding" style="border-left: 1px solid #fff;">
+                  <div class="carousel-n-item">
+                    <div class="c-n-img">
+                      <img class="c-n-img" src="assets/img/new img 7.jpg">
+                    </div>
+                    <div class="c-n-ttl">
+                      <div class="c-hedline">Sri Lanka blasts: IT worker held</div>
+                      <div class="c-n-source">
+                        <img class="source" src="assets/img/source logo 2.png"> </div>
+                    </div>
+                  </div>
+                </div> -->
+                <!-- <div class="col-4 no-padding" style="border-left: 1px solid #fff;">
+                  <div class="carousel-n-item">
+                    <div class="c-n-img">
+                      <img class="c-n-img" src="assets/img/new img 4.jpg">
+                    </div>
+                    <div class="c-n-ttl">
+                      <div class="c-hedline">Sri Lanka blasts: IT worker held</div>
+                      <div class="c-n-source">
+                        <img class="source" src="assets/img/source logo 2.png"> </div>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+        <div class="news-under-slider">
+          <div class="row " style="margin-right: -10px; margin-left: -10px;">
+            <div *ngFor="let item of newsArray; let i = index">
+              <div class="col-6 padding-ten " *ngIf="i >= 2 && i < 4">
+                <div class="home-news-item-a">
+                  <div class="row no-margin">
+                    <div class="col-5 no-padding">
+                      <img class="home-news-item-a-img" src="{{item.enlargeImgUrl}}"> </div>
+                    <div class="col-7 no-padding">
+                      <div class="home-news-item-a-ttl">
+                        <div class="a-hedline">{{item.storyText | slice:0:80}}...
+                          <br>
+                          <small> Read More</small>
+                        </div>
+                        <div class="n-i-source">
+                          <a href="{{item.storyTextUrl}}" target="_blank">
+                            <img class="source" src="assets/img/source logo 2.png">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 padding-ten " *ngFor="let item of newsArray; let i = index">
+              <div class="home-news-item-a" *ngIf="i >= 4 && i < 6">
+                <div class="row no-margin">
+                  <div class="col-5 no-padding">
+                    <img class="home-news-item-a-img" src="{{item.enlargeImgUrl}}"> </div>
+                  <div class="col-7 no-padding">
+                    <div class="home-news-item-a-ttl">
+                      <div class="a-hedline">{{item.storyText | slice:0:80}}...
+                        <br>
+                        <small> Read More</small>
+                      </div>
+                      <div class="n-i-source">
+                        <a href="{{item.storyTextUrl}}" target="_blank">
+                          <img class="source" src="assets/img/source logo 2.png">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- second collum -->
+      <div class="col-lg-3 col-sm-6">
+        <div class="ftr-news">
+
+          <!-- <div class="ftr-news-img"  style="background:url({{item.thumbImageSrcUrl|images}})"></div> -->
+          <!-- <div class="ftr-news-img"   src={{item.thumbImageSrcUrl|images}}></div> -->
+          <!-- <div class="ftr-news-img"  [style.background-image]="{{item.thumbImageSrcUrl | images}}"></div> -->
+
+          <!-- <div class="ftr-news-img"   *ngIf="!item.enlargeImgUrl" style="background:url() !important"></div> -->
+
+          <img class="ftr-news-img" src={{newsArray[0].enlargeImgUrl}}>
+          <div class="ftr-news-ttl">
+            <div class="ftr-hedline">{{newsArray[0].storyText | slice:0:80}}...
+              <br>
+              <small> Read More</small>
+            </div>
+            <div class="ftr-source">
+              <a href="{{newsArray[0].storyTextUrl}}" target="_blank">
+                <img class="source" src="assets/img/source logo.png">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="home-news-item-a">
+          <div class="row no-margin">
+            <div class="col-5 no-padding">
+              <img class="home-news-item-a-img" src={{newsArray[6].thumbImageSrcUrl}}>
+            </div>
+            <div class="col-7 no-padding">
+              <div class="home-news-item-a-ttl">
+                <div class="a-hedline">{{newsArray[6].storyText | slice:0:80}}...
+                  <br>
+                  <small> Read More</small>
+                </div>
+                <div class="n-i-source">
+                  <a href={{newsArray[6].storyTextUrl}} target="_blank">
+                    <img class="source" src="assets/img/source logo 2.png">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-news-item-a">
+          <div class="row no-margin">
+            <div class="col-5 no-padding">
+              <img class="home-news-item-a-img" src={{newsArray[7].enlargeImgUrl}}>
+            </div>
+            <div class="col-7 no-padding">
+              <div class="home-news-item-a-ttl">
+                <div class="a-hedline">{{newsArray[7].storyText | slice:0:80}}...
+                  <br>
+                  <small> Read More</small>
+                </div>
+                <div class="n-i-source">
+                  <a href={{newsArray[7].storyTextUrl}} >
+                    <img class="source" src="assets/img/source logo 2.png">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-news-item-a">
+          <div class="row no-margin">
+            <div class="col-5 no-padding">
+              <img class="home-news-item-a-img" src={{newsArray[8].thumbImageSrcUrl}}>
+            </div>
+            <div class="col-7 no-padding">
+              <div class="home-news-item-a-ttl">
+                <div class="a-hedline">{{newsArray[8].storyText | slice:0:80}}...
+                  <br>
+                  <small> Read More</small>
+                </div>
+                <div class="n-i-source">
+                  <a href={{newsArray[8].storyTextUrl}} target="_blank">
+                    <img class="source" src="assets/img/source logo 2.png">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- third collum -->
+
+      <div class="col-lg-3 col-sm-6 no-padding ">
+        
+          <div class="ftr-news-2">
+            <!-- <div *ngIf="item.enlargeImgUrl">
+              <img class="ftr-news-img" src={{item.enlargeImgUrl}}>
+            </div>
+            <div *ngIf="!item.enlargeImgUrl">
+              <img class="ftr-news-img" src={{item.enlargeImgUrl}}>
+            </div> -->
+            <img class="ftr-news-img" src={{newsArray[1].thumbImageSrcUrl}}>
+            <div class="ftr-news-2-ttl">
+              <div class="ftr-2-hedline">{{newsArray[1].storyText | slice:0:80}}</div>
+              <div class="ftr-2-source">
+                <a href={{newsArray[1].storyTextUrl}} target="_blank">
+                  <img class="source" src="assets/img/source logo 2.png">
+                </a>
+              </div>
+            
+          </div>
+        </div>
+
+
+        <div class="home-ad-one">
+          <img class="ad-img" src="assets/img/ad-a.jpg">
+
+
+        </div>
+      </div>
+    </div>
+    <div class="row no-margin">
+      <div class="col-12 no-padding">
+        <div class="home-ad-two">
+          <img class="ad-img" src="assets/img/ad-b.jpg">
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
