@@ -8,6 +8,7 @@ import { NewsComponent } from './Pages/news/news.component';
 import { StoryComponent } from './Components/story/story.component';
 import { VideoComponent } from './Components/video/video.component';
 import { LoginComponent } from './Pages/login/login.component';
+import { BlogComponent } from './Pages/blog/blog.component';
 
 const routes: Routes = [
   // {
@@ -28,7 +29,7 @@ const routes: Routes = [
   {
     path:'video/:id',component:NewsComponent,
     children:[{path:'',component:VideoComponent}]
-  }
+  },
 ];
 
 @NgModule({

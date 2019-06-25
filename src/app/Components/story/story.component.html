@@ -1,18 +1,34 @@
 <div>
-        <div><h1>{{arr[0].storyText}}</h1></div>
-        <div><img src={{arr[0].enlargeImgUrl}}></div>
-        <div [innerHtml]="arr[0].moreStoryHtml"></div>
-        <div>
-            <form [formGroup]="commentForm">
-                <div>
-                    <textarea class="form-control" rows="4" placeholder="Add your comment...." formControlName="text"></textarea>
+    <div>
+        <h1 class="textHead">{{arr[0].storyText}}</h1>
+    </div>
+    <div>
+        <img class="imageAlignment" src={{arr[0].enlargeImgUrl}}>
+    </div>
+    <div class="textContent" [innerHtml]="arr[0].moreStoryHtml"></div>
+    <div class="commentArea">
+        <form [formGroup]="commentForm">
+            <div class="row">
+                <textarea class="form-control" rows="4" placeholder="Add your comment...."
+                    formControlName="text"></textarea>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <button class="btn btn-primary signup" (click)="submitComment()">Submit Comment</button>
                 </div>
-                <div>
-                    <button (click)="submitComment()" class="signup">Submit Comment</button>
+                <div class="col-2">
+                    <div>
+                        <button class="btn btn-danger" (click)="addVote()">Recommended</button>
+                        <button class="btn btn-danger" disabled>{{arr[0].voteCount}}</button>
+                    </div>
+
                 </div>
-            </form>
-        </div>
-        <!-- <div>
+            </div>
+        </form>
+
+    </div>
+
+    <!-- <div>
             <table>
                 <thead>
                     <th></th>
@@ -26,21 +42,24 @@
                 </tbody>
             </table>
         </div> -->
-        
-        <div *ngIf="arr[0].comments?.length > 0">
-            <div *ngFor="let comment of arr[0].comments" >
-                <div class="row">
-                    <div class="col">
-                        <div>
-                            <div>hardcode user</div>
-                            <div><p>{{comment.text}}</p></div>
-                        </div>
+
+    <div class="viewComments" *ngIf="arr[0].comments?.length > 0">
+        <div *ngFor="let comment of arr[0].comments">
+            <div class="row comment-align">
+                <div class="col-1">
+                    <img class="comment-user-profile-image" src="assets/img/profile.png">
+                </div>
+                <div class="col-1">
+                    <div class="row"><p class="font-style-user">{{comment.username}}: </p></div>
+                    <div class="row">
+                        <p>{{comment.text}}</p>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <div *ngIf="arr[0].comments?.length == 0">
-            <p>Be the first to comment</p>
-        </div>
+    </div>
+</div>
+
+<div *ngIf="arr[0].comments?.length == 0">
+    <p>Be the first to comment</p>
 </div>

@@ -38,4 +38,9 @@ export class NewsService {
   addComment(data){
     return this.http.post(this.baseURL+'addNewsComment',data);
   }
+
+  addNewsVote(data){
+    console.log(data);
+    return this.http.post(this.baseURL+'addNewsVote',data);
+  }
 }

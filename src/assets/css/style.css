@@ -138,8 +138,23 @@ header.active{
 div#logo-section {
 	width: 30%;
 	position: relative;
-	/* display: flex; */
+	display: flex;
 	height: 100%;
+	z-index: 2;
+	overflow:hidden;
+	align-items: center;
+	justify-content: center;
+}
+#header.other div#logo-section:after{
+	content: '';
+    position: absolute;
+    right: -20px;
+    top: 10px;
+    background: #f79327;
+    height:100%;
+    width: 50px;
+    z-index: 3;
+    transform: skewX(-20deg);
 }
 div#logo-section img{
 	height:100%
@@ -155,6 +170,7 @@ div#search-section {
 	position: relative;
 	background: #fff;
 	padding:0 50px 0 20px;
+	z-index: 2;
 }
 div#search-section input{
 	position:relative;
@@ -182,6 +198,7 @@ div#info-section {
 	position: relative;
 	display: flex;
 	flex-direction: column;
+	z-index: 2;
 }
 
 .sign-in-sec {
@@ -211,15 +228,27 @@ div#info-section {
 #header.other {
     background: #fff;
     /* color: #666; */
+    position: relative;
+    padding-top: 20px;
 }
 #header.other:before{
 	content:'';
 	position:absolute;
 	width:100%;
-	height:50px;
-	background:blue;
+	height: 30px;
+	background: #1b75bb;
+	top: 0;
 }
-#header.other .action-sec a{
+#header.other:after{
+	content:'';
+	position:absolute;
+	width:70%;
+	height: calc(100% - 30px);
+	background: #f79327;
+	bottom: 0;
+	right:0;
+}
+#header.other .action-sec a, #header.other .date-sec{
 	color:#444;
 }
 .flickity-page-dots .dot.is-selected{

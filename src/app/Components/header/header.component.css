@@ -1,0 +1,88 @@
+header {
+	position: absolute;
+	width: 100%;
+	height: 15vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	top: -15vh;
+	transition: all .4s ease;
+}
+header.active{
+	top:0;
+}
+div#logo-section {
+	width: 30%;
+    position: relative;
+    height: 100%;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+}
+div#logo-section img{
+	height:100%
+}
+
+div#search-section {
+	border-radius: 20px;
+	width: 40%;
+	height: 30px;
+	display: flex;
+	align-items:center;
+	justify-content:start;
+	position: relative;
+	background: #fff;
+	padding:0 50px 0 20px;
+}
+div#search-section input{
+	position:relative;
+	width:100%;
+	border:0px;
+}
+div#search-section button{
+	position:absolute;
+	right:0;
+	background:transparent;
+	width:30px;
+	height:30px;
+	border:0px;
+	top:0;
+	right:8px;
+}
+div#search-section button img{
+	position:relative;
+
+	height:100%;
+}
+
+div#info-section {
+	width: 15%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.sign-in-sec {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+}
+.sign-in-sec img{
+	height:30px;
+	margin-right:20px
+}
+
+.action-sec a {
+	font-size: 13px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.date-sec {
+	color: #ddd;
+	font-size: 12px;
+	height: 20%;
+	text-align: center;
+}

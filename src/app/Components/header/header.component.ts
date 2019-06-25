@@ -9,7 +9,12 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
+  load:boolean=true;
+
   ngOnInit() {
+    if(localStorage.getItem('sewwasUserToken')==null ){
+      this.load=false;
+    }
   }
 
 }
