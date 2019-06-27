@@ -54,4 +54,8 @@ export class SubcatagoryService {
   getTechNews(){
     return this.http.get(this.baseURL2+"techNews");
   }
+
+  getDeals(){
+    return this.http.get(this.baseURL2 + "saleDeal");
+  }
 }
