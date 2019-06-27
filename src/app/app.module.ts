@@ -32,6 +32,7 @@ import { LoginComponent } from './Pages/login/login.component';
 import { NewHeaderComponent } from './Components/new-header/new-header.component';
 import { BlogComponent } from './Pages/blog/blog.component';
 import { CatagoryBlogComponent } from './Components/catagory-blog/catagory-blog.component';
+import { HomeDealsComponent } from './Components/home-deals/home-deals.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { CatagoryBlogComponent } from './Components/catagory-blog/catagory-blog.
     LoginComponent,
     NewHeaderComponent,
     BlogComponent,
-    CatagoryBlogComponent
+    CatagoryBlogComponent,
+    HomeDealsComponent
   ],
   imports: [
     BrowserModule,
