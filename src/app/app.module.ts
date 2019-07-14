@@ -7,6 +7,8 @@ import { ImagesPipe } from './pipes/images.pipe';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { JwSocialButtonsModule } from 'jw-angular-social-buttons';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,6 +35,28 @@ import { NewHeaderComponent } from './Components/new-header/new-header.component
 import { BlogComponent } from './Pages/blog/blog.component';
 import { CatagoryBlogComponent } from './Components/catagory-blog/catagory-blog.component';
 import { HomeDealsComponent } from './Components/home-deals/home-deals.component';
+import { FirstHeaderComponent } from './Components/first-header/first-header.component';
+import { SecondHeaderComponent } from './Components/second-header/second-header.component';
+import { First2HeaderComponent } from './Components/first2-header/first2-header.component';
+import { SubCatagoryComponent } from './Pages/sub-catagory/sub-catagory.component';
+import { MoreNewsComponent } from './Components/more-news/more-news.component';
+import {ReadListComponent} from './Components/read-list/read-list.component';
+import { NewPostComponent } from './Components/new-post/new-post.component';
+import { CommentsComponent } from './Components/comments/comments.component';
+import { PostAllComponent } from './Components/post-all/post-all.component';
+import { CatagorySearchComponent } from './Components/catagory-search/catagory-search.component';
+import { SearchComponent } from './Pages/search/search.component';
+import { ViewProfileComponent } from './Components/view-profile/view-profile.component';
+import { HistoryComponent } from './Components/history/history.component';
+import { PinsComponent } from './Components/pins/pins.component';
+import { SignUpComponent } from './Components/sign-up/sign-up.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { BlogStoryComponent } from './Components/blog-story/blog-story.component';
+import { UserComponent } from './Pages/user/user.component';
+import { CatagoryDealsComponent } from './Components/catagory-deals/catagory-deals.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -58,7 +82,26 @@ import { HomeDealsComponent } from './Components/home-deals/home-deals.component
     NewHeaderComponent,
     BlogComponent,
     CatagoryBlogComponent,
-    HomeDealsComponent
+    HomeDealsComponent,
+    FirstHeaderComponent,
+    SecondHeaderComponent,
+    First2HeaderComponent,
+    SubCatagoryComponent,
+    MoreNewsComponent,
+    ReadListComponent,
+    NewPostComponent,
+    CommentsComponent,
+    PostAllComponent,
+    CatagorySearchComponent,
+    SearchComponent,
+    ViewProfileComponent,
+    HistoryComponent,
+    PinsComponent,
+    SignUpComponent,
+    BlogStoryComponent,
+    UserComponent,
+    CatagoryDealsComponent
+
   ],
   imports: [
     BrowserModule,
@@ -67,6 +110,9 @@ import { HomeDealsComponent } from './Components/home-deals/home-deals.component
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
+    CKEditorModule,
+    NgxPaginationModule,
+    JwSocialButtonsModule
   ],
   providers: [NewsService],
   bootstrap: [AppComponent]

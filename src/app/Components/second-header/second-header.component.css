@@ -1,0 +1,116 @@
+.navMargin{
+	margin-top: 4%;
+	margin-left: 9%;
+	margin-bottom:1px;
+	overflow: hidden;
+}
+	
+
+.navItem{
+	
+	font-size: 16px;
+	margin-right: 3%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 10%;
+	display:block;
+	padding: 3px 3px;
+	
+}
+
+
+.navRelatiVe{
+	display: relative;
+}
+.color-me{
+    color:black;
+}
+.topText{
+	font-family: Open Sans,sans-serif;
+	margin-left: 9%;
+	font-size:18px;
+	font-weight: 500;
+	resize: both;
+  overflow: auto;
+}
+.TN{
+	background-color: black;
+	color: white;
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 600;
+	margin: 12px 12px 12px 12px;
+	padding: 12px 12px 2px 12px;
+	list-style: none ;       
+	width: 100%;
+	
+}
+
+.searchMargin{
+	margin-left: 10%;
+	
+}
+div#search-section {
+	border-radius: 20px;
+	border: 1px solid #0c0c0c;
+	border-color: black;
+	width: 300px;
+	height: 30px;
+	display: flex;
+	align-items:center;
+	justify-content:start;
+	position: relative;
+	background: #fff;
+	padding:0 50px 0px 20px;
+	margin-left: 21%;
+	margin-right: 5%;
+	margin-bottom: 1%;
+	
+}
+
+.search{
+	height:70%;
+	width:70%;
+	padding-bottom: 20%;
+}
+
+div#search-section input{
+
+	width:100%;
+	border:0px;
+}
+div#search-section button{
+	position:absolute;
+	right:0;
+	background:transparent;
+	width:30px;
+	height:30px;
+	border:0px;
+	top:0;
+	right:8px;
+}
+div#search-section button img{
+	position:relative;
+
+	height:100%;
+}
+
+a:hover{
+	text-decoration: none;
+	color: rgb(0, 89, 255)
+}
+
+hr.style1{
+	border-top: 2px solid #1675b8;
+	margin-top: -4%;
+}
+
+
+.set1{
+	color: rgb(0, 89, 255)
+}
+
+.set2{
+	color: black
+}
+
+

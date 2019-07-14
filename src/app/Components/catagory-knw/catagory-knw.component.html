@@ -2,7 +2,7 @@
 <div class="cat-body-top">
     <div class="container no-padding">
         <div class="row no-margin">
-            <h3 class="cat-ttl">Catagary Name</h3>
+            <h3 class="cat-ttl">Knowledge</h3>
         </div>
         <div class="row no-margin">
             <div class="col-lg-8 col-sm-12  no-padding ">
@@ -114,7 +114,9 @@
     <div class="row cat-sec-row-a">
         <div class="col-lg-3 col-sm-6 ">
             <div class="row no-margin">
-                <h3 class="sub-cat-ttl">Tech News</h3>
+                <a routerLink="/sub-catagory/tech">
+                    <h4 class="sub-cat-ttl">Tech News</h4>
+                </a>
             </div>
             <div *ngFor="let item of technews; let i = index">
                 <div class="sub-cat-news-item-a" *ngIf="i < 3">

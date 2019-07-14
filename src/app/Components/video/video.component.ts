@@ -18,7 +18,7 @@ export class VideoComponent implements OnInit {
   videoId='https://www.youtube.com/embed/videoseries?list=';
   private sub:any;
   type:string;
-  arr:any[];
+  arr:any;
   videoUrl:any;
   video='https://www.youtube.com/embed/';
 
@@ -28,14 +28,14 @@ export class VideoComponent implements OnInit {
       console.log(this.type);
     });
 
-    this.newsService.getNewsDetail(this.type).subscribe((data:any)=>{
+    this.newsService.getNewsWithUserId(this.type).subscribe((data:any)=>{
       this.arr=data.data;
       console.log(this.arr);
-      if(this.arr[0].storySubCategory=="teledrama"){
-        this.videoId=this.videoId+this.arr[0].storyTextUrl;
+      if(this.arr.storySubCategory=="teledrama"){
+        this.videoId=this.videoId+this.arr.storyTextUrl;
       }
       else{
-        this.videoUrl=this.arr[0].storyTextUrl.split("?v=");
+        this.videoUrl=this.arr.storyTextUrl.split("?v=");
         this.video=this.video+this.videoUrl[1];
         this.videoId=this.video;
       }

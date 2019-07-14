@@ -1,0 +1,62 @@
+.welcome{
+    font-size: 170%;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top:2%;
+    font-weight: 550;
+}
+.CP{
+    font-size: 140%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+}
+label{
+    border-radius: 50%;
+     }
+
+
+
+input[type="file"] {
+    display: none;
+}
+
+.img1
+	{
+		position: relative;
+		top: 0;
+        left: 0;
+        border-radius:100%;
+    
+	}
+	.img2
+	{
+		position: absolute;
+		top: 60%;
+        left: 14%;
+        border-radius:100%;
+    }
+ .picMargin{
+     margin-left: 44%;
+ }
+ hr{
+     height: 2px;
+ }
+ input{
+     width:80%;
+ }
+
+ .btnSub{
+     color:white;
+     background-color: #ff751a;
+     padding:10px 20px 10px 20px ;
+     font-size:150%;
+     border-radius:15px;
+     
+ }
+ .btnSub:hover{
+     background-color:  #ff944d;
+ }
+ .btnSubMargin{
+   margin-bottom: 10%;
+   margin-top: 5%;
+ }
+ 

@@ -1,0 +1,53 @@
+<div class="buttonArea">
+  <div class="btnOrder">
+    <button class="btn-publish" (click)="uploadAll()">Publish</button>
+    <button class="btn-other">Save</button>
+    <button class="btn-other">Preview</button>
+    <button class="btn-other">Close</button>
+  </div>
+</div>
+<div class="dataInputArea">
+  <form [formGroup]="blogForm">
+    <div class="form-group">
+      <div class="aa">Title</div>
+      <input type="text" class="form-control" id="title" formControlName="title" style="height:50px">
+
+    </div>
+    <!-- <div class="form-group">
+      <div class="aa">Blog Type</div>
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select Blog type</button>
+        <ul class="dropdown-menu">
+         
+          <li><a>Information</a></li>
+          <li><a>Entertainment</a></li>
+          <li><a>Knowledge</a></li>
+        </ul>
+      </div>
+    </div> -->
+    <div class="form-group">
+        <div class="aa">Blog Type</div>
+        <select class="form-control" style="height:50px" formControlName="type">
+            <option value="Information" selected>Information</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Knowledge">Knowledge</option>
+        </select>
+        
+      </div>
+    <div class="form-group">
+      <div class="aa">Upload an Image</div>
+      <input type="file" class="form-control" id="image" accept="image/*" style="height:50px" (change)="onFileChange($event)">
+    </div>
+
+    <div class="form-group">
+      <div class="aa">Content</div>
+      <ckeditor formControlName="text" [editor]="Editor" data="<p></p>"></ckeditor>
+    </div>
+
+  </form>
+
+</div>
+
+<br>
+<br>
+<br>

@@ -1,0 +1,92 @@
+<div class="d-flex flex-row-reverse">
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <span aria-hidden="true">{{ min+1 }}-{{ max }} of {{ blogs.length }}</span>
+      </li>
+      <li class="page-item">
+        <a class="page-link" (click)="previousPage()" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">Previous</span>
+        </a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">{{ page }}</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" (click)="nextPage()" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">Next</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-6">
+
+    <div *ngFor="let hero of blogs; let i = index">
+      <div *ngIf="i%2 == 0 && i<max_temp && i>=min">
+        <div class="card">
+          <div class="card-body" (click)="moreDetail(hero)">
+            <h6 class="card-title">{{hero.title}}
+              <br>{{hero.blogType}}
+            </h6>
+            <p class="card-text" [innerHtml]="hero.text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-sm-6">
+    <div *ngFor="let hero of blogs; let i = index">
+      <div *ngIf="i%2 == 1 && i<max_temp && i>=min">
+        <div class="card">
+          <div class="card-body" (click)="moreDetail(hero)">
+            <h6 class="card-title">{{hero.title}}
+              <br>{{hero.blogType}}
+            </h6>
+            <p class="card-text" [innerHtml]="hero.text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<a (click)="SeeMore()" style="margin-left:45%;" routerLink="#">See more</a>
+
+
+<div class="d-flex flex-row-reverse">
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <span aria-hidden="true">{{ min+1 }}-{{ max }} of {{ blogs.length }}</span>
+      </li>
+      <li class="page-item">
+        <a class="page-link" (click)="previousPage()" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">Previous</span>
+        </a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">{{ page }}</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" (click)="nextPage()" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">Next</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

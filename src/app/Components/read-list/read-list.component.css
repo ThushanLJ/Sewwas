@@ -1,0 +1,21 @@
+
+.card{
+    border: none;
+}
+
+.card-title{
+    background-color: rgb(0, 174, 255);
+    color: white;
+    padding: 10px
+}
+
+.card-text{
+    font-size: 10px;
+    padding: 10px;
+    border-bottom: 2px gray solid
+
+}
+
+.d-flex{
+    margin:0px 20px;
+}

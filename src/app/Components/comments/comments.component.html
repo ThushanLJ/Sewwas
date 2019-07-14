@@ -1,0 +1,68 @@
+
+
+    <div class="d-flex flex-row justify-content-end">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <span aria-hidden="true">1-11 of 11</span>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+
+    <div class="d-flex flex-row justify-content-start">
+
+      <nav aria-label="Page navigation example">
+          <ul class="pagination">
+              <li class="page-item">
+                  <span aria-hidden="true"><input type="checkbox"/></span>
+              </li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">Remove content</span>
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">Delete</span>
+              </a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">Spam</span>
+                </a>
+              </li>
+          </ul>
+        </nav>
+  </div>
+
+
+<table class="table">
+  <tbody>
+    <div *ngFor="let hero of HEROES; let i = index">
+    <tr>
+      <td class="w-2"><input type="checkbox"/></td>
+      <td class="col-sm-10">Today, readers have turned to Facebook and Instagram for their commenting fix. Spammers have taken over. And, as a result, some blog owners have done what would’ve once been unthinkable: turned off their comments.</td>
+      <td class="col-sm-1 spec">unkown</td>
+      <td class="col-sm-1">on 4/2/2019</td>
+    </tr>
+    </div>
+  </tbody>
+</table>
+
+
+<br><br><br>

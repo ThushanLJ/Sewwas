@@ -1,0 +1,53 @@
+
+
+
+<div class="float-left mx-5" ><h4><b>Results : {{ HEROES.length }}</b></h4></div>
+
+<br><br><br>
+
+<div *ngFor="let hero of HEROES; let i = index">
+<div *ngIf ="i>=min && i<max">
+
+<div class="container">
+
+  <div class="row">
+      <div class="col-sm text-justify">
+          <h3><b>Man who went to see his sick child in school shot dead</b></h3>
+      </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-2">
+      <img src="./assets/img/earthmap.jpg" class="img-fluid h-auto d-inline-block">
+    </div>
+    <div class="col-sm-8 text-justify">
+      Our community tells real global stories about resistance, justice and identity. Read reports on people whose voices and experiences are rarely seen in mainstream media. Social justice news. 40+ language translations. Unbiased global news. Truly international news. Types: Politics, Arts & Culture.
+    </div>
+  </div>
+
+  <div class="row float-sm-right auto  ">
+    <div class="col-sm-8 text-left">
+      <a routerLink="#">May 17,2019| Post a comment</a>
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-sm">
+        <hr>
+      </div>
+  </div>
+
+</div>
+
+</div>
+</div>
+
+<br><br><br>
+
+<a class="float-left mx-5 " (click)="PreviousPage()"  *ngIf="marked1">< Previous page</a>
+<a class="float-right mx-5 " (click)="NextPage()"  *ngIf="marked2">Next page ></a>
+
+
+<br><br><br>
+
+

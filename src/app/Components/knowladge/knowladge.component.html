@@ -1,9 +1,11 @@
 <!--========================== section-info ===========================-->
-<div class="container section no-padding">
+<div class="container section no-padding d-none d-sm-block">
     <div class="info">
         <div class="sec-ttl">
-            <span class="info">Knowladge ></span>
+            <span class="info"><a class="color-me" routerLink="/catagory/knw">Knowladge</a></span>
         </div>
+
+        <!--Web view-->
         <div class="row no-margin ">
             <div class="col-3 no-padding">
                 <div *ngFor="let item of arr; let i = index">
@@ -92,7 +94,8 @@
                             <div class="col-5 no-padding">
                                 <!-- <img class="home-news-item-a-img" src={{item.enlargeImgUrl}}> -->
                                 <img *ngIf='item.enlargeImgUrl' class="sec-block-a-img" src={{item.enlargeImgUrl}}>
-                                <img *ngIf='item.enlargeImgUrl=="null"' class="sec-block-a-img" src="assets/img/deafault.png">
+                                <img *ngIf='item.enlargeImgUrl=="null"' class="sec-block-a-img"
+                                    src="assets/img/deafault.png">
                             </div>
                             <div class="col-7 no-padding">
                                 <div class="home-news-item-a-ttl">
@@ -148,7 +151,7 @@
                     <div class="sec-news-block-4 sec-news-block-a" *ngIf="i == 7">
                         <!-- <img class="sec-block-a-img" src={{item.enlargeImgUrl}}> -->
                         <img *ngIf='item.enlargeImgUrl' class="sec-block-a-img" src={{item.enlargeImgUrl}}>
-                        <img *ngIf='item.enlargeImgUrl=="null"' class="sec-block-a-img"  src="assets/img/deafault.png">
+                        <img *ngIf='item.enlargeImgUrl=="null"' class="sec-block-a-img" src="assets/img/deafault.png">
                         <div class="sec-block-a-ttl">
                             <span (click)="moreDetail(item)">{{item.storyText}}</span>
                         </div>
@@ -163,5 +166,76 @@
                 </div>
             </div>
         </div>
+
+
+
+
+    </div>
+</div>
+
+
+
+<div class="container section no-padding d-sm-none">
+    <div class="info">
+        <div class="sec-ttl">
+            <span class="info"><a class="color-me" routerLink="/catagory/knw">Knowladge</a></span>
+        </div>
+
+        <!--Mobile view-->
+
+        <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="{{arr[2]?.enlargeImgUrl}}" alt="Card image cap"
+                            style="height: 200px;">
+                        <div class="card-body">
+                            <div class="row justify-content-center align-items-center mx-2" style="height: 50px">
+                                <h5 (click)="moreDetail(arr[2])">{{arr[2]?.storyText}}</h5>
+                            </div>
+                            <div class="row justify-content-center align-items-center">
+                                <a target="_blank" href={{arr[2]?.storyTextUrl}}>
+                                    <img *ngIf='arr[2]?.storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                    <img *ngIf='arr[2]?.storySite=="adaDerana"' class="source"
+                                        src="assets/img/derana.png">
+                                    <img *ngIf='arr[2]?.storySite=="Youtube"' class="source"
+                                        src="assets/img/youtube.png">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="carousel-item" *ngFor="let item of arr;">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="{{item.enlargeImgUrl}}" alt="Card image cap"
+                            style="height: 200px;">
+                        <div class="card-body">
+                            <div class="row justify-content-center align-items-center mx-2" style="height: 50px">
+                                <h5 (click)="moreDetail(item)">{{item?.storyText}}</h5>
+                            </div>
+                            <div class="row justify-content-center align-items-center">
+                                <a target="_blank" href={{item.storyTextUrl}}>
+                                    <img *ngIf='item.storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                    <img *ngIf='item.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                    <img *ngIf='item.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
     </div>
 </div>

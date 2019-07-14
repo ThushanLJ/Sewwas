@@ -1,5 +1,5 @@
- <!--========================== BODY-top ===========================-->
- <div class="cat-body-top">
+<!--========================== BODY-top ===========================-->
+<div class="cat-body-top">
     <div class="container no-padding">
         <div class="row no-margin">
             <h3 class="cat-ttl">Entertainment</h3>
@@ -13,40 +13,46 @@
                         <li data-target="#demo" data-slide-to="2"></li>
                     </ul>
                     <div class="carousel-inner">
-                        <div class="carousel-item active"> 
+                        <div class="carousel-item active">
                             <img src={{recent[0].enlargeImgUrl}} alt="Sri Lanka blasts: IT worker held" width="100%">
                             <div (click)="moreDetail(recent[0])" class="carousel-caption">
                                 <h3>{{recent[0].storyText}}</h3>
                                 <div class="cat-c-source">
                                     <img *ngIf='recent[0].storySite=="hiru"' class="source" src="assets/img/hiru.png">
                                     <img *ngIf='recent[0].storySite=="adaDerana"' class="source" src="assets/img/derana.png">
-                                    <img *ngIf='recent[0].storySite=="Youtube"' class="source" src="assets/img/youtube.png"> 
+                                    <img *ngIf='recent[0].storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                 </div>
                             </div>
                         </div>
-                        <div (click)="moreDetail(recent[1])" class="carousel-item"> <img src={{recent[1].enlargeImgUrl}} alt="HAPPY BIRTHAY BABY! HAPPY BIRTHDAY ERIC KRIPKE!" width="100%">
+                        <div (click)="moreDetail(recent[1])" class="carousel-item">
+                            <img src={{recent[1].enlargeImgUrl}} alt="HAPPY BIRTHAY BABY! HAPPY BIRTHDAY ERIC KRIPKE!" width="100%">
                             <div class="carousel-caption">
                                 <h3>{{recent[1].storyText}}</h3>
                                 <div class="cat-c-source">
                                     <img *ngIf='recent[1].storySite=="hiru"' class="source" src="assets/img/hiru.png">
                                     <img *ngIf='recent[1].storySite=="adaDerana"' class="source" src="assets/img/derana.png">
-                                    <img *ngIf='recent[1].storySite=="Youtube"' class="source" src="assets/img/youtube.png"> 
+                                    <img *ngIf='recent[1].storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item"> <img src={{recent[2].enlargeImgUrl}} alt="Supernatural Continues to Make a Big Ol' Mess of Things" width="100%">
+                        <div class="carousel-item">
+                            <img src={{recent[2].enlargeImgUrl}} alt="Supernatural Continues to Make a Big Ol' Mess of Things" width="100%">
                             <div (click)="moreDetail(recent[2])" class="carousel-caption">
                                 <h3>{{recent[2].storyText}}</h3>
-                                <div class="cat-c-source"> 
-                                        <img *ngIf='recent[2].storySite=="hiru"' class="source" src="assets/img/hiru.png">
-                                        <img *ngIf='recent[2].storySite=="adaDerana"' class="source" src="assets/img/derana.png">
-                                        <img *ngIf='recent[2].storySite=="Youtube"' class="source" src="assets/img/youtube.png">
-                                 </div>
+                                <div class="cat-c-source">
+                                    <img *ngIf='recent[2].storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                    <img *ngIf='recent[2].storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                    <img *ngIf='recent[2].storySite=="Youtube"' class="source" src="assets/img/youtube.png">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#demo" data-slide="prev"> <span class="carousel-control-prev-icon"></span> </a>
-                    <a class="carousel-control-next" href="#demo" data-slide="next"> <span class="carousel-control-next-icon"></span> </a>
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-12  no-padding ">
@@ -55,7 +61,8 @@
                     <div *ngFor="let item of recent; let i = index">
                         <div class="cat-news-item-a" *ngIf="i > 2 && i < 6">
                             <div class="row no-margin">
-                                <div class="col-6 no-padding"> <img class="cat-news-item-a-img" src={{item.enlargeImgUrl}}> </div>
+                                <div class="col-6 no-padding">
+                                    <img class="cat-news-item-a-img" src={{item.enlargeImgUrl}}> </div>
                                 <div class="col-6 no-padding">
                                     <div class="cat-news-item-a-ttl">
                                         <div class="cat-a-hedline" (click)="moreDetail(item)">{{item.storyText}}</div>
@@ -106,12 +113,15 @@
     <div class="row cat-sec-row-a">
         <div class="col-lg-3 col-sm-6 ">
             <div class="row no-margin">
-                <h3 class="sub-cat-ttl">Teledrama</h3>
+                <a routerLink="/sub-catagory/teledrama">
+                    <h4 class="sub-cat-ttl">Teledrama</h4>
+                </a>
             </div>
             <div *ngFor="let item of teledrama; let i = index">
                 <div class="sub-cat-news-item-a" *ngIf="i < 3">
                     <div class="row no-margin">
-                        <div class="col-5 no-padding"> <img class="cat-news-item-a-img" src={{item.enlargeImgUrl}}> </div>
+                        <div class="col-5 no-padding">
+                            <img class="cat-news-item-a-img" src={{item.enlargeImgUrl}}> </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
                                 <div class="a-hedline" (click)="moreDetail(item)">{{item.storyText}}</div>
@@ -160,7 +170,8 @@
             <div *ngFor="let item of teledrama; let i = index">
                 <div class="sub-cat-news-item-a" *ngIf="i > 2 && i < 6">
                     <div class="row no-margin">
-                        <div class="col-5 no-padding"> <img class="cat-news-item-a-img" src={{item.thumbImageSrcUrl}}> </div>
+                        <div class="col-5 no-padding">
+                            <img class="cat-news-item-a-img" src={{item.thumbImageSrcUrl}}> </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
                                 <div class="a-hedline" (click)="moreDetail(item)">{{item.storyText}}</div>
@@ -204,12 +215,15 @@
         </div>
         <div class="col-lg-3 col-sm-6 ">
             <div class="row no-margin">
-                <h3 class="sub-cat-ttl">Music</h3>
+                <a routerLink="/sub-catagory/music">
+                    <h4 class="sub-cat-ttl">Music</h4>
+                </a>
             </div>
             <div *ngFor="let item of music; let i = index">
                 <div class="sub-cat-news-item-a" *ngIf="i < 3">
                     <div class="row no-margin">
-                        <div class="col-5 no-padding"> <img class="cat-news-item-a-img" src={{item.thumbImageSrcUrl}}> </div>
+                        <div class="col-5 no-padding">
+                            <img class="cat-news-item-a-img" src={{item.thumbImageSrcUrl}}> </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
                                 <div class="a-hedline" (click)="moreDetail(item)">{{item.storyText}}</div>
@@ -253,12 +267,15 @@
         </div>
         <div class="col-lg-3 col-sm-6 ">
             <div class="row no-margin">
-                <h3 class="sub-cat-ttl">Sports</h3>
+                <a routerLink="/sub-catagory/sport">
+                    <h4 class="sub-cat-ttl">Sports</h4>
+                </a>
             </div>
             <div *ngFor="let item of sport; let i = index">
                 <div class="sub-cat-news-item-a" *ngIf="i < 3">
                     <div class="row no-margin">
-                        <div class="col-5 no-padding"> <img class="cat-news-item-a-img" src={{item.enlargeImgUrl}}> </div>
+                        <div class="col-5 no-padding">
+                            <img class="cat-news-item-a-img" src={{item.enlargeImgUrl}}> </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
                                 <div class="a-hedline" (click)="moreDetail(item)">{{item.storyText}}</div>
@@ -304,12 +321,15 @@
     <div class="row cat-sec-row-b">
         <div class="col-lg-3 col-sm-6 ">
             <div class="row no-margin">
-                <h3 class="sub-cat-ttl">Comedy</h3>
+                <a routerLink="/sub-catagory/comedy">
+                    <h4 class="sub-cat-ttl">Comedy</h4>
+                </a>
             </div>
             <div *ngFor="let item of comedy; let i = index">
                 <div class="sub-cat-news-item-a" *ngIf="i < 3">
                     <div class="row no-margin">
-                        <div class="col-5 no-padding"> <img class="cat-news-item-a-img" src={{item.enlargeImgUrl}}> </div>
+                        <div class="col-5 no-padding">
+                            <img class="cat-news-item-a-img" src={{item.enlargeImgUrl}}> </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
                                 <div class="a-hedline" (click)="moreDetail(item)">{{item.storyText}}</div>
@@ -353,12 +373,15 @@
         </div>
         <div class="col-lg-3 col-sm-6 ">
             <div class="row no-margin">
-                <h3 class="sub-cat-ttl">Entertainment News</h3>
+                <a routerLink="/sub-catagory/entertainment">
+                    <h4 class="sub-cat-ttl">Entertainment News</h4>
+                </a>
             </div>
             <div *ngFor="let item of gossip; let i = index">
                 <div class="sub-cat-news-item-a" *ngIf="i > 2 && i < 6">
                     <div class="row no-margin">
-                        <div class="col-5 no-padding"> <img class="cat-news-item-a-img" src={{item.enlargeImgUrl}}> </div>
+                        <div class="col-5 no-padding">
+                            <img class="cat-news-item-a-img" src={{item.enlargeImgUrl}}> </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
                                 <div class="a-hedline" (click)="moreDetail(item)">{{item.storyText}}</div>
@@ -402,12 +425,15 @@
         </div>
         <div class="col-lg-3 col-sm-6 ">
             <div class="row no-margin">
-                <h3 class="sub-cat-ttl">Travel</h3>
+                    <a routerLink="/sub-catagory/travel">
+                        <h4 class="sub-cat-ttl">Travel</h4>
+                    </a>
             </div>
             <div *ngFor="let item of travel; let i = index">
                 <div class="sub-cat-news-item-a" *ngIf="i < 3">
                     <div class="row no-margin">
-                        <div class="col-5 no-padding"> <img class="cat-news-item-a-img" src={{item.enlargeImgUrl}}> </div>
+                        <div class="col-5 no-padding">
+                            <img class="cat-news-item-a-img" src={{item.enlargeImgUrl}}> </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
                                 <div class="a-hedline" (click)="moreDetail(item)">{{item.storyText}}</div>
@@ -456,7 +482,8 @@
             <div *ngFor="let item of travel; let i = index">
                 <div class="sub-cat-news-item-a" *ngIf="i > 2 && i< 6">
                     <div class="row no-margin">
-                        <div class="col-5 no-padding"> <img class="cat-news-item-a-img" src={{item.enlargeImgUrl}}> </div>
+                        <div class="col-5 no-padding">
+                            <img class="cat-news-item-a-img" src={{item.enlargeImgUrl}}> </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
                                 <div class="a-hedline" (click)="moreDetail(item)">{{item.storyText}}</div>

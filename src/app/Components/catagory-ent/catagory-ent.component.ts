@@ -26,16 +26,17 @@ export class CatagoryEntComponent implements OnInit {
   ngOnInit() {
     this.subcatagoryService.getTeledramas().subscribe((data:any)=>{
       this.teledrama=data.data;
-      //console.log(this.teledrama);
+      console.log(this.teledrama,"teledrama");
     });
 
     this.subcatagoryService.getMusicVideos().subscribe((data:any)=>{
       this.music = data.data;
+      console.log(this.music,"music");
     });
 
     this.subcatagoryService.getSportNews().subscribe((data:any)=>{
       this.sport = data.data;
-      //console.log(this.sport);
+      console.log(this.sport,"sports");
     });
 
     this.newsService.getEntertainmentNews().subscribe((data:any)=>{
@@ -45,17 +46,17 @@ export class CatagoryEntComponent implements OnInit {
 
     this.subcatagoryService.getComedyVideos().subscribe((data:any)=>{
       this.comedy = data.data;
-      //console.log(this.comedy);
+      console.log(this.comedy,"comedy");
     })
 
     this.subcatagoryService.getGossipNews().subscribe((data:any)=>{
       this.gossip=data.data;
-      //console.log(this.gossip)
+      console.log(this.gossip,"gosip");
     })
 
     this.subcatagoryService.getTravalVideo().subscribe((data:any)=>{
       this.travel=data.data;
-      //console.log(this.travel);
+      console.log(this.travel,"travel");
     })
   }
 

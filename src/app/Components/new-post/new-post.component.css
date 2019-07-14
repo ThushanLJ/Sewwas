@@ -1,0 +1,35 @@
+.buttonArea{
+    height: 50px;
+   
+}
+.btn-publish{
+    color:white;
+    background-color: #f3623e;
+    font-size: 13px;
+    font-weight: 700;
+    border: 3px;
+    border-radius: 3px;
+    padding:5px 10px;
+}
+.btn-other{
+    color:black;
+    background-color: #eaeae1;
+    font-size: 13px;
+    border: 3px;
+    font-weight: 700;
+    border-radius: 3px;
+    padding:5px 10px;
+}
+.btnOrder{
+    flex-direction: row-reverse;
+    margin-left: 75%;
+}
+.dataInputArea{
+    margin-left:10%;
+    width:85%;
+    
+}
+.aa{
+    font-size: 25px;
+    font-weight: 700;
+}

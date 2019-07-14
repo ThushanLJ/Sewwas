@@ -1,0 +1,151 @@
+<div style="position: relative; margin: -1% 12% 2% 11%">
+  <div class="d-flex flex-row justify-content-between no-padding">
+    <div class="p-2 d-none d-sm-block"><a routerLink="/home"><img src="assets/img/logo.png" /></a> </div>
+    <div class="p-2 d-sm-none" style="width:18vw; height: 8vh; margin-bottom: 15%; margin-left:-10%; margin-top:-4% "><a
+        routerLink="/home"><img src="assets/img/logo.png" /></a> </div>
+    <div class="p-2 signAlign"><img src="assets/img/user-profile.png" style="width:30px;height:30px" />
+
+      <a id="btnShowModal">
+        <span class="color-me ">SignIn</span>
+      </a>
+      <span class="color-me"> | </span>
+      <a routerLink="/login">
+        <span class="color-me">SignUp</span>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-xs-8">
+
+      <div class="modal fade" tabindex="-1" id="loginModal" data-keyboard="false" data-backdrop="static"
+        aria-hidden="true">
+        <div class="modal-dialog modal-sm" style="left:7%;float:left;">
+          <div class="modal-content" style="position:absolute; width:70vw;left:8vw;float:left; top:100%">
+
+            <div class="row">
+              <div class="col-sm  d-none d-sm-block">
+                <div class="row">
+                  <div style="margin-top: 5%;margin-left: 7%;">
+                    <img src="./assets/img/earthmap.jpg" class="img-fluid h-auto my-5 mx-5"
+                      style="width: 80%; height: 400px;"></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4"></div>
+                  <div class="col">
+                    <div style="margin-left: 2vw">
+                      <img src="./assets/img/fb.png" (click)='loginUsingFacebook()' style="width:40px" class="tag">
+                      <img src="./assets/img/tw.png" (click)='loginUsingGoogleAuth()' style="width:40px" class="tag">
+                    </div>
+                  </div>
+                  <div class="col-xs-1"></div>
+                </div>
+                <div class="row  my-5">
+                  <div class="col"></div>
+                  <div class="col-8">
+                    <h4>Don't have an account? &nbsp; &nbsp;
+                      <a routerLink="/login">Sign up</a>
+                    </h4>
+                  </div>
+                  <div class="col"></div>
+
+                </div>
+
+              </div>
+              <div class="col-sm-6">
+
+                <div class="row mx-5 my-5" style="float: right">
+                  <button type="button" id="btnHideModal" class="btn" style="background-color: white">
+                    <img src="./assets/img/remove-button.png" style="width:30px">
+                  </button>
+                </div>
+
+                <div class="row mx-5 my-5">
+                  <div style="margin-left: 20%;">
+                    <img src="./assets/img/footer logo.png" class="img-fluid h-auto"
+                      style="width: 200px; height: 100%;">
+                  </div>
+                </div>
+                <div class="row mx-2 my-5"></div>
+
+                <form [formGroup]="loginForm">
+                  <div class="form-group mx-5 d-none d-sm-block">
+                    <input style="width:80%" type="text" class="form-control input-lg" placeholder="User Name"
+                      name="username" formControlName="email" required>
+                  </div>
+
+                  <div class="form-group mx-5 d-sm-none">
+                    <input style="width:100%" type="text" class="form-control input-lg" placeholder="User Name"
+                      name="username" formControlName="email" required>
+                  </div>
+
+                  <div class="row mx-5 my-5 d-none d-sm-block"></div>
+                  <div class="form-group mx-5 d-none d-sm-block">
+                    <input style="width:80%" type="password" class="form-control input-lg" placeholder="Password"
+                      name="pswd" formControlName="password" required>
+                  </div>
+
+                  <div class="form-group mx-5 d-sm-none">
+                    <input style="width:100%" type="password" class="form-control input-lg" placeholder="Password"
+                      name="pswd" formControlName="password" required>
+                  </div>
+
+                  <div class="row mx-5 my-5 d-none d-sm-block"></div>
+
+                  <!-- <input class="form-check-input form-group form-check mx-5" type="checkbox" name="remember"> -->
+                  <!-- <label class="form-check-label mx-5">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;Remember me
+                                      </label> -->
+
+                  <div class="row mx-5 my-5"></div>
+                  <div style="margin-left: 7%">
+                    <button type="submit" (click)="login()" class="btn btn-primary btn-lg mx-5"
+                      style="width:60%;">Login</button>
+                  </div>
+                </form>
+
+                <div class="row mx-5 my-5 d-none d-sm-block">
+                  <div class="col"></div>
+                  <!--<div class="col"><h4><a href="">Forgot password</a></h4></div>-->
+                  <div class="col"></div>
+                </div>
+
+                <div class="row d-sm-none">
+                  <div class="col-md-4"></div>
+                  <div class="col">
+                    <div style="margin-left: 35%; margin-top: 5%">
+                      <img src="./assets/img/fb.png" (click)='loginUsingFacebook()' style="width:40px" class="tag">
+                      <img src="./assets/img/tw.png" (click)='loginUsingGoogleAuth()' style="width:40px" class="tag">
+                    </div>
+                  </div>
+                  <div class="col-xs-1"></div>
+                </div>
+
+                <div class="row d-sm-n0ne">
+                  <div class="col"></div>
+                  <div class="col-8">
+                    <h5>Don't have an account?<br>
+                      <a routerLink="/login">Sign up</a>
+                    </h5>
+                  </div>
+                  <div class="col"></div>
+                </div>
+
+                <div class="row mx-5 my-5"></div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,1 +1,88 @@
-<h1>under construction </h1>
+<div class="NPBbackground d-sm-none" style="margin-top: 5%">
+    <button type="button" class="btn btn-warning" *ngIf="!marked4" (click)="NewPost()" style="margin-left:70%">New
+        post</button>
+</div>
+
+<div class="NPBbackground d-none d-sm-block" style="margin-top: 0%">
+    <button type="button" class="btn btn-warning" *ngIf="!marked4" (click)="NewPost()" style="margin-left:85%">New
+        post</button>
+</div>
+<br><br><br>
+<div *ngIf="marked4">
+    <app-new-post></app-new-post>
+</div>
+
+<div *ngIf="!marked4">
+    <div class="row d-none d-sm-block">
+        <div class="col-sm-3">
+            <div class="container ">
+                <div class="aMargin">
+                    <a (click)="ReadingList()" routerLink="#"> <img class="web" src="assets/img/reading.jpg" width="20px"
+                            height="30px" />Reading List</a>
+                </div>
+                <!-- <div class="aMargin">
+                   <a (click)="Comment()" routerLink="#"><img src="assets/img/comment.png" width="20px" height="20px" />Comment</a>
+                </div> -->
+                <div class="aMargin">
+                    <a (click)="Post()" routerLink="#"><img class="web" src="assets/img/post2.jpg" width="20px"
+                            height="20px" />Post</a>
+                </div>
+                <!-- <div class="aMargin2">
+                    <a routerLink="" style="font-size: 15px"> All(5)</a>
+                </div>   
+                <div class="aMargin2">
+                    <a routerLink="" style="font-size: 15px">Published(20)</a>
+                </div>      -->
+            </div>
+        </div>
+        <div class="col-sm-8">
+
+            <div *ngIf="marked1">
+                <app-read-list></app-read-list>
+            </div>
+            <div *ngIf="marked3">
+                <app-post-all></app-post-all>
+            </div>
+            <!-- <div *ngIf="marked2"><app-comments ></app-comments></div> -->
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<div *ngIf="!marked4">
+    <div class="row d-sm-none">
+        <div class="col-sm-3">
+            <div class="container" style="margin-top: -15%"> 
+
+                <div class="d-flex flex-row bd-highlight mb-3">
+                    <div class="p-2 bd-highlight mx-3"><a (click)="ReadingList()" routerLink="#"> <img
+                                src="assets/img/reading.jpg" width="20px" height="30px" />Reading List</a></div>
+                    <div class="p-2 bd-highlight mx-3"><a (click)="Post()" routerLink="#"><img src="assets/img/post2.jpg"
+                                width="20px" height="20px" />Post</a></div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+
+            <div *ngIf="marked1">
+                <app-read-list></app-read-list>
+            </div>
+            <div *ngIf="marked3">
+                <app-post-all></app-post-all>
+            </div>
+            <!-- <div *ngIf="marked2"><app-comments ></app-comments></div> -->
+
+
+        </div>
+
+
+    </div>
+
+</div>

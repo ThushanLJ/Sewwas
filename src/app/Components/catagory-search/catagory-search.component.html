@@ -1,0 +1,53 @@
+
+
+
+<div class="float-left mx-5" ><h4><b>Results : {{ news.length }}</b></h4></div>
+
+<br><br><br>
+
+<div *ngFor="let hero of news; let i = index">
+<div *ngIf ="i>=min && i<max">
+
+<div class="container">
+
+  <div class="row">
+      <div class="col-sm text-justify" (click)="moreDetail(hero)">
+          <h3><b>{{hero.storyText}}</b></h3>
+      </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-2">
+      <img src={{hero.thumbImageSrcUrl}} class="img-fluid h-auto d-inline-block">
+    </div>
+    <div class="col-sm-10 text-justify">
+      {{hero.storySummary}}
+    </div>
+  </div>
+
+  <div class="row float-sm-right auto  ">
+    <div class="col-sm text-left">
+      <a routerLink="#">May 17,2019| Post a comment</a>
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-sm">
+        <hr>
+      </div>
+  </div>
+
+</div>
+
+</div>
+</div>
+
+<br><br><br>
+
+<a class="float-left mx-5 " (click)="PreviousPage()"  *ngIf="marked1">< Previous page</a>
+<a class="float-right mx-5 " (click)="NextPage()"  *ngIf="marked2">Next page ></a>
+
+
+<br><br><br>
+
+

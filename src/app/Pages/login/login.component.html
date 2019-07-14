@@ -88,10 +88,13 @@
 
 
 <div>
-    <app-header></app-header>
+    <app-first-header></app-first-header>
+    <app-first2-header></app-first2-header>
+    <app-second-header></app-second-header>
+    <app-sign-up></app-sign-up>
 </div>
-
-<div *ngIf="!load">
+<!--previous code-->
+<!--<div *ngIf="!load">
     Already Login
     <button class="btn btn-default" (click)="logoutNow()">Logout</button>
 </div>
@@ -143,19 +146,6 @@
             <div class="container">
                     <form [formGroup]="registerForm">
                       <div class="row">
-                        <!-- <div class="vl">
-                          <span class="vl-innertext">or</span>
-                        </div> -->
-                  
-                        <!-- <div class="col">
-                          <a (click)="loginUsingFacebook()"  class="fb btn">
-                            <i class="fa fa-facebook fa-fw"></i> Login with Facebook
-                           </a>
-                          <a (click)="loginUsingGoogleAuth()" class="google btn"><i class="fa fa-google fa-fw">
-                            </i> Login with Google+
-                          </a>
-                        </div> -->
-                  
                         <div class="col">
                           <div class="hide-md-lg">
                             <p>Or sign in manually:</p>
@@ -190,4 +180,7 @@
                         </div>
                       </div>
     </div>
-</div>
+</div>-->
+
+
+<!-- <app-view-profile></app-view-profile> -->

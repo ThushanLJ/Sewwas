@@ -3,7 +3,6 @@ import {NewsService} from '../../services/news.service';
 import { ActivatedRoute } from '@angular/router';
 import {Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { HttpErrorResponse } from "@angular/common/http";
-// import { Input } from '@angular/core/src/metadata/directives';
 
 @Component({
   selector: 'app-story',
@@ -16,12 +15,13 @@ export class StoryComponent implements OnInit {
               private route: ActivatedRoute,
               private formBuilder: FormBuilder) { }
 
-  @Input() storyId;
-  arr:any[];
+  
+  arr:any;
   private sub:any;
   type:string;
   commentForm : FormGroup;
   isUser:boolean=true;
+  url='';
 
   ngOnInit() {
     this.commentForm = this.formBuilder.group({
@@ -35,11 +35,22 @@ export class StoryComponent implements OnInit {
     this.sub=this.route.params.subscribe(params=>{
       this.type=params['id'];
       console.log(this.type);
+      this.url=location.origin+'/news/'+this.type;
+      console.log(this.url);
+      //console.log(location.origin)
     });
-    this.newsService.getNewsDetail(this.type).subscribe((data:any)=>{
-      this.arr=data.data;
-      console.log(this.arr);
+    // this.newsService.getNewsDetail(this.type).subscribe((data:any)=>{
+    //   this.arr=data.data;
+    //   console.log(this.arr);
+    // })
+
+    this.newsService.getNewsWithUserId(this.type).subscribe((data:any)=>{
+      // console.log(data.data);
+       this.arr=data.data;
+       console.log(this.arr);
     })
+
+    
   }
 
   submitComment(){

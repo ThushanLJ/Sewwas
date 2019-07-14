@@ -16,8 +16,7 @@
                         <div class="carousel-item active">
                             <!-- <img src={{bizNewsArray[0].thumbImageSrcUrl}} alt="Sri Lanka blasts: IT worker held" width="100%"> -->
                             <div *ngIf="bizNewsArray[0].enlargeImgUrl">
-                                <img src={{bizNewsArray[0].enlargeImgUrl}} alt="Sri Lanka blasts: IT worker held"
-                                    width="100%">
+                                <img src={{bizNewsArray[0].enlargeImgUrl}} alt="Sri Lanka blasts: IT worker held" width="100%">
                             </div>
                             <div *ngIf="!bizNewsArray[0].enlargeImgUrl">
                                 <img src="assets/img/deafault.png" alt="Sri Lanka blasts: IT worker held" width="100%">
@@ -27,12 +26,9 @@
                                 <h3>{{bizNewsArray[0].storyText | slice:0:60}}</h3>
                                 <div class="cat-c-source">
                                     <a href="{{bizNewsArray[0].storyTextUrl}}" target="_blank">
-                                        <img *ngIf='newArray[0].storySite=="hiru"' class="source"
-                                            src="assets/img/hiru.png">
-                                        <img *ngIf='newArray[0].storySite=="adaDerana"' class="source"
-                                            src="assets/img/derana.png">
-                                        <img *ngIf='newArray[0].storySite=="Youtube"' class="source"
-                                            src="assets/img/youtube.png">
+                                        <img *ngIf='newArray[0].storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                        <img *ngIf='newArray[0].storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                        <img *ngIf='newArray[0].storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                     </a>
                                 </div>
                             </div>
@@ -40,8 +36,7 @@
                         <div class="carousel-item">
                             <!-- <img src={{newArray[1].thumbImageSrcUrl}} alt="HAPPY BIRTHAY BABY! HAPPY BIRTHDAY ERIC KRIPKE!" width="100%"> -->
                             <div *ngIf="newArray[0].enlargeImgUrl">
-                                <img src={{newArray[0].enlargeImgUrl}} alt="Sri Lanka blasts: IT worker held"
-                                    width="100%">
+                                <img src={{newArray[0].enlargeImgUrl}} alt="Sri Lanka blasts: IT worker held" width="100%">
                             </div>
                             <div *ngIf="!newArray[0].enlargeImgUrl">
                                 <img src="assets/img/deafault.png" alt="Sri Lanka blasts: IT worker held" width="100%">
@@ -50,12 +45,9 @@
                                 <h3>{{newArray[0].storyText | slice:0:60}}</h3>
                                 <div class="cat-c-source">
                                     <a href="{{newArray[0].storyTextUrl}}" target="_blank">
-                                        <img *ngIf='newArray[0].storySite=="hiru"' class="source"
-                                            src="assets/img/hiru.png">
-                                        <img *ngIf='newArray[0].storySite=="adaDerana"' class="source"
-                                            src="assets/img/derana.png">
-                                        <img *ngIf='newArray[0].storySite=="Youtube"' class="source"
-                                            src="assets/img/youtube.png">
+                                        <img *ngIf='newArray[0].storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                        <img *ngIf='newArray[0].storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                        <img *ngIf='newArray[0].storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                     </a>
                                 </div>
                             </div>
@@ -63,8 +55,7 @@
                         <div class="carousel-item">
                             <!-- <img src={{newsVideoArray[0].thumbImageSrcUrl}} alt="Supernatural Continues to Make a Big Ol' Mess of Things" width="100%"> -->
                             <div *ngIf="newsVideoArray[0].enlargeImgUrl">
-                                <img src={{newsVideoArray[0].enlargeImgUrl}} alt="Sri Lanka blasts: IT worker held"
-                                    width="100%">
+                                <img src={{newsVideoArray[0].enlargeImgUrl}} alt="Sri Lanka blasts: IT worker held" width="100%">
                             </div>
                             <div *ngIf="!newsVideoArray[0].enlargeImgUrl">
                                 <img src="assets/img/deafault.png" alt="Sri Lanka blasts: IT worker held" width="100%">
@@ -73,12 +64,9 @@
                                 <h3>{{newsVideoArray[0].storyText | slice:0:60}}</h3>
                                 <div class="cat-c-source">
                                     <a href="{{newsVideoArray[0].storyTextUrl}}" target="_blank">
-                                        <img *ngIf='newsVideoArray[0].storySite=="hiru"' class="source"
-                                            src="assets/img/hiru.png">
-                                        <img *ngIf='newsVideoArray[0].storySite=="adaDerana"' class="source"
-                                            src="assets/img/derana.png">
-                                        <img *ngIf='newsVideoArray[0].storySite=="Youtube"' class="source"
-                                            src="assets/img/youtube.png">
+                                        <img *ngIf='newsVideoArray[0].storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                        <img *ngIf='newsVideoArray[0].storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                        <img *ngIf='newsVideoArray[0].storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                     </a>
                                 </div>
                             </div>
@@ -103,10 +91,8 @@
                         <div class="cat-news-item-a">
                             <div class="row no-margin">
                                 <div class="col-6 no-padding">
-                                    <img *ngIf='newsVideoArray[0].thumbImageSrcUrl' class="cat-news-item-a-img"
-                                        src="{{newsVideoArray[0].thumbImageSrcUrl}}">
-                                    <img *ngIf='newsVideoArray[0].thumbImageSrcUrl=="null"' class="cat-news-item-a-img"
-                                        src="assets/img/deafault.png">
+                                    <img *ngIf='newsVideoArray[0].thumbImageSrcUrl' class="cat-news-item-a-img" src="{{newsVideoArray[0].thumbImageSrcUrl}}">
+                                    <img *ngIf='newsVideoArray[0].thumbImageSrcUrl=="null"' class="cat-news-item-a-img" src="assets/img/deafault.png">
                                 </div>
                                 <div class="col-6 no-padding">
                                     <div class="cat-news-item-a-ttl">
@@ -114,12 +100,9 @@
                                             {{newsVideoArray[0].storyText | slice:0:60}}</div>
                                         <div class="n-i-source">
                                             <a href="{{newsVideoArray[0].storyTextUrl}}" target="_blank">
-                                                <img *ngIf='newsVideoArray[0].storySite=="hiru"' class="source"
-                                                    src="assets/img/hiru.png">
-                                                <img *ngIf='newsVideoArray[0].storySite=="adaDerana"' class="source"
-                                                    src="assets/img/derana.png">
-                                                <img *ngIf='newsVideoArray[0].storySite=="Youtube"' class="source"
-                                                    src="assets/img/youtube.png">
+                                                <img *ngIf='newsVideoArray[0].storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                                <img *ngIf='newsVideoArray[0].storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                                <img *ngIf='newsVideoArray[0].storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                             </a>
                                         </div>
                                     </div>
@@ -132,10 +115,8 @@
                             <div class="row no-margin">
                                 <div class="col-6 no-padding">
                                     <!-- <img class="cat-news-item-a-img" src="{{newArray[1].thumbImageSrcUrl}}">  -->
-                                    <img *ngIf='newArray[1].thumbImageSrcUrl' class="cat-news-item-a-img"
-                                        src="{{newArray[1].thumbImageSrcUrl}}">
-                                    <img *ngIf='newArray[1].thumbImageSrcUrl=="null"' class="cat-news-item-a-img"
-                                        src="assets/img/deafault.png">
+                                    <img *ngIf='newArray[1].thumbImageSrcUrl' class="cat-news-item-a-img" src="{{newArray[1].thumbImageSrcUrl}}">
+                                    <img *ngIf='newArray[1].thumbImageSrcUrl=="null"' class="cat-news-item-a-img" src="assets/img/deafault.png">
                                 </div>
                                 <div class="col-6 no-padding">
                                     <div class="cat-news-item-a-ttl">
@@ -143,12 +124,9 @@
                                             {{newArray[1].storyText | slice:0:60}}</div>
                                         <div class="n-i-source">
                                             <a href="{{newArray[1].storyTextUrl}}" target="_blank">
-                                                <img *ngIf='newArray[1].storySite=="hiru"' class="source"
-                                                    src="assets/img/hiru.png">
-                                                <img *ngIf='newArray[1].storySite=="adaDerana"' class="source"
-                                                    src="assets/img/derana.png">
-                                                <img *ngIf='newArray[1].storySite=="Youtube"' class="source"
-                                                    src="assets/img/youtube.png">
+                                                <img *ngIf='newArray[1].storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                                <img *ngIf='newArray[1].storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                                <img *ngIf='newArray[1].storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                             </a>
                                         </div>
                                     </div>
@@ -161,10 +139,8 @@
                             <div class="row no-margin">
                                 <div class="col-6 no-padding">
                                     <!-- <img class="cat-news-item-a-img" src="{{bizNewsArray[1].thumbImageSrcUrl}}">  -->
-                                    <img *ngIf='bizNewsArray[1].thumbImageSrcUrl' class="cat-news-item-a-img"
-                                        src="{{bizNewsArray[1].thumbImageSrcUrl}}">
-                                    <img *ngIf='bizNewsArray[1].thumbImageSrcUrl=="null"' class="cat-news-item-a-img"
-                                        src="assets/img/deafault.png">
+                                    <img *ngIf='bizNewsArray[1].thumbImageSrcUrl' class="cat-news-item-a-img" src="{{bizNewsArray[1].thumbImageSrcUrl}}">
+                                    <img *ngIf='bizNewsArray[1].thumbImageSrcUrl=="null"' class="cat-news-item-a-img" src="assets/img/deafault.png">
                                 </div>
                                 <div class="col-6 no-padding">
                                     <div class="cat-news-item-a-ttl">
@@ -172,12 +148,9 @@
                                             {{bizNewsArray[1].storyText | slice:0:60}}</div>
                                         <div class="n-i-source">
                                             <a href="{{bizNewsArray[1].storyTextUrl}}" target="_blank">
-                                                <img *ngIf='bizNewsArray[1].storySite=="hiru"' class="source"
-                                                    src="assets/img/hiru.png">
-                                                <img *ngIf='bizNewsArray[1].storySite=="adaDerana"' class="source"
-                                                    src="assets/img/derana.png">
-                                                <img *ngIf='bizNewsArray[1].storySite=="Youtube"' class="source"
-                                                    src="assets/img/youtube.png">
+                                                <img *ngIf='bizNewsArray[1].storySite=="hiru"' class="source" src="assets/img/hiru.png">
+                                                <img *ngIf='bizNewsArray[1].storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                                <img *ngIf='bizNewsArray[1].storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                             </a>
                                         </div>
                                     </div>
@@ -196,17 +169,17 @@
     <div class="row cat-sec-row-a">
         <div class="col-lg-3 col-sm-6 ">
             <div class="row no-margin">
-                <h4 class="sub-cat-ttl">Hot News</h4>
+                <a routerLink="/sub-catagory/hot">
+                    <h4 class="sub-cat-ttl">Hot News</h4>
+                </a>
             </div>
             <div *ngFor="let items of newArray; let i=index">
                 <div class="sub-cat-news-item-a" *ngIf=" i < 3">
                     <div class="row no-margin">
                         <div class="col-5 no-padding">
                             <!-- <img class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}"> -->
-                            <img *ngIf='items.thumbImageSrcUrl' class="cat-news-item-a-img"
-                                src="{{items.thumbImageSrcUrl}}">
-                            <img *ngIf='items.thumbImageSrcUrl=="null"' class="cat-news-item-a-img"
-                                src="assets/img/deafault.png">
+                            <img *ngIf='items.thumbImageSrcUrl' class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}">
+                            <img *ngIf='items.thumbImageSrcUrl=="null"' class="cat-news-item-a-img" src="assets/img/deafault.png">
                         </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
@@ -215,10 +188,8 @@
                                 <div class="n-i-source">
                                     <a href="{{items.storyTextUrl}}" target="_blank">
                                         <img *ngIf='items.storySite=="hiru"' class="source" src="assets/img/hiru.png">
-                                        <img *ngIf='items.storySite=="adaDerana"' class="source"
-                                            src="assets/img/derana.png">
-                                        <img *ngIf='items.storySite=="Youtube"' class="source"
-                                            src="assets/img/youtube.png">
+                                        <img *ngIf='items.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                        <img *ngIf='items.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                     </a>
 
                                 </div>
@@ -260,7 +231,7 @@
         </div>
         <div class="col-lg-3 col-sm-6 ">
             <div class="row no-margin">
-                <h4 class="sub-cat-ttl">Hot News</h4>
+                <!-- <h4 class="sub-cat-ttl">Hot News</h4> -->
             </div>
             <div *ngFor="let items of newArray; let i=index">
                 <div class="sub-cat-news-item-a" *ngIf=" i >= 3 && i < 6">
@@ -268,10 +239,8 @@
                     <div class="row no-margin">
                         <div class="col-5 no-padding">
                             <!-- <img class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}">  -->
-                            <img *ngIf='items.thumbImageSrcUrl' class="cat-news-item-a-img"
-                                src="{{items.thumbImageSrcUrl}}">
-                            <img *ngIf='items.thumbImageSrcUrl=="null"' class="cat-news-item-a-img"
-                                src="assets/img/deafault.png">
+                            <img *ngIf='items.thumbImageSrcUrl' class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}">
+                            <img *ngIf='items.thumbImageSrcUrl=="null"' class="cat-news-item-a-img" src="assets/img/deafault.png">
                         </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
@@ -280,10 +249,8 @@
                                 <div class="n-i-source">
                                     <a href="{{items.storyTextUrl}}" target="_blank">
                                         <img *ngIf='items.storySite=="hiru"' class="source" src="assets/img/hiru.png">
-                                        <img *ngIf='items.storySite=="adaDerana"' class="source"
-                                            src="assets/img/derana.png">
-                                        <img *ngIf='items.storySite=="Youtube"' class="source"
-                                            src="assets/img/youtube.png">
+                                        <img *ngIf='items.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                        <img *ngIf='items.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                     </a>
                                 </div>
                             </div>
@@ -323,18 +290,16 @@
 
         </div>
         <div class="col-lg-3 col-sm-6 ">
-            <div class="row no-margin">
+            <!-- <div class="row no-margin">
                 <h4 class="sub-cat-ttl">Hot News</h4>
-            </div>
+            </div> -->
             <div *ngFor="let items of newArray; let i=index">
                 <div class="sub-cat-news-item-a" *ngIf=" i >= 6 && i < 9">
                     <div class="row no-margin">
                         <div class="col-5 no-padding">
                             <!-- <img class="cat-news-item-a-img" src={{items.thumbImageSrcUrl}}> -->
-                            <img *ngIf='items.thumbImageSrcUrl' class="cat-news-item-a-img"
-                                src="{{items.thumbImageSrcUrl}}">
-                            <img *ngIf='items.thumbImageSrcUrl=="null"' class="cat-news-item-a-img"
-                                src="assets/img/deafault.png">
+                            <img *ngIf='items.thumbImageSrcUrl' class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}">
+                            <img *ngIf='items.thumbImageSrcUrl=="null"' class="cat-news-item-a-img" src="assets/img/deafault.png">
                         </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
@@ -343,10 +308,8 @@
                                 <div class="n-i-source">
                                     <a href={{items.storyTextUrl}} target="_blank">
                                         <img *ngIf='items.storySite=="hiru"' class="source" src="assets/img/hiru.png">
-                                        <img *ngIf='items.storySite=="adaDerana"' class="source"
-                                            src="assets/img/derana.png">
-                                        <img *ngIf='items.storySite=="Youtube"' class="source"
-                                            src="assets/img/youtube.png">
+                                        <img *ngIf='items.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                        <img *ngIf='items.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                     </a>
                                 </div>
                             </div>
@@ -386,18 +349,16 @@
 
         </div>
         <div class="col-lg-3 col-sm-6 ">
-            <div class="row no-margin">
+            <!-- <div class="row no-margin">
                 <h4 class="sub-cat-ttl">Hot News</h4>
-            </div>
+            </div> -->
             <div *ngFor="let items of newArray; let i=index">
                 <div class="sub-cat-news-item-a" *ngIf=" i >= 9 && i < 12">
                     <div class="row no-margin">
                         <div class="col-5 no-padding">
                             <!-- <img class="cat-news-item-a-img" src={{items.thumbImageSrcUrl}}> -->
-                            <img *ngIf='items.thumbImageSrcUrl' class="cat-news-item-a-img"
-                                src="{{items.thumbImageSrcUrl}}">
-                            <img *ngIf='items.thumbImageSrcUrl=="null"' class="cat-news-item-a-img"
-                                src="assets/img/deafault.png">
+                            <img *ngIf='items.thumbImageSrcUrl' class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}">
+                            <img *ngIf='items.thumbImageSrcUrl=="null"' class="cat-news-item-a-img" src="assets/img/deafault.png">
                         </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
@@ -406,10 +367,8 @@
                                 <div class="n-i-source">
                                     <a href={{items.storyTextUrl}} target="_blank">
                                         <img *ngIf='items.storySite=="hiru"' class="source" src="assets/img/hiru.png">
-                                        <img *ngIf='items.storySite=="adaDerana"' class="source"
-                                            src="assets/img/derana.png">
-                                        <img *ngIf='items.storySite=="Youtube"' class="source"
-                                            src="assets/img/youtube.png">
+                                        <img *ngIf='items.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                        <img *ngIf='items.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                     </a>
                                 </div>
                             </div>
@@ -453,17 +412,17 @@
     <div class="row cat-sec-row-b">
         <div class="col-lg-3 col-sm-6 ">
             <div class="row no-margin">
-                <h4 class="sub-cat-ttl">Biz News</h4>
+                <a routerLink="/sub-catagory/biz">
+                    <h4 class="sub-cat-ttl">Biz News</h4>
+                </a>
             </div>
             <div *ngFor="let items of bizNewsArray; let i=index">
                 <div class="sub-cat-news-item-a" *ngIf=" i < 3">
                     <div class="row no-margin">
                         <div class="col-5 no-padding">
                             <!-- <img class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}"> -->
-                            <img *ngIf='items.thumbImageSrcUrl' class="cat-news-item-a-img"
-                                src="{{items.thumbImageSrcUrl}}">
-                            <img *ngIf='items.thumbImageSrcUrl=="null"' class="cat-news-item-a-img"
-                                src="assets/img/deafault.png">
+                            <img *ngIf='items.thumbImageSrcUrl' class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}">
+                            <img *ngIf='items.thumbImageSrcUrl=="null"' class="cat-news-item-a-img" src="assets/img/deafault.png">
                         </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
@@ -472,10 +431,8 @@
                                 <div class="n-i-source">
                                     <a href="{{items.storyTextUrl}}" target="_blank">
                                         <img *ngIf='items.storySite=="hiru"' class="source" src="assets/img/hiru.png">
-                                        <img *ngIf='items.storySite=="adaDerana"' class="source"
-                                            src="assets/img/derana.png">
-                                        <img *ngIf='items.storySite=="Youtube"' class="source"
-                                            src="assets/img/youtube.png">
+                                        <img *ngIf='items.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                        <img *ngIf='items.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                     </a>
                                 </div>
                             </div>
@@ -516,18 +473,16 @@
         </div>
 
         <div class="col-lg-3 col-sm-6 ">
-            <div class="row no-margin">
+            <!-- <div class="row no-margin">
                 <h4 class="sub-cat-ttl">Biz News</h4>
-            </div>
+            </div> -->
             <div *ngFor="let items of bizNewsArray; let i=index">
                 <div class="sub-cat-news-item-a" *ngIf=" i >=3 && i < 6">
                     <div class="row no-margin">
                         <div class="col-5 no-padding">
                             <!-- <img class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}">  -->
-                            <img *ngIf='items.thumbImageSrcUrl' class="cat-news-item-a-img"
-                                src="{{items.thumbImageSrcUrl}}">
-                            <img *ngIf='items.thumbImageSrcUrl=="null"' class="cat-news-item-a-img"
-                                src="assets/img/deafault.png">
+                            <img *ngIf='items.thumbImageSrcUrl' class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}">
+                            <img *ngIf='items.thumbImageSrcUrl=="null"' class="cat-news-item-a-img" src="assets/img/deafault.png">
                         </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
@@ -536,10 +491,8 @@
                                 <div class="n-i-source">
                                     <a href="{{items.storyTextUrl}}" target="_blank">
                                         <img *ngIf='items.storySite=="hiru"' class="source" src="assets/img/hiru.png">
-                                        <img *ngIf='items.storySite=="adaDerana"' class="source"
-                                            src="assets/img/derana.png">
-                                        <img *ngIf='items.storySite=="Youtube"' class="source"
-                                            src="assets/img/youtube.png">
+                                        <img *ngIf='items.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                        <img *ngIf='items.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                     </a>
                                 </div>
                             </div>
@@ -579,15 +532,17 @@
         </div>
         <div class="col-lg-3 col-sm-6 ">
             <div class="row no-margin">
-                <h4 class="sub-cat-ttl">News Videos</h4>
+                <a routerLink="/sub-catagory/news">
+                    <h4 class="sub-cat-ttl">News Videos</h4>
+                </a>
             </div>
             <div *ngFor="let items of newsVideoArray; let i=index">
                 <div class="sub-cat-news-item-a" *ngIf="i < 3">
                     <div class="row no-margin">
                         <div class="col-5 no-padding">
                             <!-- <img class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}"> -->
-                            <img *ngIf='items.thumbImageSrcUrl' class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}"> 
-                            <img *ngIf='items.thumbImageSrcUrl=="null"' class="cat-news-item-a-img" src="assets/img/deafault.png"> 
+                            <img *ngIf='items.thumbImageSrcUrl' class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}">
+                            <img *ngIf='items.thumbImageSrcUrl=="null"' class="cat-news-item-a-img" src="assets/img/deafault.png">
                         </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
@@ -596,10 +551,8 @@
                                 <div class="n-i-source">
                                     <a href="{{items.storyTextUrl}}" target="_blank">
                                         <img *ngIf='items.storySite=="hiru"' class="source" src="assets/img/hiru.png">
-                                        <img *ngIf='items.storySite=="adaDerana"' class="source"
-                                            src="assets/img/derana.png">
-                                        <img *ngIf='items.storySite=="Youtube"' class="source"
-                                            src="assets/img/youtube.png">
+                                        <img *ngIf='items.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                        <img *ngIf='items.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                     </a>
                                 </div>
                             </div>
@@ -638,16 +591,16 @@
 
         </div>
         <div class="col-lg-3 col-sm-6 ">
-            <div class="row no-margin">
+            <!-- <div class="row no-margin">
                 <h4 class="sub-cat-ttl">News Videos</h4>
-            </div>
+            </div> -->
             <div *ngFor="let items of newsVideoArray; let i=index">
                 <div class="sub-cat-news-item-a" *ngIf=" i >=3 && i < 6">
                     <div class="row no-margin">
                         <div class="col-5 no-padding">
                             <!-- <img class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}">  -->
-                            <img *ngIf='items.thumbImageSrcUrl' class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}"> 
-                            <img *ngIf='items.thumbImageSrcUrl=="null"' class="cat-news-item-a-img" src="assets/img/deafault.png"> 
+                            <img *ngIf='items.thumbImageSrcUrl' class="cat-news-item-a-img" src="{{items.thumbImageSrcUrl}}">
+                            <img *ngIf='items.thumbImageSrcUrl=="null"' class="cat-news-item-a-img" src="assets/img/deafault.png">
                         </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
@@ -656,10 +609,8 @@
                                 <div class="n-i-source">
                                     <a href="{{items.storyTextUrl}}" target="_blank">
                                         <img *ngIf='items.storySite=="hiru"' class="source" src="assets/img/hiru.png">
-                                        <img *ngIf='items.storySite=="adaDerana"' class="source"
-                                            src="assets/img/derana.png">
-                                        <img *ngIf='items.storySite=="Youtube"' class="source"
-                                            src="assets/img/youtube.png">
+                                        <img *ngIf='items.storySite=="adaDerana"' class="source" src="assets/img/derana.png">
+                                        <img *ngIf='items.storySite=="Youtube"' class="source" src="assets/img/youtube.png">
                                     </a>
                                 </div>
                             </div>

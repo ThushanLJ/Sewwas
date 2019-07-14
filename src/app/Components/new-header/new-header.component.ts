@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from 'src/app/services/news.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-new-header',
@@ -8,9 +10,12 @@ import { NewsService } from 'src/app/services/news.service';
 })
 export class NewHeaderComponent implements OnInit {
 
-  constructor(
-    private newsService: NewsService
-  ) { }
+  
+
+  constructor(private newsService: NewsService,
+              private router : Router) {
+   
+   }
 
   knwArray:any[];
   entArray:any[];
@@ -19,21 +24,20 @@ export class NewHeaderComponent implements OnInit {
 
   ngOnInit() {
 
-    document.getElementById('svg').classList.add('animate');
+    //document.getElementById('svg').classList.add('animate');
 
-    setTimeout(function () {
+    /*setTimeout(function () {
       document.getElementById('svg').classList.remove('animate');
       document.getElementById('loading-container').classList.add('loaded');
-    }, 7000);
+    }, 7000);*/
 
     setTimeout(function () {
-      document.getElementById('svg').classList.add('animate');
 
-      var header = document.getElementById("header");
-      header.setAttribute("class", "active");
+     // var header = document.getElementById("header");
+      //header.setAttribute("class", "active");
       var container2 = document.getElementById("container2");
       container2.setAttribute("class", "container2 active");
-    }, 10000);
+    }, 0);
 
 
     this.newsService.getKnowladgeNews().subscribe((data:any)=>{
@@ -55,6 +59,16 @@ export class NewHeaderComponent implements OnInit {
       this.latestArray=data.data;
       console.log(this.latestArray,"getLatestNews");
     })
+  }
+
+  moreDetail(item){
+    // this.router.navigate([''])
+    if(item.storySite!="Youtube"){
+      this.router.navigate(['/news/'+item._id])
+    }
+    else{
+      this.router.navigate(['/video/'+item._id])
+    }
   }
 
 }

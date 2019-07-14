@@ -35,6 +35,14 @@ export class NewsService {
     return this.http.get(this.baseURL+"idResult",{params:params})
   }
 
+  getNewsWithUserId(data){
+    var se={
+      newsid:data,
+      userid:localStorage.getItem('sewwasUserId')
+    }
+    return this.http.post(this.baseURL+'idResult',se)
+  }
+
   addComment(data){
     return this.http.post(this.baseURL+'addNewsComment',data);
   }
@@ -42,5 +50,28 @@ export class NewsService {
   addNewsVote(data){
     console.log(data);
     return this.http.post(this.baseURL+'addNewsVote',data);
+  }
+
+  getSeaarchResult(data){
+    var se={
+      searchKey:data
+    }
+    console.log(se);
+    return this.http.post(this.baseURL+'searchDetails',se);
+  }
+
+  getPagination(page,type){
+    var se={
+      subCategory:type,
+      pageNo:page
+    }
+    return this.http.post(this.baseURL+'pagination',se);
+  }
+
+  getUserHistory(){
+    var se={
+      userid:localStorage.getItem('sewwasUserId')
+    }
+    return this.http.post(this.baseURL+'userHistory',se)
   }
 }

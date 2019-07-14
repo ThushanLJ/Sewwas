@@ -1,56 +1,61 @@
-<div>
+<!-- <app-first-header></app-first-header>
+<app-first2-header></app-first2-header>
+<app-second-header></app-second-header> -->
+
+<div class="container">
     <div>
-        <h1 class="textHead">{{arr[0].storyText}}</h1>
+        <img class="imageAlignment" src={{arr.enlargeImgUrl}}>
     </div>
     <div>
-        <img class="imageAlignment" src={{arr[0].enlargeImgUrl}}>
-    </div>
-    <div class="textContent" [innerHtml]="arr[0].moreStoryHtml"></div>
-    <div class="commentArea">
-        <form [formGroup]="commentForm">
-            <div class="row">
-                <textarea class="form-control" rows="4" placeholder="Add your comment...."
-                    formControlName="text"></textarea>
-            </div>
-            <div class="row">
-                <div class="col-2">
-                    <button class="btn btn-primary signup" (click)="submitComment()">Submit Comment</button>
-                </div>
-                <div class="col-2">
-                    <div>
-                        <button class="btn btn-danger" (click)="addVote()">Recommended</button>
-                        <button class="btn btn-danger" disabled>{{arr[0].voteCount}}</button>
-                    </div>
-
-                </div>
-            </div>
-        </form>
-
+        <h1 class="textHead my-5">{{arr.storyText}}</h1>
     </div>
 
-    <!-- <div>
-            <table>
-                <thead>
-                    <th></th>
-                    <th></th>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let comment of arr[0].comments">
-                        <td>****</td>
-                        <td>{{comment.text}}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div> -->
+    <div class="textContent h4" style="color:rgb(0, 132, 255)">{{arr.storyDateTime | slice:0:10}}</div>
+    <div class="textContent" [innerHtml]="arr.moreStoryHtml"></div>
+    <div>
+        <hr>
+    </div>
 
-    <div class="viewComments" *ngIf="arr[0].comments?.length > 0">
+
+
+
+    <b style="text-decoration: underline; text-decoration-color:rgb(0, 132, 255) ">{{arr.comments.length}} Comments</b>
+
+    <div class="my-5">
+        <button class="btn btn-danger" (click)="addVote()">Recommended</button>
+        <button class="btn btn-danger" disabled>{{arr.voteCount}}</button>
+        <!-- <button>
+            <img src="./assets/img/fb.png" style="width:40px; background-color: white">
+        </button> -->
+        <fb-like url={{url}}></fb-like>
+        <!-- <button>
+            <img src="./assets/img/tw.png" style="width:40px; background-color: white">
+        </button> -->
+        <tweet url={{url}}></tweet>
+    </div>
+
+
+    <form [formGroup]="commentForm">
+
+        <textarea class="form-control" rows="4" placeholder="Add your comment...." formControlName="text"></textarea>
+        <button class="btn btn-primary signup" (click)="submitComment()">Submit Comment</button>
+
+
+    </form>
+
+
+
+
+    <div *ngIf="arr.comments?.length > 0">
         <div *ngFor="let comment of arr[0].comments">
-            <div class="row comment-align">
+            <div class="row my-5">
                 <div class="col-1">
-                    <img class="comment-user-profile-image" src="assets/img/profile.png">
+                    <img class="img-fluid h-auto" src="./assets/img/profile.png">
                 </div>
-                <div class="col-1">
-                    <div class="row"><p class="font-style-user">{{comment.username}}: </p></div>
+                <div class="col">
+                    <div class="row">
+                        <p class="font-style-user">{{comment.username}}</p>
+                    </div>
                     <div class="row">
                         <p>{{comment.text}}</p>
                     </div>
@@ -58,8 +63,42 @@
             </div>
         </div>
     </div>
-</div>
 
-<div *ngIf="arr[0].comments?.length == 0">
-    <p>Be the first to comment</p>
+
+    <!-- <div class="row my-5">
+                                <div class="col-1">
+                                    <img class="img-fluid h-auto" src="./assets/img/profile.png">
+                                </div>
+                                <div class="col">
+                                    <div class="row"><p class="font-style-user">Ranjith Soyza </p></div>
+                                    <div class="row">
+                                        <p>In computer programming, a comment is a programmer-readable explanation or annotation in the source code of a computer program. They are added with the purpose of making the source code easier for humans to understand, and are generally ignored by compilers and interpreters</p>
+                                    </div>
+                                </div>
+                            </div> -->
+
+
+
+
+    <!--<div class="viewComments" *ngIf="arr[0].comments?.length > 0">
+        <div *ngFor="let comment of arr[0].comments">
+                <div class="row my-5">
+                        <div class="col-1">
+                            <img class="img-fluid h-auto" src="./assets/img/profile.png">
+                        </div>
+                        <div class="col">
+                            <div class="row"><p class="font-style-user">{{comment.username}} </p></div>
+                            <div class="row">
+                                <p>{{comment.text}}</p>
+                            </div>
+                        </div>
+                </div>
+        </div>
+    </div>
+
+
+    <div *ngIf="arr[0].comments?.length == 0">
+        <p class="my-5">Be the first to comment</p>
+    </div>-->
+
 </div>

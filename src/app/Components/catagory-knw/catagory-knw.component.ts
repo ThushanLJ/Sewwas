@@ -26,6 +26,7 @@ export class CatagoryKnwComponent implements OnInit {
 
     this.subcatagoryService.getTechNews().subscribe((data:any)=>{
       this.technews=data.data;
+      console.log(this.technews,"technews");
     })
   }
 

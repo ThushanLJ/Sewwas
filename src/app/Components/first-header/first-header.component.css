@@ -1,0 +1,20 @@
+/*First navi bar*/  
+
+.navItem{
+	
+	font-size: 100%;
+	margin: 0 0 0 3%;
+	font-weight: 10%;
+	display:block;
+	
+}
+.navAlign{
+	margin-left: 20vw;
+}
+.color-me{
+	color:white;
+}
+
+
+.navbar-nav {padding-top:5px ; padding-bottom:0 ; height: 30px; } 
+.navbar {min-height:30px;}

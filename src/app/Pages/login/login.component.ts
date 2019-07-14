@@ -195,7 +195,7 @@ export class LoginComponent implements OnInit {
 
 
   register(){
-    //console.log(this.registerForm.value);
+    console.log(this.registerForm.value);
     this.auth.registerUser(this.registerForm.value).subscribe((data:any)=>{
       if(data.data != null){
         window.location.reload();
