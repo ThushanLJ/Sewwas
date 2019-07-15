@@ -54,6 +54,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { BlogStoryComponent } from './Components/blog-story/blog-story.component';
 import { UserComponent } from './Pages/user/user.component';
 import { CatagoryDealsComponent } from './Components/catagory-deals/catagory-deals.component';
+import { UpdateProfileComponent } from './Components/update-profile/update-profile.component';
 
 
 
@@ -100,7 +101,8 @@ import { CatagoryDealsComponent } from './Components/catagory-deals/catagory-dea
     SignUpComponent,
     BlogStoryComponent,
     UserComponent,
-    CatagoryDealsComponent
+    CatagoryDealsComponent,
+    UpdateProfileComponent,
 
   ],
   imports: [
