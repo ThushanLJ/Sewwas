@@ -1,4 +1,4 @@
-<p class="topText d-none d-sm-block" style="margin-left:11%; margin-bottom: 0%">
+<!-- <p class="topText d-none d-sm-block" style="margin-left:11%; margin-bottom: 0%">
   <span class="TN"> Trending now </span>Latest News | Current News | Breaking news | Latest  video </p>
 <div class="container d-none d-sm-block" style="padding-left: 0%; margin-bottom: -10%">
 <div class="loader">
@@ -15,7 +15,7 @@
     <div class="container2" id="container2">
       <div class="carousel-wrapper">
         <div class="carousel" data-flickity='{ "initialIndex": 2,"pageDots": false}' >
-          <div class="carousel-cell" aria-selected="false" [routerLink]="['/catagory', 'knw']">
+          <div class="carousel-cell" aria-selected="false" [routerLink]="['/catagory', 'knw']"> -->
             <!-- <h3>Knowledge</h3> -->
             <!-- <a class="more" href="">{{knwArray[0].storyText | slice:0:60}}</a> -->
             <!-- <div class="imageSize">
@@ -26,12 +26,12 @@
                 {{knwArray[0].storyText}}
               </p>
             </div> -->
-            <div class="backgroundImageSize">
+            <!-- <div class="backgroundImageSize">
               <img src={{knwArray[0].enlargeImgUrl}} alt="Sri Lanka blasts: IT worker held" width="100%">
               <div class="bottom-left" (click)="moreDetail(knwArray[0])">{{knwArray[0].storyText}}</div>
             </div>
           </div>
-          <div class="carousel-cell" aria-selected="false" [routerLink]="['/catagory', 'inf']">
+          <div class="carousel-cell" aria-selected="false" [routerLink]="['/catagory', 'inf']"> -->
             <!-- <h3>Information</h3> -->
             <!-- <a class="more" href="">{{infArray[0].storyText | slice:0:60}}</a> -->
             <!-- <div class="imageSize">
@@ -42,12 +42,12 @@
                 {{infArray[0].storyText}}
               </p>
             </div> -->
-            <div class="backgroundImageSize">
+            <!-- <div class="backgroundImageSize">
               <img src={{infArray[0].enlargeImgUrl}} alt="Sri Lanka blasts: IT worker held" width="100%">
               <div class="bottom-left" (click)="moreDetail(infArray[0])">{{infArray[0].storyText}}</div>
             </div>
           </div>
-          <div class="carousel-cell" aria-selected="true">
+          <div class="carousel-cell" aria-selected="true"> -->
             <!-- <h3>Home</h3> -->
             <!-- <a class="more" href="">{{latestArray[1].storyText | slice:0:60}}</a> -->
             <!-- <div class="imageSize">
@@ -58,12 +58,12 @@
                 {{latestArray[1].storyText}}
               </p>
             </div> -->
-            <div class="backgroundImageSize">
+            <!-- <div class="backgroundImageSize">
               <img src={{latestArray[1].enlargeImgUrl}}  alt="Sri Lanka blasts: IT worker held" width="100%">
               <div class="bottom-left" (click)="moreDetail(latestArray[1])">{{latestArray[1].storyText}}</div>
             </div>
           </div>
-          <div class="carousel-cell" aria-selected="false" [routerLink]="['/catagory', 'ent']">
+          <div class="carousel-cell" aria-selected="false" [routerLink]="['/catagory', 'ent']"> -->
             <!-- <h3>Entertainment</h3> -->
             <!-- <a class="more" href="">{{entArray[0].storyText | slice:0:40}}</a> -->
             <!-- <div class="imageSize">
@@ -74,19 +74,19 @@
                 {{entArray[0].storyText}}
               </p>
             </div> -->
-            <div class="backgroundImageSize">
+            <!-- <div class="backgroundImageSize">
               <img src={{entArray[0].enlargeImgUrl}}  alt="Sri Lanka blasts: IT worker held" width="100%">
               <div class="bottom-left" (click)="moreDetail(entArray[0])">{{entArray[0].storyText}}</div>
             </div>
           </div>
-          <div class="carousel-cell" aria-selected="false">
+          <div class="carousel-cell" aria-selected="false"> -->
             <!-- <h3>Blog</h3> -->
             <!-- <a class="more" href="">Explore more</a>
             <div class="imageSize">
               <img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop="
               />
             </div> -->
-            <div class="backgroundImageSize">
+            <!-- <div class="backgroundImageSize">
               <img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop="  alt="Sri Lanka blasts: IT worker held" width="100%">
               <div class="bottom-left"></div>
             </div>
@@ -97,4 +97,38 @@
   </div>
 </div>
 </div>
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> -->
+
+<p class="topText d-none d-sm-block" style="margin-left: 12vw;">
+  <span class="TN"> Trending now </span>Latest News | Current News | Breaking news | Latest video </p>
+
+<div class="container my-5">
+  <div class="row" >
+    <div class="col" style="width:50%">
+      <div class="row">
+        <img src="{{knwArray[0].enlargeImgUrl}}" style="width:99%;height:160px; position: relative;" (click)="moreDetail(knwArray[0])">
+        <div class="text-center font-weight-bold big-img">{{knwArray[0].storyText}}</div>
+      </div>
+      <div class="row" style="margin-top: 1%">
+        
+          <img src="{{infArray[0].enlargeImgUrl}}" style="width:49%; height:150px;margin-right: 1%;position: relative;" (click)="moreDetail(infArray[0])">
+          <div class="text-center font-weight-bold small-img">{{infArray[0].storyText}}</div>
+          <img  src="{{entArray[0].enlargeImgUrl}}" style="width:49%; height:150px;" (click)="moreDetail(entArray[0])">
+          <div class="text-center font-weight-bold small2-img">{{entArray[0].storyText}}</div>
+        </div>
+    </div>
+    <div class="col" style="width:50%">
+        <div class="row">
+            <img src="{{infArray[1].enlargeImgUrl}}" style="width:49%; height:150px; margin-right: 1%" (click)="moreDetail(infArray[1])">
+            <div class="text-center font-weight-bold small-img">{{infArray[1].storyText}}</div>
+            <img src="{{entArray[1].enlargeImgUrl}}" style="width:49%; height:150px" (click)="moreDetail(entArray[1])">
+            <div class="text-center font-weight-bold small2-img">{{entArray[1].storyText}}</div>
+        </div>
+        <div class="row" style="margin-top: 1%">
+        <img src="{{latestArray[0].enlargeImgUrl}}" style="width:99%;height:160px" (click)="moreDetail(latestArray[0])">
+        <div class="text-center font-weight-bold big-img">{{latestArray[0].storyText}}</div>
+        </div>
+    </div>
+  </div>
+
+</div>
