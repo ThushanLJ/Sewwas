@@ -21,17 +21,19 @@
 
     <b style="text-decoration: underline; text-decoration-color:rgb(0, 132, 255) ">{{arr.comments.length}} Comments</b>
 
-    <div class="my-5">
+    <div class="my-5" style="flex-direction: row; vertical-align: middle">
         <button class="btn btn-danger" (click)="addVote()">Recommended</button>
-        <button class="btn btn-danger" disabled>{{arr.voteCount}}</button>
+        <button class="btn btn-danger" disabled>{{arr.voteCount}} </button>
         <!-- <button>
             <img src="./assets/img/fb.png" style="width:40px; background-color: white">
         </button> -->
-        <fb-like url={{url}}></fb-like>
+    <fb-like  style="margin-left: 0.5%" url={{url}}></fb-like>
         <!-- <button>
             <img src="./assets/img/tw.png" style="width:40px; background-color: white">
         </button> -->
-        <tweet url={{url}}></tweet>
+        <div class="d-none d-sm-block" style="margin-left:25.5%;margin-top: -2.69%"><tweet url={{url}}></tweet></div>
+        <div class="d-sm-none" style="margin-left:77%;margin-top: -5.45%"><tweet url={{url}}></tweet></div>
+   
     </div>
 
 

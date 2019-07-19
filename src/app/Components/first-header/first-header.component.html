@@ -12,13 +12,16 @@
 
 -->
 
-<div style="background-color: #1675b6;">
-  <nav class="navbar navbar-expand-sm ">
-    <div class="navItem" *ngFor='let d of weather'>
-      <p class="color-me">{{d.app_temp}} | {{d.city_name}}</p>
+<div style="background-color: #1675b6; height: 30px">
+  <div class="container">
+    
+  
+  <nav class="navbar navbar-expand-sm " style="margin-left: -5.5%">
+    <div class="navItem" *ngFor='let d of weather' >
+      <p class="color-me" style="margin-bottom:0%; margin-left:">{{d.app_temp}}<sup> c</sup> | {{d.city_name}}</p>
     </div>
-    <div class="navItem" style="margin-left: 11.5%;">
-      <a class="color-me" href="/">{{ date }}</a>
+    <div class="navItem" >
+      <div class="color-me" >{{ date }}</div>
     </div>
     <div class="navItem">
       <a class="color-me" routerLink="/catagory/blog">Blog</a>
@@ -31,4 +34,5 @@
     </div> -->
 
   </nav>
+</div>
 </div>

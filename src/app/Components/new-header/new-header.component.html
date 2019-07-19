@@ -99,14 +99,16 @@
 </div>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> -->
 
-<p class="topText d-none d-sm-block" style="margin-left: 12vw;">
-  <span class="TN"> Trending now </span>Latest News | Current News | Breaking news | Latest video </p>
 
-<div class="container my-5">
-  <div class="row" >
+<div class="container ">
+
+    <p class="topText d-none d-sm-block">
+        <span class="TN"> Trending now </span>Latest News | Current News | Breaking news | Latest video </p>
+
+  <div class="row" style="margin-bottom: 3%" >
     <div class="col" style="width:50%">
       <div class="row">
-        <img src="{{knwArray[0].enlargeImgUrl}}" style="width:99%;height:160px; position: relative;" (click)="moreDetail(knwArray[0])">
+        <img src="{{knwArray[0].enlargeImgUrl}}" style="width:99%;height:35vh; position: relative;" (click)="moreDetail(knwArray[0])">
         <div class="text-center font-weight-bold big-img">{{knwArray[0].storyText}}</div>
       </div>
       <div class="row" style="margin-top: 1%">
@@ -125,7 +127,7 @@
             <div class="text-center font-weight-bold small2-img">{{entArray[1].storyText}}</div>
         </div>
         <div class="row" style="margin-top: 1%">
-        <img src="{{latestArray[0].enlargeImgUrl}}" style="width:99%;height:160px" (click)="moreDetail(latestArray[0])">
+        <img src="{{latestArray[0].enlargeImgUrl}}" style="width:99%;height:35vh" (click)="moreDetail(latestArray[0])">
         <div class="text-center font-weight-bold big-img">{{latestArray[0].storyText}}</div>
         </div>
     </div>

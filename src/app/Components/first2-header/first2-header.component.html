@@ -1,24 +1,27 @@
-<div style="position: relative; margin: -1% 12% 2% 11%">
+<div class="container">
+  
+
+<div style="position: relative; margin: 0% 5%  1% -2.5%">
   <div class="d-flex flex-row justify-content-between no-padding">
     <div class="p-2 d-none d-sm-block"><a href="/"><img src="assets/img/logo.png" /></a> </div>
-    <div class="p-2 d-sm-none" style="width:18vw; height: 8vh; margin-bottom: 15%; margin-left:-10%; margin-top:-4% "><a
+    <div class="p-2 d-sm-none" style="width:18vw; height: 8vh; margin-bottom: 15%; margin-left:-4%; margin-top:-4% "><a
         href="/"><img src="assets/img/logo.png" /></a> </div>
-    <div class="p-2 signAlign"><a routerLink="/userprofile"><img src="assets/img/user-profile.png" style="width:30px;height:30px" /></a>
-
-      <div *ngIf="log">
-          <a id="btnShowModal">
+        <div class="p-2" *ngIf="log" style="margin-right:-6%"><a routerLink="/userprofile"><img src="assets/img/user-profile.png " style="width:30px;height:30px;margin-left: 0%" /></a>
+     
+          <a id="btnShowModal" style="cursor:pointer">
               <span class="color-me ">SignIn</span>
             </a>
             <span class="color-me"> | </span>
             <a routerLink="/login">
               <span class="color-me">SignUp</span>
-            </a>
-      </div>
-      <div *ngIf="!log">
-          <a (click)="logoutNow()">
-            <span class="color-me">LogOut</span>
-          </a>
-      </div>
+            </a></div>
+            <div class="p-2"  style="margin-right:-6%" *ngIf="!log"><a routerLink="/userprofile"><img src="assets/img/user-profile.png " style="width:30px;height:30px;margin-left:0%" /></a>
+     
+              <a (click)="logoutNow()">
+                  <span class="color-me"  style="cursor:pointer">LogOut</span>
+                </a>
+              </div>
+   
       <!-- <a id="btnShowModal">
         <span class="color-me ">SignIn</span>
       </a>
@@ -27,10 +30,10 @@
         <span class="color-me">SignUp</span>
       </a> -->
 
-    </div>
+ 
   </div>
 </div>
-
+</div>
 
 
 <div class="container">
