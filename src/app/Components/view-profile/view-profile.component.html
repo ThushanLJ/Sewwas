@@ -23,16 +23,17 @@
 
 
         <div class="col-3" *ngIf="nav1">
-            <img class="mx-2 my-2 img-fluid h-auto photo1" src="./assets/img/deal 1.jpg">
-            <img class="mx-2 photo2" src="./assets/img/camera.png" style="width: 50px;">
-            <input type="file">
+            <img class="mx-2 my-2 img-fluid h-auto photo1" src="./assets/img/deal 1.jpg"  *ngIf='userData.picture==null'>
+            <img class="mx-2 my-2 img-fluid h-auto photo1" src={{userData.picture}} *ngIf='userData.picture!=null'>
+            <!-- <img class="mx-2 photo2" src="./assets/img/camera.png" style="width: 50px;">
+            <input type="file"> -->
         </div>
 
 
         <div class="col" *ngIf="nav1">
 
             <div class="h2 my-5">
-                <b>Wikraja Jasun</b>
+                <b>{{userData.local.firstName}} {{userData.local.lastName}}</b>
             </div>
 
             <!-- <div class="h5"><b>Blog post rating</b></div>
@@ -49,22 +50,22 @@
             <!-- <form> -->
                 <div class="form-group float-label-control">
                     <label>Phone :-</label>
-                    <label></label>
+                    <label>{{userData.phone}}</label>
                     <!-- <input type="text" class="form-control" id="phone"> -->
                 </div>
                 <div class="form-group">
                     <label>Address :-</label>
-                    <label></label>
+                    <label>{{userData.address}}</label>
                     <!-- <input type="text" class="form-control" id="addr"> -->
                 </div>
                 <div class="form-group">
                     <label>Email :-</label>
-                    <label></label>
+                    <label>{{userData.local.userMail}}</label>
                     <!-- <input type="text" class="form-control" id="email"> -->
                 </div>
                 <div class="form-group">
                     <label>Web site :-</label>
-                    <label></label>
+                    <label>{{userData.website}}</label>
                     <!-- <input type="text" class="form-control" id="site"> -->
                 </div>
             <!-- </form> -->
@@ -75,12 +76,12 @@
             <!-- <form> -->
                 <div class="form-group float-label-control">
                     <label>Birthday :-</label>
-                    <label></label>
+                    <label>{{userData.birthday}}</label>
                     <!-- <input type="text" class="form-control" id="phone"> -->
                 </div>
                 <div class="form-group">
                     <label>Gender :-</label>
-                    <label></label>
+                    <label>{{userData.gender}}</label>
                     <!-- <input type="text" class="form-control" id="addr"> -->
                 </div>
             <!-- </form> -->

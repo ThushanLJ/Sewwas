@@ -14,18 +14,21 @@
 
 <div style="background-color: #1675b6;">
   <nav class="navbar navbar-expand-sm ">
+    <div class="navItem" *ngFor='let d of weather'>
+      <p class="color-me">{{d.app_temp}} | {{d.city_name}}</p>
+    </div>
     <div class="navItem" style="margin-left: 11.5%;">
       <a class="color-me" href="/">{{ date }}</a>
     </div>
     <div class="navItem">
       <a class="color-me" routerLink="/catagory/blog">Blog</a>
     </div>
-    <div class="navItem">
+    <!-- <div class="navItem">
       <a class="color-me" routerLink="">Forums</a>
     </div>
     <div class="navItem">
       <a class="color-me" routerLink="">Contact</a>
-    </div>
+    </div> -->
 
   </nav>
 </div>

@@ -26,4 +26,15 @@ export class AuthService {
   googleRegister(data){
     return this.http.post(this.baseURL+'googleOauth',data);
   }
+
+  saveUpdate(data){
+    return this.http.post(this.baseURL+"registerMoreData",data);
+  }
+
+  getUserDetail(){
+    var se={
+      userId:localStorage.getItem('sewwasUserId')
+    }
+    return this.http.post(this.baseURL+'getUser',se);
+  }
 }

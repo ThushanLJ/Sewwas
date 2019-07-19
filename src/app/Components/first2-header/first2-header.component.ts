@@ -38,7 +38,7 @@ export class First2HeaderComponent implements OnInit {
       password:[null, Validators.required],
     });
 
-    if(localStorage.getItem('sewwasUserToken') == null){
+    if(localStorage.getItem("sewwasUserId") == null){
       this.log=false;
     }
   }
@@ -47,7 +47,7 @@ export class First2HeaderComponent implements OnInit {
     this.showPopUp = true;
   }
   login(){
-    console.log(this.loginForm.value);
+    //console.log(this.loginForm.value);
     this.auth.loginUser(this.loginForm.value).subscribe((data:any)=>{
       if(data.data.user_id != null){
         console.log(data);
