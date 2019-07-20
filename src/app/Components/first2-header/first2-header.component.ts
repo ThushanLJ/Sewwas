@@ -55,7 +55,7 @@ export class First2HeaderComponent implements OnInit {
         localStorage.setItem('sewwasUserName', data.data.user_name);
         localStorage.setItem('sewwasUserId', data.data.user_id);
         localStorage.setItem('sewwasPicture', data.data.picture);
-        this.router.navigate(['/home']);
+        window.location.reload();
       }
       else{
         //
@@ -211,5 +211,10 @@ export class First2HeaderComponent implements OnInit {
       
     // }
     // }
+  }
+
+  userProfile(){
+    if(localStorage.getItem("sewwasUserId") != null){
+      this.router.navigate(['/userprofile']);}
   }
 }

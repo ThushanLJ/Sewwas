@@ -48,6 +48,7 @@ export class UpdateProfileComponent implements OnInit {
     this.authService.getUserDetail().subscribe((data:any)=>{
       console.log(data.data);
       this.userData=data.data;
+      this.updateFormData();
     });
   }
 
@@ -56,6 +57,11 @@ export class UpdateProfileComponent implements OnInit {
     var currntDate = Date.now().toString();
     var storageRef = firebase.storage().ref();
     var imageRef = storageRef.child("images/" + currntDate);
+
+    if(this.imageFile[0]==null){
+      this.saveUpdate(null);
+      return
+    }
 
     imageRef.put(this.imageFile[0]).then((snapshot)=> {
       snapshot.ref.getDownloadURL().then((downloadURL) =>{
@@ -83,6 +89,18 @@ export class UpdateProfileComponent implements OnInit {
         window.location.reload();
       }
     })
+  }
+
+  updateFormData(){
+    this.registerForm.patchValue({
+      phone:this.userData.phone,
+      address:this.userData.address,
+      eamil:this.userData.local.userMail,
+      website:this.userData.website,
+      birthday:this.userData.birthday,
+      gender:this.userData.gender,
+      picture:this.userData.picture
+    });
   }
 
 }
