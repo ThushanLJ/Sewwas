@@ -1,8 +1,9 @@
 .navMargin{
-	margin-top: 4%;
-	margin-left: 9%;
+	margin-top: 5%;
+	margin-left: -2.5%;
 	margin-bottom:1px;
 	overflow: hidden;
+	margin-right: -1%
 }
 	
 
@@ -46,7 +47,7 @@
 }
 
 .searchMargin{
-	margin-left: 10%;
+	margin-left: 5%;
 	
 }
 div#search-section {
@@ -61,8 +62,8 @@ div#search-section {
 	position: relative;
 	background: #fff;
 	padding:0 50px 0px 20px;
-	margin-left: 21%;
-	margin-right: 5%;
+	margin-left: 35%;
+	margin-right: -1%;
 	margin-bottom: 1%;
 	
 }
@@ -113,4 +114,6 @@ hr.style1{
 	color: black
 }
 
-
+input:focus{
+	outline: none;
+	}
