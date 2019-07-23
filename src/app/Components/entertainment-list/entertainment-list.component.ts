@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {BlogService} from '../../services/blog.service';
+import { BlogService } from 'src/app/services/blog.service';
 
 @Component({
-  selector: 'app-read-list',
-  templateUrl: './read-list.component.html',
-  styleUrls: ['./read-list.component.css']
+  selector: 'app-entertainment-list',
+  templateUrl: './entertainment-list.component.html',
+  styleUrls: ['./entertainment-list.component.css']
 })
-export class ReadListComponent implements OnInit {
+export class EntertainmentListComponent implements OnInit {
 
   constructor(private blogService: BlogService,
     private router : Router) { }
@@ -22,7 +22,7 @@ export class ReadListComponent implements OnInit {
 
 
   ngOnInit() {
-       this.blogService.getrecentBlog().subscribe((data:any)=>{
+       this.blogService.getEntertainmentBlog().subscribe((data:any)=>{
          console.log(data);
          this.blogs=data.data;
        })

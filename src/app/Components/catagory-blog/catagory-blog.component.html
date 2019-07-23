@@ -1,31 +1,44 @@
 <div class="NPBbackground d-sm-none" style="margin-top: 5%">
-    <button type="button" class="btn btn-warning" *ngIf="!marked4" (click)="NewPost()" style="margin-left:70%">New
+    <button type="button" class="btn btn-warning" *ngIf="!marked6" (click)="NewPost()" style="margin-left:70%">New
         post</button>
 </div>
 
 <div class="NPBbackground d-none d-sm-block" style="margin-top: 0%">
-    <button type="button" class="btn btn-warning" *ngIf="!marked4" (click)="NewPost()" style="margin-left:85%">New
+    <button type="button" class="btn btn-warning" *ngIf="!marked6" (click)="NewPost()" style="margin-left:85%">New
         post</button>
 </div>
 <br><br><br>
-<div *ngIf="marked4">
+<div *ngIf="marked6">
     <app-new-post></app-new-post>
 </div>
 
-<div *ngIf="!marked4">
+<div *ngIf="!marked6">
     <div class="row d-none d-sm-block">
         <div class="col-sm-3">
             <div class="container ">
                 <div class="aMargin">
-                    <a (click)="ReadingList()" routerLink="#"> <img class="web" src="assets/img/reading.jpg" width="20px"
-                            height="30px" />Reading List</a>
+                     <img class="web" src="assets/img/reading.jpg" width="20px"
+                            height="30px" />
+                            <a class="btn" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Reading List 
+                            </a>
+                            <div class="collapse" id="collapseExample" style="margin-left:60px ">
+                                <h4 class="my-5 point" (click)="ReadingList()">All</h4>
+                                <h4 class="my-5 point" (click)="KnowledgeList()">Knowledge</h4>
+                                <h4 class="my-5 point" (click)="EntertainmentList()">Entertainment</h4>
+                                <h4 class="my-5 point" (click)="InformationList()">Information</h4>
+                            </div>
                 </div>
                 <!-- <div class="aMargin">
                    <a (click)="Comment()" routerLink="#"><img src="assets/img/comment.png" width="20px" height="20px" />Comment</a>
                 </div> -->
                 <div class="aMargin">
                     <a (click)="Post()" routerLink="#"><img class="web" src="assets/img/post2.jpg" width="20px"
-                            height="20px" />Post</a>
+                            height="20px" />
+                            <a class="btn" role="button" aria-expanded="false">
+                                Post 
+                            </a>
+                        </a>
                 </div>
                 <!-- <div class="aMargin2">
                     <a routerLink="" style="font-size: 15px"> All(5)</a>
@@ -40,7 +53,16 @@
             <div *ngIf="marked1">
                 <app-read-list></app-read-list>
             </div>
+            <div *ngIf="marked2">
+                <app-knowledge-list></app-knowledge-list>
+            </div>
             <div *ngIf="marked3">
+                <app-entertainment-list></app-entertainment-list>
+            </div>
+            <div *ngIf="marked4">
+                <app-information-list></app-information-list>
+            </div>
+            <div *ngIf="marked5">
                 <app-post-all></app-post-all>
             </div>
             <!-- <div *ngIf="marked2"><app-comments ></app-comments></div> -->
@@ -55,16 +77,28 @@
 
 
 
-<div *ngIf="!marked4">
+<div *ngIf="!marked6">
     <div class="row d-sm-none">
         <div class="col-sm-3">
             <div class="container" style="margin-top: -15%"> 
 
                 <div class="d-flex flex-row bd-highlight mb-3">
-                    <div class="p-2 bd-highlight mx-3"><a (click)="ReadingList()" routerLink="#"> <img
-                                src="assets/img/reading.jpg" width="20px" height="30px" />Reading List</a></div>
-                    <div class="p-2 bd-highlight mx-3"><a (click)="Post()" routerLink="#"><img src="assets/img/post2.jpg"
-                                width="20px" height="20px" />Post</a></div>
+                    <div class="p-2 bd-highlight mx-3"> <img
+                                src="assets/img/reading.jpg" width="20px" height="30px" />
+                                <a class="btn" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    Reading List 
+                                </a>
+                                <div class="collapse" id="collapseExample" style="margin-left:60px ">
+                                    <h4 class="my-5" (click)="ReadingList()">All</h4>
+                                    <h4 class="my-5" (click)="KnowledgeList()">Knowledge</h4>
+                                    <h4 class="my-5" (click)="EntertainmentList()">Entertainment</h4>
+                                    <h4 class="my-5" (click)="InformationList()">Information</h4>
+                                </div>
+                             </div>
+                    <div class="p-2 bd-highlight mx-3"><img src="assets/img/post2.jpg"
+                                width="20px" height="20px" /><a class="btn" role="button" aria-expanded="false" (click)="Post()">
+                                    Post
+                                </a></div>
 
                 </div>
             </div>
@@ -74,7 +108,16 @@
             <div *ngIf="marked1">
                 <app-read-list></app-read-list>
             </div>
+            <div *ngIf="marked2">
+                <app-knowledge-list></app-knowledge-list>
+            </div>
             <div *ngIf="marked3">
+                <app-entertainment-list></app-entertainment-list>
+            </div>
+            <div *ngIf="marked4">
+                <app-information-list></app-information-list>
+            </div>
+            <div *ngIf="marked5">
                 <app-post-all></app-post-all>
             </div>
             <!-- <div *ngIf="marked2"><app-comments ></app-comments></div> -->
@@ -86,3 +129,4 @@
     </div>
 
 </div>
+

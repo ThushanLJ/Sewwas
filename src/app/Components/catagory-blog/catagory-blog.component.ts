@@ -13,6 +13,8 @@ export class CatagoryBlogComponent implements OnInit {
   marked2=false;
   marked3 =false;
   marked4=false;
+  marked5=false;
+  marked6=false;
 
 
   ngOnInit() {
@@ -23,20 +25,44 @@ export class CatagoryBlogComponent implements OnInit {
       this.marked2 = false
       this.marked3 = false
       this.marked4 = false
+      this.marked5 = false
+      this.marked6 = false
   }
 
-  Comment(){
-      this.marked1 = false
-      this.marked2 = true
-      this.marked3 = false
-      this.marked4 = false
+  KnowledgeList(){
+    this.marked1 = false
+    this.marked2 = true
+    this.marked3 = false
+    this.marked4 = false
+    this.marked5 = false
+    this.marked6 = false
+  }
+
+  EntertainmentList(){
+    this.marked1 = false
+    this.marked2 = false
+    this.marked3 = true
+    this.marked4 = false
+    this.marked5 = false
+    this.marked6 = false
+  }
+
+  InformationList(){
+    this.marked1 = false
+    this.marked2 = false
+    this.marked3 = false
+    this.marked4 = true
+    this.marked5 = false
+    this.marked6 = false
   }
 
   Post(){
-      this.marked1 = false
-      this.marked2 = false
-      this.marked3 = true
-      this.marked4 = false
+    this.marked1 = false
+    this.marked2 = false
+    this.marked3 = false
+    this.marked4 = false
+    this.marked5 = true
+    this.marked6 = false
   }
 
   NewPost(){
@@ -44,10 +70,11 @@ export class CatagoryBlogComponent implements OnInit {
         this.marked1 = false
         this.marked2 = false
         this.marked3 = false
-        this.marked4 = true
+        this.marked4 = false
+        this.marked5 = false
+        this.marked6 = true
     }
     else{
-        //
     }
   }
 

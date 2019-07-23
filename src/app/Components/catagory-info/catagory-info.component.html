@@ -22,7 +22,7 @@
                                 <img src="assets/img/deafault.png" alt="Sri Lanka blasts: IT worker held" width="100%">
                             </div>
 
-                            <div (click)="moreDetail(bizNewsArray[0])" class="carousel-caption">
+                            <div (click)="moreDetail(bizNewsArray[0])" class="carousel-caption marg point">
                                 <h3>{{bizNewsArray[0].storyText | slice:0:60}}</h3>
                                 <div class="cat-c-source">
                                     <a href="{{bizNewsArray[0].storyTextUrl}}" target="_blank">
@@ -41,7 +41,7 @@
                             <div *ngIf="!newArray[0].enlargeImgUrl">
                                 <img src="assets/img/deafault.png" alt="Sri Lanka blasts: IT worker held" width="100%">
                             </div>
-                            <div (click)="moreDetail(newArray[0])" class="carousel-caption">
+                            <div (click)="moreDetail(newArray[0])" class="carousel-caption marg point">
                                 <h3>{{newArray[0].storyText | slice:0:60}}</h3>
                                 <div class="cat-c-source">
                                     <a href="{{newArray[0].storyTextUrl}}" target="_blank">
@@ -60,7 +60,7 @@
                             <div *ngIf="!newsVideoArray[0].enlargeImgUrl">
                                 <img src="assets/img/deafault.png" alt="Sri Lanka blasts: IT worker held" width="100%">
                             </div>
-                            <div (click)="moreDetail(newsVideoArray[0])" class="carousel-caption">
+                            <div (click)="moreDetail(newsVideoArray[0])" class="carousel-caption marg point">
                                 <h3>{{newsVideoArray[0].storyText | slice:0:60}}</h3>
                                 <div class="cat-c-source">
                                     <a href="{{newsVideoArray[0].storyTextUrl}}" target="_blank">
@@ -96,7 +96,7 @@
                                 </div>
                                 <div class="col-6 no-padding">
                                     <div class="cat-news-item-a-ttl">
-                                        <div class="cat-a-hedline" (click)="moreDetail(newsVideoArray[0])">
+                                        <div class="cat-a-hedline point" (click)="moreDetail(newsVideoArray[0])">
                                             {{newsVideoArray[0].storyText | slice:0:60}}</div>
                                         <div class="n-i-source">
                                             <a href="{{newsVideoArray[0].storyTextUrl}}" target="_blank">
@@ -120,7 +120,7 @@
                                 </div>
                                 <div class="col-6 no-padding">
                                     <div class="cat-news-item-a-ttl">
-                                        <div class="cat-a-hedline" (click)="moreDetail(newArray[1])">
+                                        <div class="cat-a-hedline point" (click)="moreDetail(newArray[1])">
                                             {{newArray[1].storyText | slice:0:60}}</div>
                                         <div class="n-i-source">
                                             <a href="{{newArray[1].storyTextUrl}}" target="_blank">
@@ -144,7 +144,7 @@
                                 </div>
                                 <div class="col-6 no-padding">
                                     <div class="cat-news-item-a-ttl">
-                                        <div class="cat-a-hedline" (click)="moreDetail(bizNewsArray[1])">
+                                        <div class="cat-a-hedline point" (click)="moreDetail(bizNewsArray[1])">
                                             {{bizNewsArray[1].storyText | slice:0:60}}</div>
                                         <div class="n-i-source">
                                             <a href="{{bizNewsArray[1].storyTextUrl}}" target="_blank">

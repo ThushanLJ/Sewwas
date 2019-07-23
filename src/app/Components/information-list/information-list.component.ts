@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {BlogService} from '../../services/blog.service';
+import { BlogService } from 'src/app/services/blog.service';
 
 @Component({
-  selector: 'app-read-list',
-  templateUrl: './read-list.component.html',
-  styleUrls: ['./read-list.component.css']
+  selector: 'app-information-list',
+  templateUrl: './information-list.component.html',
+  styleUrls: ['./information-list.component.css']
 })
-export class ReadListComponent implements OnInit {
+export class InformationListComponent implements OnInit {
 
   constructor(private blogService: BlogService,
     private router : Router) { }
@@ -22,7 +22,7 @@ export class ReadListComponent implements OnInit {
 
 
   ngOnInit() {
-       this.blogService.getrecentBlog().subscribe((data:any)=>{
+       this.blogService.getInformationBlog().subscribe((data:any)=>{
          console.log(data);
          this.blogs=data.data;
        })
@@ -65,4 +65,5 @@ export class ReadListComponent implements OnInit {
     // this.router.navigate([''])
     this.router.navigate(['/blogStory/'+item._id])
   }
+
 }

@@ -15,7 +15,7 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src={{recent[0].enlargeImgUrl}} alt="Sri Lanka blasts: IT worker held" width="100%">
-                            <div (click)="moreDetail(recent[0])" class="carousel-caption">
+                            <div (click)="moreDetail(recent[0])" class="carousel-caption marg point">
                                 <h3>{{recent[0].storyText}}</h3>
                                 <div class="cat-c-source">
                                     <img *ngIf='recent[0].storySite=="hiru"' class="source" src="assets/img/hiru.png">
@@ -26,7 +26,7 @@
                         </div>
                         <div (click)="moreDetail(recent[1])" class="carousel-item">
                             <img src={{recent[1].enlargeImgUrl}} alt="HAPPY BIRTHAY BABY! HAPPY BIRTHDAY ERIC KRIPKE!" width="100%">
-                            <div class="carousel-caption">
+                            <div class="carousel-caption marg point">
                                 <h3>{{recent[1].storyText}}</h3>
                                 <div class="cat-c-source">
                                     <img *ngIf='recent[1].storySite=="hiru"' class="source" src="assets/img/hiru.png">
@@ -37,7 +37,7 @@
                         </div>
                         <div class="carousel-item">
                             <img src={{recent[2].enlargeImgUrl}} alt="Supernatural Continues to Make a Big Ol' Mess of Things" width="100%">
-                            <div (click)="moreDetail(recent[2])" class="carousel-caption">
+                            <div (click)="moreDetail(recent[2])" class="carousel-caption marg point">
                                 <h3>{{recent[2].storyText}}</h3>
                                 <div class="cat-c-source">
                                     <img *ngIf='recent[2].storySite=="hiru"' class="source" src="assets/img/hiru.png">
@@ -64,7 +64,7 @@
                                 <div class="col-6 no-padding">
                                     <img class="cat-news-item-a-img" src={{item.enlargeImgUrl}}> </div>
                                 <div class="col-6 no-padding">
-                                    <div class="cat-news-item-a-ttl">
+                                    <div class="cat-news-item-a-ttl point">
                                         <div class="cat-a-hedline" (click)="moreDetail(item)">{{item.storyText}}</div>
                                         <div class="n-i-source">
                                             <span>
@@ -124,7 +124,7 @@
                             <img class="cat-news-item-a-img" src={{item.enlargeImgUrl}}> </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
-                                <div class="a-hedline" (click)="moreDetail(item)">{{item.storyText}}</div>
+                                <div class="a-hedline point" (click)="moreDetail(item)">{{item.storyText}}</div>
                                 <div class="n-i-source">
                                     <span>
                                         <a target="_blank" href={{item.storyTextUrl}}>
@@ -173,7 +173,7 @@
                         <div class="col-5 no-padding">
                             <img class="cat-news-item-a-img" src={{item.thumbImageSrcUrl}}> </div>
                         <div class="col-7 no-padding">
-                            <div class="cat-news-item-a-ttl">
+                            <div class="cat-news-item-a-ttl point">
                                 <div class="a-hedline" (click)="moreDetail(item)">{{item.storyText}}</div>
                                 <div class="n-i-source">
                                     <span>
@@ -226,7 +226,7 @@
                             <img class="cat-news-item-a-img" src={{item.thumbImageSrcUrl}}> </div>
                         <div class="col-7 no-padding">
                             <div class="cat-news-item-a-ttl">
-                                <div class="a-hedline" (click)="moreDetail(item)">{{item.storyText}}</div>
+                                <div class="a-hedline point" (click)="moreDetail(item)">{{item.storyText}}</div>
                                 <div class="n-i-source">
                                     <span>
                                         <a target="_blank" href={{item.storyTextUrl}}>
@@ -277,7 +277,7 @@
                         <div class="col-5 no-padding">
                             <img class="cat-news-item-a-img" src={{item.enlargeImgUrl}}> </div>
                         <div class="col-7 no-padding">
-                            <div class="cat-news-item-a-ttl">
+                            <div class="cat-news-item-a-ttl point">
                                 <div class="a-hedline" (click)="moreDetail(item)">{{item.storyText}}</div>
                                 <div class="n-i-source">
                                     <span>
@@ -331,7 +331,7 @@
                         <div class="col-5 no-padding">
                             <img class="cat-news-item-a-img" src={{item.enlargeImgUrl}}> </div>
                         <div class="col-7 no-padding">
-                            <div class="cat-news-item-a-ttl">
+                            <div class="cat-news-item-a-ttl point">
                                 <div class="a-hedline" (click)="moreDetail(item)">{{item.storyText}}</div>
                                 <div class="n-i-source">
                                     <span>
@@ -383,7 +383,7 @@
                         <div class="col-5 no-padding">
                             <img class="cat-news-item-a-img" src={{item.enlargeImgUrl}}> </div>
                         <div class="col-7 no-padding">
-                            <div class="cat-news-item-a-ttl">
+                            <div class="cat-news-item-a-ttl point">
                                 <div class="a-hedline" (click)="moreDetail(item)">{{item.storyText}}</div>
                                 <div class="n-i-source">
                                     <span>
@@ -435,7 +435,7 @@
                         <div class="col-5 no-padding">
                             <img class="cat-news-item-a-img" src={{item.enlargeImgUrl}}> </div>
                         <div class="col-7 no-padding">
-                            <div class="cat-news-item-a-ttl">
+                            <div class="cat-news-item-a-ttl point">
                                 <div class="a-hedline" (click)="moreDetail(item)">{{item.storyText}}</div>
                                 <div class="n-i-source">
                                     <span>
@@ -485,7 +485,7 @@
                         <div class="col-5 no-padding">
                             <img class="cat-news-item-a-img" src={{item.enlargeImgUrl}}> </div>
                         <div class="col-7 no-padding">
-                            <div class="cat-news-item-a-ttl">
+                            <div class="cat-news-item-a-ttl point">
                                 <div class="a-hedline" (click)="moreDetail(item)">{{item.storyText}}</div>
                                 <div class="n-i-source">
                                     <span>

@@ -13,7 +13,7 @@
                         <!-- <img class="sec-block-a-img" src={{item.enlargeImgUrl}}> -->
                         <img *ngIf='item.enlargeImgUrl' class="sec-block-a-img" src={{item.enlargeImgUrl}}>
                         <img *ngIf='item.enlargeImgUrl=="null"' class="sec-block-a-img" src="assets/img/deafault.png">
-                        <div class="sec-block-a-ttl">
+                        <div class="sec-block-a-ttl point">
                             <span (click)="moreDetail(item)">{{item.storyText}}</span>
                         </div>
                         <span>
@@ -38,7 +38,7 @@
                             </div>
                             <div class="col-7 no-padding">
                                 <div class="home-news-item-a-ttl">
-                                    <div class="a-hedline"><span (click)="moreDetail(item)">{{item.storyText}}</span>
+                                    <div class="a-hedline point"><span (click)="moreDetail(item)">{{item.storyText}}</span>
                                     </div>
                                     <div class="n-i-source">
                                         <span>
@@ -98,7 +98,7 @@
                             </div>
                             <div class="col-7 no-padding">
                                 <div class="home-news-item-a-ttl">
-                                    <div class="a-hedline"><span (click)="moreDetail(item)">{{item.storyText}}</span>
+                                    <div class="a-hedline point"><span (click)="moreDetail(item)">{{item.storyText}}</span>
                                     </div>
                                     <div class="n-i-source">
                                         <span>
@@ -151,7 +151,7 @@
                         <!-- <img class="sec-block-a-img" src={{item.enlargeImgUrl}}> -->
                         <img *ngIf='item.enlargeImgUrl' class="sec-block-a-img" src={{item.enlargeImgUrl}}>
                         <img *ngIf='item.enlargeImgUrl=="null"' class="sec-block-a-img" src="assets/img/deafault.png">
-                        <div class="sec-block-a-ttl">
+                        <div class="sec-block-a-ttl point">
                             <span (click)="moreDetail(item)">{{item.storyText}}</span>
                         </div>
                         <span>
@@ -189,7 +189,7 @@
                         <img class="card-img-top" src="{{arr[2]?.enlargeImgUrl}}" alt="Card image cap"
                             style="height: 200px;">
                         <div class="card-body">
-                            <div class="row justify-content-center align-items-center mx-2" style="height: 50px">
+                            <div class="row justify-content-center align-items-center mx-2 point" style="height: 50px">
                                 <h5 (click)="moreDetail(arr[2])">{{arr[2]?.storyText}}</h5>
                             </div>
                             <div class="row justify-content-center align-items-center">
@@ -211,7 +211,7 @@
                         <img class="card-img-top" src="{{item.enlargeImgUrl}}" alt="Card image cap"
                             style="height: 200px;">
                         <div class="card-body">
-                            <div class="row justify-content-center align-items-center mx-2" style="height: 50px">
+                            <div class="row justify-content-center align-items-center mx-2 point" style="height: 50px">
                                 <h5 (click)="moreDetail(item)">{{item?.storyText}}</h5>
                             </div>
                             <div class="row justify-content-center align-items-center">

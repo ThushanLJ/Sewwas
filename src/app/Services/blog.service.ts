@@ -20,6 +20,18 @@ export class BlogService {
     return this.http.get(this.baseURL+"getRecentBlog");
   }
 
+  getEntertainmentBlog(){
+    return this.http.get(this.baseURL+"getEntertainmentBlog");
+  }
+
+  getKnowledgeBlog(){
+    return this.http.get(this.baseURL+"getKnowledgeBlog");
+  }
+
+  getInformationBlog(){
+    return this.http.get(this.baseURL+"getInformationBlog");
+  }
+
   getUserBlog(){
     var se={
       email:localStorage.getItem('sewwasEmail')

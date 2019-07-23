@@ -30,7 +30,7 @@ const routes: Routes = [
   {path: 'catagory/:type' , component: CatagoryComponent},
   {path: 'content/:type' , component: NewsComponent},
   {path: 'morenews' , component: MoreNewsComponent},
-  // {path: 'deals' , component: CatagoryDealsComponent},
+
   {
     path:'news/:id',component:NewsComponent,
     children:[{path:'',component:StoryComponent}]

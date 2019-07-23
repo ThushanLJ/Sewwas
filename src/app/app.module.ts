@@ -55,6 +55,9 @@ import { BlogStoryComponent } from './Components/blog-story/blog-story.component
 import { UserComponent } from './Pages/user/user.component';
 import { CatagoryDealsComponent } from './Components/catagory-deals/catagory-deals.component';
 import { UpdateProfileComponent } from './Components/update-profile/update-profile.component';
+import { EntertainmentListComponent } from './Components/entertainment-list/entertainment-list.component';
+import { KnowledgeListComponent } from './Components/knowledge-list/knowledge-list.component';
+import { InformationListComponent } from './Components/information-list/information-list.component';
 
 
 
@@ -103,6 +106,9 @@ import { UpdateProfileComponent } from './Components/update-profile/update-profi
     UserComponent,
     CatagoryDealsComponent,
     UpdateProfileComponent,
+    EntertainmentListComponent,
+    KnowledgeListComponent,
+    InformationListComponent,
 
   ],
   imports: [
