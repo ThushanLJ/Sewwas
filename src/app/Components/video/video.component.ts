@@ -21,6 +21,7 @@ export class VideoComponent implements OnInit {
   arr:any;
   videoUrl:any;
   video='https://www.youtube.com/embed/';
+  finalUrl:any;
 
   ngOnInit() {
     this.sub=this.route.params.subscribe(params=>{
@@ -33,11 +34,13 @@ export class VideoComponent implements OnInit {
       console.log(this.arr);
       if(this.arr.storySubCategory=="teledrama"){
         this.videoId=this.videoId+this.arr.storyTextUrl;
+        this.finalUrl=this.videoReturn();
       }
       else{
         this.videoUrl=this.arr.storyTextUrl.split("?v=");
         this.video=this.video+this.videoUrl[1];
         this.videoId=this.video;
+        this.finalUrl=this.videoReturn();
       }
     });
   }

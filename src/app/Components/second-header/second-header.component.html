@@ -26,8 +26,10 @@
          
         <div id="search-section">    
           <div class="searchMargin">
-            <input  type="text" style="width: 130%" placeholder="search" name="search" />
-            <button routerLink="/catagory/search">
+            <form [formGroup]="searchForm">
+              <input  type="text" style="width: 130%" placeholder="search" name="search" formControlName="search" />
+            </form>
+            <button (click)='search()'>
               <div class="search"> <img src="assets/img/search1.png" ></div>
             </button>
           </div>   
