@@ -3,6 +3,65 @@
         post</button>
 </div>
 
+<!--sign modal start-->
+
+  <!-- Modal large--> 
+  <div class="container  d-none d-sm-block">
+    
+  
+  <div class="modal show" *ngIf="show1"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  
+    <div class="modal-dialog " role="document">
+      <div class="modal-content " style="position:absolute;left:-50vw; top:100%" >
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel" style="color:red">Please Sign In l</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="close()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        <b>You have to sign in before add a new post</b>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary"  id="btnHideModal" data-dismiss="modal" (click)="close()" >Close</button>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+   <!-- Modal small-->
+   <div class="container d-sm-none">
+       
+   
+   <div class="modal show " *ngIf="show1"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  
+        <div class="modal-dialog " role="document">
+          <div class="modal-content" style="position:absolute;left:10vw;width:80%; top:100%"  >
+            <div class="modal-header">
+              <h3 class="modal-title" id="exampleModalLabel" style="color:red">Please Sign In s</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="close()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+            <b>You have to sign in before add a new post</b>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary"  id="btnHideModal" data-dismiss="modal" (click)="close()" >Close</button>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+<!--sign modal closed-->
+
+
+
+
+
 <div class="NPBbackground d-none d-sm-block" style="margin-top: 0%">
     <button type="button" class="btn btn-warning" *ngIf="!marked6" (click)="NewPost()" style="margin-left:85%">New
         post</button>

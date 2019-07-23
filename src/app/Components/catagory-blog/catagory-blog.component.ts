@@ -16,6 +16,8 @@ export class CatagoryBlogComponent implements OnInit {
   marked5=false;
   marked6=false;
 
+  closed=false;
+  show1=false;
 
   ngOnInit() {
   }
@@ -64,7 +66,10 @@ export class CatagoryBlogComponent implements OnInit {
     this.marked5 = true
     this.marked6 = false
   }
-
+   close(){
+    this.closed=true
+    this.show1=false
+   }
   NewPost(){
       if(localStorage.getItem('sewwasUserName')!=null){
         this.marked1 = false
@@ -75,7 +80,13 @@ export class CatagoryBlogComponent implements OnInit {
         this.marked6 = true
     }
     else{
+        this.show1=true
+        this.closed=false
     }
   }
+//code for login
+
+
+
 
 }

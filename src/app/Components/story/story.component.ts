@@ -15,7 +15,10 @@ export class StoryComponent implements OnInit {
               private route: ActivatedRoute,
               private formBuilder: FormBuilder) { }
 
-  
+              
+  closed=false;
+  show1=false;
+
   arr:any;
   private sub:any;
   type:string;
@@ -54,6 +57,7 @@ export class StoryComponent implements OnInit {
   }
 
   submitComment(){
+    if(localStorage.getItem('sewwasUserName')!=null){
     this.commentForm.value.userid = localStorage.getItem('sewwasUserId');
     this.commentForm.value.newsid = this.type;
     this.commentForm.value.username = localStorage.getItem('sewwasUserName');
@@ -68,8 +72,14 @@ export class StoryComponent implements OnInit {
       //
     })
   }
+  else{
+    this.show1=true
+    this.closed=false
+  }
+}
 
   addVote(){
+    if(localStorage.getItem('sewwasUserName')!=null){
     var user={
       'userid':localStorage.getItem('sewwasUserId'),
       'newsid':this.type,
@@ -83,5 +93,16 @@ export class StoryComponent implements OnInit {
       console.log(err);
     })
   }
+
+  else{
+    this.show1=true
+    this.closed=false
+  }
+  }
+
+  close(){
+    this.closed=true
+    this.show1=false
+   }
 
 }
