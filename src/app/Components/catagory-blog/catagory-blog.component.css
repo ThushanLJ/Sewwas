@@ -39,3 +39,15 @@ img.web{
 }
 
 
+.fade{
+    background-color: rgba(204, 185, 185, 0.486)
+}
+.color-me{
+    color: black;
+}
+.modal {
+    background-color: rgba(0,0,0,0.5);
+  }
+  .signAlign{
+      flex-direction: row-reverse;
+  }

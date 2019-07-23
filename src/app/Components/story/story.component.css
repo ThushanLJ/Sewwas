@@ -50,3 +50,6 @@
 .font-style-user{
     font-weight:100;
 }
+.modal {
+    background-color: rgba(0,0,0,0.5);
+  }
