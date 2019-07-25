@@ -29,7 +29,7 @@ export class First2HeaderComponent implements OnInit {
     appId: "1:506694270836:web:3b0f5a1bb3a48ae5"
   };
 
-  showPopUp = false;
+  showPopUp = true;
   loginForm : FormGroup;
   log:any =true;
   ngOnInit() {
@@ -44,7 +44,7 @@ export class First2HeaderComponent implements OnInit {
   }
 
   PopUp(){
-    this.showPopUp = true;
+    this.showPopUp = false;
   }
   login(){
     //console.log(this.loginForm.value);
@@ -55,6 +55,7 @@ export class First2HeaderComponent implements OnInit {
         localStorage.setItem('sewwasUserName', data.data.user_name);
         localStorage.setItem('sewwasUserId', data.data.user_id);
         localStorage.setItem('sewwasPicture', data.data.picture);
+        this.showPopUp = false;
         window.location.reload();
       }
       else{
