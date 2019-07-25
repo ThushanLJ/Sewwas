@@ -29,6 +29,7 @@ export class First2HeaderComponent implements OnInit {
     appId: "1:506694270836:web:3b0f5a1bb3a48ae5"
   };
 
+  userData:any
   showPopUp = true;
   loginForm : FormGroup;
   log:any =true;
@@ -41,6 +42,10 @@ export class First2HeaderComponent implements OnInit {
     if(localStorage.getItem("sewwasUserId") == null){
       this.log=false;
     }
+    this.auth.getUserDetail().subscribe((data:any)=>{
+      console.log(data.data);
+      this.userData=data.data;
+    })
   }
 
   PopUp(){

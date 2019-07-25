@@ -75,3 +75,9 @@ input[type="file"] {
 div{
     font-family:Open Sans,sans-serif;
 }
+.btn-secondary{
+    background-color: #ff751a
+}
+.modal {
+    background-color: rgba(0,0,0,0.5);
+  }

@@ -1,4 +1,54 @@
 <div class="container">
+  <!--popUp-->
+  <!-- Modal large--> 
+  <div class="container  d-none d-sm-block">
+    
+  
+      <div class="modal show" *ngIf="show1"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      
+        <div class="modal-dialog " role="document">
+          <div class="modal-content " style="position:absolute;left:-50vw; top:100%" >
+            <div class="modal-header">
+              <h2 class="modal-title" id="exampleModalLabel" style="color:green;margin-left: 30%">Succesfull !</h2>
+            </div>
+            <div class="modal-body text-center">
+            <h4><b>You have succesfully created your account.</b></h4>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" style="margin-right: 50%" id="btnHideModal" data-dismiss="modal" (click)="close()" >ok</button>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+       <!-- Modal small-->
+       <div class="container d-sm-none">
+           
+       
+       <div class="modal show " *ngIf="show1"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      
+            <div class="modal-dialog " role="document">
+              <div class="modal-content" style="position:absolute;left:10vw;width:80%; top:100%"  >
+                <div class="modal-header">
+                  <h3 class="modal-title" id="exampleModalLabel" style="color:green;margin-left: 25%">Succesfull !</h3>
+                 
+                </div>
+                <div class="modal-body text-center">
+                    
+                <h4><b>You have succesfully created your account.</b></h4>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" style="margin-right: 40%"  id="btnHideModal" data-dismiss="modal" (click)="close()" >ok</button>
+               
+                </div>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+    <!--sign modal closed-->
+  <!--/popUp-->
     <div class="text-center">
       <p class="welcome">Welcome to SEWWAS</p>
       <p class="CP"> Create Your Profile</p>

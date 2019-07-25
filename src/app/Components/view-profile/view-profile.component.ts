@@ -9,7 +9,6 @@ import { AuthService } from './../../Services/auth.service';
 export class ViewProfileComponent implements OnInit {
 
   constructor(private authService:AuthService) { }
-
   nav1;
   nav2;
   nav3;
