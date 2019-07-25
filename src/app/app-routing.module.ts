@@ -21,6 +21,7 @@ import { CatagoryDealsComponent } from './Components/catagory-deals/catagory-dea
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { NewPostComponent } from './Components/new-post/new-post.component';
 
+
 const routes: Routes = [
   // {
   //   path:'' ,redirectTo:'/home',pathMatch:'full'
@@ -41,7 +42,8 @@ const routes: Routes = [
   },
   {
     path:'login',
-    component: SignUpComponent
+    //component: SignUpComponent
+    component: ViewProfileComponent
   },
   {
     path:'video/:id',component:NewsComponent,

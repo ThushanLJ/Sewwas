@@ -15,13 +15,26 @@ export class ViewProfileComponent implements OnInit {
   nav3;
   userData:any;
 
+  user={
+    phone: '',
+    address: '',
+    email: '',
+    website:'',
+    birthday:'',
+    gender:''
+
+  }
+
   ngOnInit() {
     this.nav1 = true;
     this.nav2 = false;
     this.nav3 = false;
+    this.user.phone = '0761050'
     this.authService.getUserDetail().subscribe((data:any)=>{
       console.log(data.data);
       this.userData=data.data;
+
+      
     })
   }
 

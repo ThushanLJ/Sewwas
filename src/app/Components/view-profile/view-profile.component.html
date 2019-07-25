@@ -1,15 +1,100 @@
+<!--Second header-->
+
+<div class="container">
+  
+        <div style=" margin-top: -8%; margin-bottom: 3%; position: static;">
+        
+          <div class="navMargin d-none d-sm-block">
+          <nav class="navbar navbar-expand-sm bg-transparent">
+              
+                <div class="navItem"  >
+                  <a  class="color-me" routerLink="/" >Home</a>
+                </div>
+                <div class="navItem">
+                  <a class="color-me" routerLink="/catagory/knw">Knowledge</a>
+                </div>
+                <div class="navItem">
+                    <a class="color-me"  routerLink="/catagory/ent"> Entertainment </a>
+                </div>
+                <div class="navItem">
+                  <a class="color-me" routerLink="/catagory/inf">Information</a>
+                </div>
+                  <!-- <div class="navItem">
+                    <a class="color-me"  routerLink="/catagory/deals">Deal</a>
+                  </div> -->
+              
+                 
+                <div id="search-section">    
+                  <div class="searchMargin">
+                    <form [formGroup]="searchForm">
+                      <input  type="text" style="width: 130%" placeholder="search" name="search" formControlName="search" />
+                    </form>
+                    <button (click)='search()'>
+                      <div class="search"> <img src="assets/img/search1.png" ></div>
+                    </button>
+                  </div>   
+              </div>
+             
+            </nav>
+          </div>
+        
+        </div>
+          
+        
+          <nav class="navbar navbar-expand-sm navbar-light bg-light d-sm-none">
+        
+              <div class="d-inline p-2" style="margin-left: -5%">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              </div>
+              <div class="d-inline p-2" style="margin-left: -2%; width:70%">
+              <input class="form-control" type="text" placeholder="Search" aria-label="Search" >
+            </div>
+            <div class="d-inline p-2">
+              <button class="btn"><img src="assets/img/search1.png" style="width:15px; height:15px"></button>
+            </div>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                      <a  class="nav-link" routerLink="">Home<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" routerLink="/catagory/info">Information</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" routerLink="/catagory/knw">Knowledge</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link"  routerLink="/catagory/ent"> Entertainment </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link"  routerLink="/catagory/deals">Deal</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+              
+</div>
+        
+<hr class="style1">
+
+
+<!--//Second header-->
+<div class="d-none d-sm-block">
 <div class="container">
     <div class="row">
         <div class="col-2 h4">
             <div class="row my-5">
                 <div class="col">
-                    <img class="mx-2" src="./assets/img/man-user.png" style="width: 30px;">
+                    <img class="mx-2" src="./assets/img/man-user.png" style="width: 25px;">
                     <a (click)="Profile()" routerLink="#"> My Profile </a>
                 </div>
             </div>
             <div class="row my-5">
                 <div class="col">
-                    <img class="mx-2" src="./assets/img/parchment.png" style="width: 30px;">
+                    <img class="mx-2" src="./assets/img/parchment.png" style="width: 25px;">
                     <a (click)="History()" routerLink="#">My History </a>
                 </div>
             </div>
@@ -23,8 +108,8 @@
 
 
         <div class="col-3" *ngIf="nav1">
-            <img class="mx-2 my-2 img-fluid h-auto photo1" src="./assets/img/deal 1.jpg"  *ngIf='userData.picture==null'>
-            <img class="mx-2 my-2 img-fluid h-auto photo1" src={{userData.picture}} *ngIf='userData.picture!=null'>
+            <img class="mx-2 my-5 img-fluid h-auto photo1" src="./assets/img/images.png">
+            <img class="mx-2 my-5 img-fluid h-auto photo1" src={{userData.picture}} *ngIf='userData.picture!=null'>
             <!-- <img class="mx-2 photo2" src="./assets/img/camera.png" style="width: 50px;">
             <input type="file"> -->
         </div>
@@ -45,42 +130,43 @@
         <img class="set" src="./assets/img/star.png" style="width:30px">
         <img class="set" src="./assets/img/star.png" style="width:30px"> -->
 
-            <div class="h3 text-muted my-5"> Contact Information</div>
+            <div class="h4 text-muted my-5"> Contact Information</div>
 
             <!-- <form> -->
                 <div class="form-group float-label-control">
-                    <label>Phone :-</label>
-                    <label>{{userData.phone}}</label>
+                   <label>Phone :</label>
+                   <label>{{userData.phone}}</label>
+                    
                     <!-- <input type="text" class="form-control" id="phone"> -->
                 </div>
                 <div class="form-group">
-                    <label>Address :-</label>
+                    <label>Address :</label>
                     <label>{{userData.address}}</label>
                     <!-- <input type="text" class="form-control" id="addr"> -->
                 </div>
                 <div class="form-group">
-                    <label>Email :-</label>
+                    <label>Email :</label>
                     <label>{{userData.local.userMail}}</label>
                     <!-- <input type="text" class="form-control" id="email"> -->
                 </div>
                 <div class="form-group">
-                    <label>Web site :-</label>
+                    <label>Web site :</label>
                     <label>{{userData.website}}</label>
                     <!-- <input type="text" class="form-control" id="site"> -->
                 </div>
             <!-- </form> -->
 
 
-            <div class="h3 text-muted my-5">Basic Information</div>
+            <div class="h4 text-muted my-5">Basic Information</div>
 
             <!-- <form> -->
                 <div class="form-group float-label-control">
-                    <label>Birthday :-</label>
+                    <label>Birthday :</label>
                     <label>{{userData.birthday}}</label>
                     <!-- <input type="text" class="form-control" id="phone"> -->
                 </div>
                 <div class="form-group">
-                    <label>Gender :-</label>
+                    <label>Gender :</label>
                     <label>{{userData.gender}}</label>
                     <!-- <input type="text" class="form-control" id="addr"> -->
                 </div>
@@ -102,15 +188,81 @@
         </div>
 
     </div>
+
+    <div class="row " *ngIf="nav1">
+            <div class="col">
+        
+            </div>
+        
+            <div class="col-2">
+                <button type="button" class="btn bg-warning text-white" (click)="Pins()">Update Account</button>
+            </div>
+        </div>
+</div>
 </div>
 
 
-<div class="row" *ngIf="nav1">
-    <div class="col">
+<div class="d-sm-none">
+    <div class="container">
+                <div class="center">
+                    <div class="d-inline">
+                        <img class="mx-2" src="./assets/img/man-user.png" style="width: 25px;">
+                        <a (click)="Profile()" routerLink="#"> My Profile </a>
+                    </div>
+               
+                    <div class="d-inline">
+                        <img class="mx-2" src="./assets/img/parchment.png" style="width: 25px;">
+                        <a (click)="History()" routerLink="#">My History </a>
+                    </div>
+                </div>
 
-    </div>
+            <img class="mx-2 my-5 img-fluid h-auto photo1" src="./assets/img/images.png">
+            <img class="mx-2 my-5 img-fluid h-auto photo1" src={{userData.picture}} *ngIf='userData.picture!=null'>
 
-    <div class="col-2">
-        <button type="button" class="btn bg-warning text-white" (click)="Pins()">Update Account</button>
+
+        <div class="h4 text-muted my-5"> Contact Information</div>
+
+        <!-- <form> -->
+            <div class="form-group float-label-control">
+               <label>Phone :</label>
+               <label>{{userData.phone}}</label>
+                
+                <!-- <input type="text" class="form-control" id="phone"> -->
+            </div>
+            <div class="form-group">
+                <label>Address :</label>
+                <label>{{userData.address}}</label>
+                <!-- <input type="text" class="form-control" id="addr"> -->
+            </div>
+            <div class="form-group">
+                <label>Email :</label>
+                <label>{{userData.local.userMail}}</label>
+                <!-- <input type="text" class="form-control" id="email"> -->
+            </div>
+            <div class="form-group">
+                <label>Web site :</label>
+                <label>{{userData.website}}</label>
+                <!-- <input type="text" class="form-control" id="site"> -->
+            </div>
+        <!-- </form> -->
+
+
+        <div class="h4 text-muted my-5">Basic Information</div>
+
+        <!-- <form> -->
+            <div class="form-group float-label-control">
+                <label>Birthday :</label>
+                <label>{{userData.birthday}}</label>
+                <!-- <input type="text" class="form-control" id="phone"> -->
+            </div>
+            <div class="form-group">
+                <label>Gender :</label>
+                <label>{{userData.gender}}</label>
+                <!-- <input type="text" class="form-control" id="addr"> -->
+            </div>
+
+            <button type="button" class="btn bg-warning text-white" (click)="Pins()">Update Account</button>
     </div>
 </div>
+
+
