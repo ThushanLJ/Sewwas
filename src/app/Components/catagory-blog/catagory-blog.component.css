@@ -20,16 +20,13 @@
     flex-direction: row;
 }
 a{
-    font-size: 23px;
+    font-size: 17px;
     font-weight: 525;
     color:black;
     
 }
 
-.aMargin{
-    margin:20px 0px;
-    margin-left:10%;
-}
+
 .aMargin2{
     margin:20px 0px;
     margin-left:15%;
@@ -51,3 +48,9 @@ img.web{
   .signAlign{
       flex-direction: row-reverse;
   }
+
+  div{
+    font-family: "Open Sans";
+ 
+    
+}

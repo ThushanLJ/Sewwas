@@ -3,6 +3,13 @@
         post</button>
 </div>
 
+<div class="NPBbackground d-none d-sm-block" style="margin-top: 0%">
+    <div class="container">
+    <button type="button" class="btn btn-warning" *ngIf="!marked6" (click)="NewPost()" style="float: right;">New
+        post</button>
+    </div>
+</div>
+
 <!--sign modal start-->
 
   <!-- Modal large--> 
@@ -59,22 +66,15 @@
 <!--sign modal closed-->
 
 
-
-
-
-<div class="NPBbackground d-none d-sm-block" style="margin-top: 0%">
-    <button type="button" class="btn btn-warning" *ngIf="!marked6" (click)="NewPost()" style="margin-left:85%">New
-        post</button>
-</div>
-<br><br><br>
 <div *ngIf="marked6">
     <app-new-post></app-new-post>
 </div>
+<br><br><br>
+<div class="container ">
 
 <div *ngIf="!marked6">
     <div class="row d-none d-sm-block">
         <div class="col-sm-3">
-            <div class="container ">
                 <div class="aMargin">
                      <img class="web" src="assets/img/reading.jpg" width="20px"
                             height="30px" />
@@ -82,10 +82,10 @@
                                 Reading List 
                             </a>
                             <div class="collapse" id="collapseExample" style="margin-left:60px ">
-                                <h4 class="my-5 point" (click)="ReadingList()">All</h4>
-                                <h4 class="my-5 point" (click)="KnowledgeList()">Knowledge</h4>
-                                <h4 class="my-5 point" (click)="EntertainmentList()">Entertainment</h4>
-                                <h4 class="my-5 point" (click)="InformationList()">Information</h4>
+                                <h5 class="my-5 point" (click)="ReadingList()">All</h5>
+                                 <h5 class="my-5 point" (click)="KnowledgeList()">Knowledge</h5>
+                                <h5 class="my-5 point" (click)="EntertainmentList()">Entertainment</h5>
+                                <h5 class="my-5 point" (click)="InformationList()">Information</h5>
                             </div>
                 </div>
                 <!-- <div class="aMargin">
@@ -105,9 +105,8 @@
                 <div class="aMargin2">
                     <a routerLink="" style="font-size: 15px">Published(20)</a>
                 </div>      -->
-            </div>
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-9">
 
             <div *ngIf="marked1">
                 <app-read-list></app-read-list>
@@ -131,6 +130,8 @@
 
 
     </div>
+
+</div>
 
 </div>
 
