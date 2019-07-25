@@ -15,8 +15,10 @@ export class FirstHeaderComponent implements OnInit {
   load: boolean = true;
   location: any;
   weather:any;
+  today: number = Date.now();
   constructor(private weatherService:WeatherService) {
     this.date = formatDate(this.myDate, 'yyyy/MM/dd', 'en');
+    
   }
 
   ngOnInit() {

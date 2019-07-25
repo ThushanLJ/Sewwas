@@ -18,10 +18,10 @@
   
   <nav class="navbar navbar-expand-sm " style="margin-left: -5.5%">
     <div class="navItem" *ngFor='let d of weather' >
-      <p class="color-me" style="margin-bottom:0%; margin-left:">{{d.app_temp}}<sup> c</sup> | {{d.city_name}}</p>
+      <p class="color-me" style="margin-bottom:0%;">{{d.app_temp}}<sup> c</sup> | {{d.city_name}}</p>
     </div>
     <div class="navItem" >
-      <div class="color-me" >{{ date }}</div>
+      <div class="color-me" >{{today | date:'fullDate'}}</div>
     </div>
     <div class="navItem">
       <a class="color-me" routerLink="/catagory/blog">Blog</a>
