@@ -117,3 +117,11 @@ hr.style1{
 input:focus{
 	outline: none;
 	}
+.line{
+	background-color:  #1675b8;
+    height:1%;
+	width: 100%;
+	 padding: 0.1% 0% 0% 0%;
+	 margin-bottom: 1%;
+	
+}
