@@ -21,15 +21,15 @@ export class BlogService {
   }
 
   getEntertainmentBlog(){
-    return this.http.get(this.baseURL+"getEntertainmentBlog");
+    return this.http.post(this.baseURL+"getBlogCategory", {"blogType":"ent"});
   }
 
   getKnowledgeBlog(){
-    return this.http.get(this.baseURL+"getKnowledgeBlog");
+    return this.http.post(this.baseURL+"getBlogCategory", {"blogType":"knw"});
   }
 
   getInformationBlog(){
-    return this.http.get(this.baseURL+"getInformationBlog");
+    return this.http.post(this.baseURL+"getBlogCategory", {"blogType":"inf"});
   }
 
   getUserBlog(){

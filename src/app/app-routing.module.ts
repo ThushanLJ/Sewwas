@@ -42,8 +42,8 @@ const routes: Routes = [
   },
   {
     path:'login',
-    //component: SignUpComponent
-    component: ViewProfileComponent
+    component: SignUpComponent
+    //component: ViewProfileComponent
   },
   {
     path:'video/:id',component:NewsComponent,
