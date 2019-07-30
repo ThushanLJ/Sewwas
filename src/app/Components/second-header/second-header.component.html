@@ -8,16 +8,16 @@
   <nav class="navbar navbar-expand-sm bg-transparent">
       
         <div class="navItem"  >
-          <a  class="color-me" routerLink="/" >Home</a>
+          <a  style="color: black; text-decoration: none" [class]="title1" routerLink="/"  (click)="home()">Home</a>
         </div>
         <div class="navItem">
-          <a class="color-me" routerLink="/catagory/knw">Knowledge</a>
+          <a style="color: black; text-decoration: none" [class]="title2" routerLink="/catagory/knw" (click)="knw()">Knowledge</a>
         </div>
         <div class="navItem">
-            <a class="color-me"  routerLink="/catagory/ent"> Entertainment </a>
+            <a style="color: black; text-decoration: none" [class]="title3" routerLink="/catagory/ent" (click)="ent()"> Entertainment </a>
         </div>
         <div class="navItem">
-          <a class="color-me" routerLink="/catagory/inf">Information</a>
+          <a style="color: black; text-decoration: none" [class]="title4" routerLink="/catagory/inf" (click)="inf()">Information</a>
         </div>
           <!-- <div class="navItem">
             <a class="color-me"  routerLink="/catagory/deals">Deal</a>

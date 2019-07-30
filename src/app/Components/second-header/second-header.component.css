@@ -97,8 +97,11 @@ div#search-section button img{
 
 a:hover{
 	text-decoration: none;
-	color: rgb(0, 89, 255)
+	border-bottom: solid orange 2px
 }
+
+
+
 
 hr.style1{
 	border-top: 2px solid #1675b8;
@@ -106,12 +109,8 @@ hr.style1{
 }
 
 
-.set1{
-	color: rgb(0, 89, 255)
-}
-
 .set2{
-	color: black
+	color: white
 }
 
 input:focus{
@@ -124,4 +123,18 @@ input:focus{
 	 padding: 0.1% 0% 0% 0%;
 	 margin-bottom: 1%;
 	
+}
+
+
+.style2{
+	border-bottom: solid orange 2px
+}
+
+.style1{
+	border-bottom: none
+}
+
+
+a:visited{
+	text-decoration: none
 }
