@@ -22,11 +22,10 @@
 }
 .btnOrder{
     flex-direction: row-reverse;
-    margin-left: 75%;
+    margin-left: 95%;
 }
 .dataInputArea{
-    margin-left:10%;
-    width:85%;
+    width:100%;
     
 }
 .aa{

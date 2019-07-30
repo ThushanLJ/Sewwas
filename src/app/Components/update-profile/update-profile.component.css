@@ -6,15 +6,15 @@
 }
 
 .btn{
-    font-size: 20px;
-    margin: 20px;
-    margin-left: -148px;
+    font-size: 15px;
 }
 
 .photo1{
     position: relative;
     top: 0;
-	left: 0;
+    left: 0;
+    width:200px;
+    height: 200px;
 }
 
 .photo2{
@@ -23,10 +23,17 @@
     left: 200px;
 }
 
+.photo3{
+    position: absolute;
+    top: 450px;
+    left: 250px;
+}
+
 input[type="file"]{
     display:none
 }
 
 .inputStyle{
-    width: 500px;
+    width: 80%;
 }
+
