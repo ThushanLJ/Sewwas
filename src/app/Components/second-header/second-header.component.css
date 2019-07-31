@@ -72,6 +72,7 @@ div#search-section {
 	height:70%;
 	width:70%;
 	padding-bottom: 20%;
+	border:0px;
 }
 
 div#search-section input{

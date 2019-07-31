@@ -48,9 +48,7 @@ export class First2HeaderComponent implements OnInit {
     })
   }
 
-  PopUp(){
-    this.showPopUp = false;
-  }
+  
   login(){
     //console.log(this.loginForm.value);
     this.auth.loginUser(this.loginForm.value).subscribe((data:any)=>{
