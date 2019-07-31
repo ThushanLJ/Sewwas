@@ -20,7 +20,7 @@
     <div class="navItem" *ngFor='let d of weather' >
       <p class="color-me" style="margin-bottom:0%;">{{d.app_temp}}<sup> c</sup> | {{d.city_name}}</p>
     </div>
-    <div class="navItem" >
+    <div class="navItem d-none d-sm-block" >
       <div class="color-me" >{{today | date:'fullDate'}}</div>
     </div>
     <div class="navItem">
